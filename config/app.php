@@ -2,6 +2,11 @@
 
 return [
 
+    'recaptcha' => [
+        'secret' => env('RECAPTCHA_SECRET_KEY'),
+        'site_key' => env('RECAPTCHA_SITE_KEY')
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -67,7 +72,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => env('APP_TIMEZONE'),
 
     /*
     |--------------------------------------------------------------------------
@@ -80,7 +85,9 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => env('APP_LOCALE'),
+
+    'supported_locales' => ['en', 'ru'],
 
     /*
     |--------------------------------------------------------------------------
@@ -166,6 +173,8 @@ return [
          * Package Service Providers...
          */
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Cog\Laravel\Ban\Providers\BanServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -174,6 +183,7 @@ return [
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
+        App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
     ],

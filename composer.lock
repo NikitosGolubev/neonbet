@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d5b7d7ea9ca033b00aeefcc3a895b26",
+    "content-hash": "9183a9c8e7c26dc7b14885d0d38b0ef6",
     "packages": [
         {
             "name": "cybercog/laravel-ban",
