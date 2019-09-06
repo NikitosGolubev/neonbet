@@ -2,26 +2,30 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 use App\User;
-use Illuminate\Support\Str;
 use Faker\Generator as Faker;
-
-/*
-|--------------------------------------------------------------------------
-| Model Factories
-|--------------------------------------------------------------------------
-|
-| This directory should contain each of the model factory definitions for
-| your application. Factories provide a convenient way to generate new
-| model instances for testing / seeding your application's database.
-|
-*/
+use Illuminate\Support\Facades\Hash;
+use Carbon\Carbon;
 
 $factory->define(User::class, function (Faker $faker) {
     return [
-        'name' => $faker->name,
+        'nickname' => $faker->unique()->userName,
         'email' => $faker->unique()->safeEmail,
-        'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-        'remember_token' => Str::random(10),
+        'password' => Hash::make('secret'),
+        'fullname' => $faker->firstName.' '.$faker->lastName,
+        'birthdate' => $faker->date('d.m.Y', Carbon::create(2000, 1, 1, 0, 0, 0)->timestamp),
+        'verified_at' => getVerifiedAt()
     ];
 });
+
+/**
+ * Provides verification value depend on chance.
+ */
+function getVerifiedAt($verification_chance = 50) {
+   $random_int = rand(1, 100);
+
+   if ($random_int <= $verification_chance) {
+       return Carbon::now()->toDateTimeString();
+   }
+
+   return null;
+}

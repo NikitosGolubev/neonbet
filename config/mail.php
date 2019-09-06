@@ -2,7 +2,7 @@
 
 return [
 
-    'verification_secret' => env('EMAIL_VERIFICATION_SECRET'),
+    'verification_secret' => env('MAIL_VERIFICATION_SECRET'),
 
     /*
     |--------------------------------------------------------------------------
@@ -58,8 +58,8 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
-        'name' => env('MAIL_FROM_NAME', 'Example'),
+        'address' => env('MAIL_FROM_ADDRESS'),
+        'name' => env('MAIL_FROM_NAME'),
     ],
 
     /*
@@ -115,7 +115,7 @@ return [
     */
 
     'markdown' => [
-        'theme' => 'default',
+        'theme' => 'main',
 
         'paths' => [
             resource_path('views/vendor/mail'),

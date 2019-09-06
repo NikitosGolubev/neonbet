@@ -105,7 +105,7 @@ trait Verifiable
 
     private function getExpiration() {
         $default_expiration = 3600;
-        return isset($this->expiration) ? $this->expiration : $default_expiration;
+        return isset($this->verification_expiration) ? $this->verification_expiration : $default_expiration;
     }
 
     private function getUniqueDataField() {

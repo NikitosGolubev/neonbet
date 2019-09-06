@@ -53,7 +53,7 @@ class RegisterRequest extends ApiRequest
     {
         return [
             $this->nicknameParam => ['required', 'min:6', 'max:32', new Nickname, 'unique:users,nickname'],
-            $this->emailParam => ['required', 'max:255', 'email', 'unique:users,email'],
+            $this->emailParam => ['required', 'max:255', 'email:rfc,dns', 'unique:users,email'],
             $this->fullnameParam => ['required', 'string', 'max:255', new Fullname],
             $this->birthdateParam => [
                 'required',

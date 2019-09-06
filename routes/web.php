@@ -10,6 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use Illuminate\Mail\Markdown;
 
 Route::get('/', function () {
     return view('welcome');
