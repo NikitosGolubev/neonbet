@@ -4,34 +4,91 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9183a9c8e7c26dc7b14885d0d38b0ef6",
+    "content-hash": "98c703be6fe2712bb1ab8fe22b81254b",
     "packages": [
         {
-            "name": "cybercog/laravel-ban",
-            "version": "4.0.0",
+            "name": "cakephp/chronos",
+            "version": "1.2.8",
             "source": {
                 "type": "git",
-                "url": "https://github.com/cybercog/laravel-ban.git",
-                "reference": "f99bdc90bebc7d2b8a01166ea8f68abaab2d74f3"
+                "url": "https://github.com/cakephp/chronos.git",
+                "reference": "0292f06e8cc23fc82f0574889da2d8bf27b613c1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cybercog/laravel-ban/zipball/f99bdc90bebc7d2b8a01166ea8f68abaab2d74f3",
-                "reference": "f99bdc90bebc7d2b8a01166ea8f68abaab2d74f3",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/0292f06e8cc23fc82f0574889da2d8bf27b613c1",
+                "reference": "0292f06e8cc23fc82f0574889da2d8bf27b613c1",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "5.5.*|5.6.*|5.7.*|5.8.*",
-                "illuminate/events": "5.5.*|5.6.*|5.7.*|5.8.*",
-                "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*",
+                "php": "^5.5.9|^7"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "cakephp/cakephp-codesniffer": "^3.0",
+                "phpbench/phpbench": "@dev",
+                "phpstan/phpstan": "^0.6.4",
+                "phpunit/phpunit": "<6.0 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cake\\Chronos\\": "src/"
+                },
+                "files": [
+                    "src/carbon_compat.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brian Nesbitt",
+                    "email": "brian@nesbot.com",
+                    "homepage": "http://nesbot.com"
+                },
+                {
+                    "name": "The CakePHP Team",
+                    "homepage": "http://cakephp.org"
+                }
+            ],
+            "description": "A simple API extension for DateTime.",
+            "homepage": "http://cakephp.org",
+            "keywords": [
+                "date",
+                "datetime",
+                "time"
+            ],
+            "time": "2019-06-17T15:19:18+00:00"
+        },
+        {
+            "name": "cybercog/laravel-ban",
+            "version": "4.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cybercog/laravel-ban.git",
+                "reference": "13d58955d8e573eeed57fa5ce755e90380ec3481"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cybercog/laravel-ban/zipball/13d58955d8e573eeed57fa5ce755e90380ec3481",
+                "reference": "13d58955d8e573eeed57fa5ce755e90380ec3481",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/database": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
+                "illuminate/events": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
+                "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0",
                 "php": "^7.1.3"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.10",
                 "mockery/mockery": "^1.0",
-                "orchestra/database": "~3.5.0|~3.6.0|~3.7.0|~3.8.0",
-                "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0|~3.8.0",
-                "phpunit/phpunit": "^7.5"
+                "orchestra/database": "~3.5.0|~3.6.0|~3.7.0|~3.8.0|^4.0",
+                "orchestra/testbench": "~3.5.0|~3.6.0|~3.7.0|~3.8.0|^4.0",
+                "phpunit/phpunit": "^7.5|^8.0"
             },
             "type": "library",
             "extra": {
@@ -54,8 +111,8 @@
             "authors": [
                 {
                     "name": "Anton Komarev",
-                    "email": "a.komarev@cybercog.su",
-                    "homepage": "http://ell.folio.su",
+                    "email": "anton@komarev.com",
+                    "homepage": "https://komarev.com",
                     "role": "Developer"
                 }
             ],
@@ -76,7 +133,7 @@
                 "trait",
                 "user"
             ],
-            "time": "2019-02-26T21:01:13+00:00"
+            "time": "2019-09-04T08:40:44+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -463,25 +520,25 @@
         },
         {
             "name": "fideloper/proxy",
-            "version": "4.2.0",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fideloper/TrustedProxy.git",
-                "reference": "39a4c2165e578bc771f5dc031c273210a3a9b6d2"
+                "reference": "03085e58ec7bee24773fa5a8850751a6e61a7e8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fideloper/TrustedProxy/zipball/39a4c2165e578bc771f5dc031c273210a3a9b6d2",
-                "reference": "39a4c2165e578bc771f5dc031c273210a3a9b6d2",
+                "url": "https://api.github.com/repos/fideloper/TrustedProxy/zipball/03085e58ec7bee24773fa5a8850751a6e61a7e8a",
+                "reference": "03085e58ec7bee24773fa5a8850751a6e61a7e8a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "~5.0|~6.0",
+                "illuminate/contracts": "^5.0|^6.0|^7.0",
                 "php": ">=5.4.0"
             },
             "require-dev": {
-                "illuminate/http": "~5.6|~6.0",
-                "mockery/mockery": "~1.0",
+                "illuminate/http": "^5.0|^6.0|^7.0",
+                "mockery/mockery": "^1.0",
                 "phpunit/phpunit": "^6.0"
             },
             "type": "library",
@@ -513,7 +570,7 @@
                 "proxy",
                 "trusted proxy"
             ],
-            "time": "2019-07-29T16:49:45+00:00"
+            "time": "2019-09-03T16:45:42+00:00"
         },
         {
             "name": "firebase/php-jwt",
@@ -838,16 +895,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.34",
+            "version": "v5.8.35",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "c3a870b96c7afe5174f486af74768ccfddeec77b"
+                "reference": "5a9e4d241a8b815e16c9d2151e908992c38db197"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/c3a870b96c7afe5174f486af74768ccfddeec77b",
-                "reference": "c3a870b96c7afe5174f486af74768ccfddeec77b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/5a9e4d241a8b815e16c9d2151e908992c38db197",
+                "reference": "5a9e4d241a8b815e16c9d2151e908992c38db197",
                 "shasum": ""
             },
             "require": {
@@ -930,6 +987,7 @@
             "suggest": {
                 "aws/aws-sdk-php": "Required to use the SQS queue driver and SES mail driver (^3.0).",
                 "doctrine/dbal": "Required to rename columns and drop SQLite columns (^2.6).",
+                "ext-gd": "Required to use Illuminate\\Http\\Testing\\FileFactory::image().",
                 "ext-pcntl": "Required to use all features of the queue worker.",
                 "ext-posix": "Required to use all features of the queue worker.",
                 "filp/whoops": "Required for friendly error pages in development (^2.1.4).",
@@ -981,7 +1039,76 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-08-27T14:35:59+00:00"
+            "time": "2019-09-03T16:44:30+00:00"
+        },
+        {
+            "name": "laravel/horizon",
+            "version": "v3.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/horizon.git",
+                "reference": "692d3649a9c1bd13a3340ecc10036c1d3b55155b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/692d3649a9c1bd13a3340ecc10036c1d3b55155b",
+                "reference": "692d3649a9c1bd13a3340ecc10036c1d3b55155b",
+                "shasum": ""
+            },
+            "require": {
+                "cakephp/chronos": "^1.0",
+                "ext-json": "*",
+                "ext-pcntl": "*",
+                "ext-posix": "*",
+                "illuminate/contracts": "~5.7.0|~5.8.0|^6.0|^7.0",
+                "illuminate/queue": "~5.7.0|~5.8.0|^6.0|^7.0",
+                "illuminate/support": "~5.7.0|~5.8.0|^6.0|^7.0",
+                "php": ">=7.1.0",
+                "predis/predis": "^1.1",
+                "ramsey/uuid": "^3.5",
+                "symfony/debug": "^4.2",
+                "symfony/process": "^4.2"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.0",
+                "orchestra/testbench": "^3.7|^4.0|^5.0",
+                "phpunit/phpunit": "^7.0|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Horizon\\HorizonServiceProvider"
+                    ],
+                    "aliases": {
+                        "Horizon": "Laravel\\Horizon\\Horizon"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Horizon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Dashboard and code-driven configuration for Laravel queues.",
+            "keywords": [
+                "laravel",
+                "queue"
+            ],
+            "time": "2019-08-27T14:30:05+00:00"
         },
         {
             "name": "laravel/passport",
@@ -1056,32 +1183,32 @@
         },
         {
             "name": "laravel/telescope",
-            "version": "v2.0.6",
+            "version": "v2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/telescope.git",
-                "reference": "61b415ea2401fe659ee35fa809908628aa08bf07"
+                "reference": "d9c5c53d3a0c60dcd4ef3777884d0cf368eb3e6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/telescope/zipball/61b415ea2401fe659ee35fa809908628aa08bf07",
-                "reference": "61b415ea2401fe659ee35fa809908628aa08bf07",
+                "url": "https://api.github.com/repos/laravel/telescope/zipball/d9c5c53d3a0c60dcd4ef3777884d0cf368eb3e6f",
+                "reference": "d9c5c53d3a0c60dcd4ef3777884d0cf368eb3e6f",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
-                "laravel/framework": "~5.8.0|~5.9.0",
+                "laravel/framework": "~5.8.0|^6.0|^7.0",
                 "moontoast/math": "^1.1",
                 "php": "^7.1.3",
                 "symfony/var-dumper": "^4.1"
             },
             "require-dev": {
-                "orchestra/testbench": "~3.7"
+                "orchestra/testbench": "^3.8|^4.0|^5.0"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.0-dev"
                 },
                 "laravel": {
                     "providers": [
@@ -1114,7 +1241,7 @@
                 "laravel",
                 "monitoring"
             ],
-            "time": "2019-07-12T06:52:24+00:00"
+            "time": "2019-08-30T11:58:27+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1447,16 +1574,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.24.0",
+            "version": "1.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266"
+                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
-                "reference": "bfc9ebb28f97e7a24c45bdc3f0ff482e47bb0266",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
+                "reference": "70e65a5470a42cfec1a7da00d30edb6e617e8dcf",
                 "shasum": ""
             },
             "require": {
@@ -1521,7 +1648,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2018-11-05T09:00:11+00:00"
+            "time": "2019-09-06T13:49:17+00:00"
         },
         {
             "name": "moontoast/math",
@@ -4109,30 +4236,30 @@
     "packages-dev": [
         {
             "name": "barryvdh/laravel-ide-helper",
-            "version": "v2.6.2",
+            "version": "v2.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/barryvdh/laravel-ide-helper.git",
-                "reference": "39c148ad4273f5b8c49d0a363ddbc0462f1f2eec"
+                "reference": "16eb4f65ee0d51b1f1182d56ae28ee00a70ce75a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/39c148ad4273f5b8c49d0a363ddbc0462f1f2eec",
-                "reference": "39c148ad4273f5b8c49d0a363ddbc0462f1f2eec",
+                "url": "https://api.github.com/repos/barryvdh/laravel-ide-helper/zipball/16eb4f65ee0d51b1f1182d56ae28ee00a70ce75a",
+                "reference": "16eb4f65ee0d51b1f1182d56ae28ee00a70ce75a",
                 "shasum": ""
             },
             "require": {
                 "barryvdh/reflection-docblock": "^2.0.6",
                 "composer/composer": "^1.6",
-                "illuminate/console": "^5.5,<5.9",
-                "illuminate/filesystem": "^5.5,<5.9",
-                "illuminate/support": "^5.5,<5.9",
+                "illuminate/console": "^5.5|^6",
+                "illuminate/filesystem": "^5.5|^6",
+                "illuminate/support": "^5.5|^6",
                 "php": ">=7"
             },
             "require-dev": {
                 "doctrine/dbal": "~2.3",
-                "illuminate/config": "^5.1,<5.9",
-                "illuminate/view": "^5.1,<5.9",
+                "illuminate/config": "^5.5|^6",
+                "illuminate/view": "^5.5|^6",
                 "phpro/grumphp": "^0.14",
                 "phpunit/phpunit": "4.*",
                 "scrutinizer/ocular": "~1.1",
@@ -4179,7 +4306,7 @@
                 "phpstorm",
                 "sublime"
             ],
-            "time": "2019-03-26T10:38:22+00:00"
+            "time": "2019-09-03T17:51:13+00:00"
         },
         {
             "name": "barryvdh/reflection-docblock",

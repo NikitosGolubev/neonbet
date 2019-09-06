@@ -8,6 +8,6 @@ return [
         'ordinary' => 'ordinary'
     ],
 
-    'verification_url' => url('/confirm-account'),
-    'reset_registration_url' => url('/reset-registration')
+    'verification_url' => env('APP_URL').'/confirm-account',
+    'reset_registration_url' => env('APP_URL').'/reset-registration'
 ];
