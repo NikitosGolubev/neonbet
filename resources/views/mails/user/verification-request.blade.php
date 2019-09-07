@@ -12,7 +12,7 @@
 
 @lang('mails/account-verification-request.reset_text')<br />
 
-[@lang('mails/account-verification-request.reset_action')]($reset_url)
+[@lang('mails/account-verification-request.reset_action')]({{ $reset_url }})
 
 
 @include('mails.common_blocks.gratitude')

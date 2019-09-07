@@ -4,7 +4,6 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\Auth\RegisterRequest;
 use App\Notifications\User\AccountVerificationRequest;
-use App\Services\Verification\EmailVerification;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

@@ -2,8 +2,6 @@
 
 return [
 
-    'verification_secret' => env('MAIL_VERIFICATION_SECRET'),
-
     /*
     |--------------------------------------------------------------------------
     | Mail Driver

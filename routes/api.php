@@ -6,6 +6,9 @@ Route::group(['namespace' => 'API', 'middleware' => 'user_data'], function() {
         Route::post('/signin', 'AuthController@signin');
         Route::get('/logout', 'AuthController@logout')->middleware('auth:api');
 
+        Route::put('/user-verification', 'UserVerificationController@update');
+        Route::delete('/user-verification', 'UserVerificationController@destroy');
+
         // user email verification
         // reset password apply
         // reset password validation & functionality

@@ -13,6 +13,11 @@ return [
     'unentitled_age' => "You have to turn :age to access our service.",
     'captcha' => 'The captcha has not been approved.',
 
+    'invalid_verification_token' => "Provided token is invalid, user can't be identified.",
+    'verification_token_expired' => "Verification token is expired. Try to apply for verification
+                                    again if it's possible.",
+    "model_is_already_verified" => "The resource is already verified.",
+
     // Laravel default messages
 
     /*

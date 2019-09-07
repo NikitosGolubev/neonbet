@@ -26,12 +26,14 @@ class User extends Authenticatable
         'password'
     ];
 
+    // Verification URL for user to follow
     public function getVerificationURL($token) {
-        return config('user.verification_url').'/'.$token;
+        return config('user.verification_url').'?v_token='.$token;
     }
 
+    // Reset URL for user to follow
     public function getResetVerificationURL($token) {
-        return config('user.reset_registration_url').'/'.$token;
+        return config('user.reset_registration_url').'?v_token='.$token;
     }
 
     public function getVerificationExpiration() {
