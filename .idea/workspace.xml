@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4aa2250d-00b7-438b-ba3b-85a74f24dc7e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Verification/ModelAlreadyVerifiedException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Verification/ModelAlreadyVerifiedException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Verification/VerificationTokenExpiredException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Verification/VerificationTokenExpiredException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Verification/VerificationTokenInvalidException.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Verification/VerificationTokenInvalidException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/API/UserVerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/API/UserVerificationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/ModelEnhancers/Verifiable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/ModelEnhancers/Verifiable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/User/AccountVerificationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/User/AccountVerificationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Notifications/User/AccountVerified.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/User/AccountVerified.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Date/AdultUser.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Date/AdultUser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Date/DateRelevantFuture.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Date/DateRelevantFuture.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Date/DateRelevantPast.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Date/DateRelevantPast.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Date/DdMmYyyyDateFormat.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Date/DdMmYyyyDateFormat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Date/ValidDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Date/ValidDate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Fullname.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Fullname.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/Nickname.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/Nickname.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/ReCaptcha.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/ReCaptcha.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Rules/StringComplexity.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Rules/StringComplexity.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/user.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/user.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/validation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/vendor/mail/html/themes/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -102,12 +82,12 @@
         <option value="$PROJECT_DIR$/app/ModelEnhancers/Verifiable.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/API/UserVerificationController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/lang/en/mails/account-verified.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Notifications/User/AccountVerified.php" />
         <option value="$PROJECT_DIR$/resources/views/mails/user/account-verified.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/mails/user/verification-request.blade.php" />
+        <option value="$PROJECT_DIR$/app/User.php" />
       </list>
     </option>
   </component>
@@ -305,12 +285,12 @@
       <option name="presentableId" value="Default" />
       <updated>1567523976127</updated>
       <workItem from="1567523979442" duration="43257000" />
-      <workItem from="1567688015175" duration="65870000" />
+      <workItem from="1567688015175" duration="66525000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="109127000" />
+    <option name="totallyTimeSpent" value="109782000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -322,7 +302,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533512" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -669,19 +649,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="52" column="96" selection-start-line="52" selection-start-column="96" selection-end-line="52" selection-end-column="96" />
-          <folding>
-            <element signature="e#23#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Notifications/User/AccountVerificationRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -741,6 +708,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="52" column="82" selection-start-line="52" selection-start-column="82" selection-end-line="52" selection-end-column="82" />
+          <folding>
+            <element signature="e#23#57#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

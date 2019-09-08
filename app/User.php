@@ -50,6 +50,6 @@ class User extends Authenticatable
     }
 
     public function setBirthdateAttribute($value) {
-        $this->attributes['birthdate'] = Carbon::createFromFormat('d.m.Y', $value)->startOfDay();
+        $this->attributes['birthdate'] = Carbon::createFromFormat('d.m.Y', $value)->toDate();
     }
 }
