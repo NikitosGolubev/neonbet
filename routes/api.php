@@ -1,10 +1,10 @@
 <?php
 
-Route::group(['namespace' => 'API', 'middleware' => 'user_data'], function() {
+Route::group(['namespace' => 'API', 'middleware' => 'user.general_data'], function() {
     Route::group(['prefix' => 'auth'], function () {
         Route::post('/register', 'UserController@store');
         Route::post('/signin', 'AuthController@signin');
-        Route::get('/logout', 'AuthController@logout')->middleware('auth:api');
+        Route::get('/logout', 'AuthController@logout')->middleware('user.valid');
 
         Route::put('/user-verification', 'UserVerificationController@update');
         Route::delete('/user-verification', 'UserVerificationController@destroy');

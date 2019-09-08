@@ -13,5 +13,6 @@ return [
     'invalid_verification_token' => "Provided token is invalid, user can't be identified.",
     'verification_token_expired' => "Verification token is expired. Try to apply for verification
                                     again if it's possible.",
-    "model_is_already_verified" => "The resource is already verified.",
+    'model_is_already_verified' => "The resource is already verified.",
+    'unverified_user' => 'The account must be verified to access this part of service.'
 ];
