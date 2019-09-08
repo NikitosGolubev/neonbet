@@ -48,6 +48,7 @@ trait Verifiable
         $verification_field = self::getVerificationField();
         $model->$verification_field = Carbon::now()->toDateTimeString();
         $model->save();
+        return $model;
     }
 
     /**

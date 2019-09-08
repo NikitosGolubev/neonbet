@@ -33,6 +33,6 @@ class ReCaptcha implements Rule
 
     public function message()
     {
-        return trans('validation.captcha');
+        return trans('custom-validation.captcha');
     }
 }

@@ -26,6 +26,6 @@ class AdultUser implements Rule
 
     public function message()
     {
-        return trans('validation.unentitled_age', ['age' => $this->adultAge]);
+        return trans('custom-validation.unentitled_age', ['age' => $this->adultAge]);
     }
 }

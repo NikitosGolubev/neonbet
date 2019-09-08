@@ -26,6 +26,6 @@ class DateRelevantFuture implements Rule
 
     public function message()
     {
-        return trans('validation.irrelevant_date');
+        return trans('custom-validation.irrelevant_date');
     }
 }

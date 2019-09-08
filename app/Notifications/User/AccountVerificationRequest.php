@@ -21,7 +21,7 @@ class AccountVerificationRequest extends Notification implements ShouldQueue
         $token = $notifiable->getToken();
 
         return (new MailMessage)
-            ->subject(__('mails/account-verification-request.subject'))
+            ->subject(trans('mails/account-verification-request.subject'))
             ->markdown('mails.user.verification-request', [
             'verify_url' => $notifiable->getVerificationURL($token),
             'reset_url' => $notifiable->getResetVerificationURL($token)

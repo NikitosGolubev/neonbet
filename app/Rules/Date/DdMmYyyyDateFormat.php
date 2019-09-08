@@ -16,6 +16,6 @@ class DdMmYyyyDateFormat implements Rule
 
     public function message()
     {
-        return trans('validation.dd-mm-yyyy_date-format');
+        return trans('custom-validation.dd-mm-yyyy_date-format');
     }
 }

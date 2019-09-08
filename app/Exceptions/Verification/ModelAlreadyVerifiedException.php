@@ -8,7 +8,7 @@ class ModelAlreadyVerifiedException extends Exception
 {
     public function render($request) {
         return response()->json([
-            'message' => trans('validation.model_is_already_verified')
+            'message' => trans('custom-validation.model_is_already_verified')
         ], 406);
     }
 }

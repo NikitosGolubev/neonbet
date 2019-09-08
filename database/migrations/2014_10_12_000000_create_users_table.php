@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('fullname');
-            $table->timestamp('birthdate');
+            $table->dateTime('birthdate');
             $table->string('userpick')->default('storage/defaults/user-avatar.jpg');
             $table->float('balance')->unsigned()->default(0);
             $table->timestamp('banned_at')->nullable();

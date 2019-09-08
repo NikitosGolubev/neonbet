@@ -16,6 +16,6 @@ class StringComplexity implements Rule
 
     public function message()
     {
-        return trans('validation.string_complexity');
+        return trans('custom-validation.string_complexity');
     }
 }

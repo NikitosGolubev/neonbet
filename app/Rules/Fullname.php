@@ -16,6 +16,6 @@ class Fullname implements Rule
 
     public function message()
     {
-        return trans('validation.fullname');
+        return trans('custom-validation.fullname');
     }
 }

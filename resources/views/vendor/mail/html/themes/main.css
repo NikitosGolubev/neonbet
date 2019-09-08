@@ -272,23 +272,22 @@ img {
 /* Promotions */
 
 .promotion {
-    background-color: #FFFFFF;
-    border: 2px dashed #9BA2AB;
+    background-color: #202428;
+    border: 2px dashed #656f79;
     margin: 0;
-    margin-bottom: 25px;
-    margin-top: 25px;
-    padding: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     width: 100%;
     -premailer-cellpadding: 0;
     -premailer-cellspacing: 0;
     -premailer-width: 100%;
-}
-
-.promotion h1 {
-    text-align: center;
+    padding: 10px 20px;
 }
 
 .promotion p {
     font-size: 15px;
+    font-weight: bold;
     text-align: center;
+    color: #fff !important;
+    margin: 0;
 }

@@ -15,6 +15,6 @@ class Nickname implements Rule
 
     public function message()
     {
-        return trans('validation.nickname');
+        return trans('custom-validation.nickname');
     }
 }

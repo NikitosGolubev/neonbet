@@ -30,6 +30,6 @@ class ValidDate implements Rule
 
     public function message()
     {
-        return trans('validation.invalid_date');
+        return trans('custom-validation.invalid_date');
     }
 }

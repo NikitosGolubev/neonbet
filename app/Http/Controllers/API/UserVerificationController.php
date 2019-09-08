@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Requests\ModelVerificationRequest;
 use App\Http\Controllers\Controller;
+use App\Notifications\User\AccountVerified;
 use App\User;
 
 class UserVerificationController extends Controller
@@ -13,7 +14,9 @@ class UserVerificationController extends Controller
      */
     public function update(ModelVerificationRequest $request) {
         $token = $request->getData()['verification_token'];
-        User::verify($token);
+        $user = User::verify($token);
+
+        $user->notify(new AccountVerified);
 
         return response()->json([
             'message' => 'Verified'

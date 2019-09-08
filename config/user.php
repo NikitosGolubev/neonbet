@@ -9,5 +9,6 @@ return [
     ],
 
     'verification_url' => env('APP_URL').'/mock-pages/verify-user',
-    'reset_registration_url' => env('APP_URL').'/mock-pages/reset-verification'
+    'reset_registration_url' => env('APP_URL').'/mock-pages/reset-verification',
+    'login_url' => env('APP_URL').'/mock-pages/login'
 ];
