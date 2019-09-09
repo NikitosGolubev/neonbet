@@ -14,10 +14,16 @@ class UserController extends Controller
         $this->middleware('recaptcha')->only(['store']);
     }
 
+    /**
+     * Provides user data
+     */
     public function index(Request $request) {
         return $request->user();
     }
 
+    /**
+     * Creates user
+     */
     public function store(RegisterRequest $request) {
         $user_data = $request->getData();
 

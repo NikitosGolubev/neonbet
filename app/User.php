@@ -3,6 +3,7 @@
 namespace App;
 
 use App\ModelEnhancers\Verifiable;
+use App\Services\Facades\LoginType;
 use Cog\Laravel\Ban\Traits\Bannable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -25,6 +26,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password'
     ];
+
+    /**
+     * Laravel passport username field customization
+     */
+    public function findForPassport($username)
+    {
+        $login_type = LoginType::identify();
+        return $this->where($login_type, $username)->first();
+    }
 
     // Verification URL for user to follow
     public function getVerificationURL($token) {

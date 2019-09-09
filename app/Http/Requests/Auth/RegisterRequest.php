@@ -24,6 +24,8 @@ class RegisterRequest extends ApiRequest
     private $birthdateParam = 'birthdate';
     private $passwordParam = 'password';
 
+
+
     public function getData()
     {
         return [
@@ -35,6 +37,7 @@ class RegisterRequest extends ApiRequest
         ];
     }
 
+
     protected function getSanitizedParams()
     {
         return [
@@ -44,15 +47,21 @@ class RegisterRequest extends ApiRequest
         ];
     }
 
-    public function authorize()
-    {
-        return true;
-    }
 
     public function rules()
     {
+        $nick_min_len = config('user.nickname_min_len');
+        $nick_max_len = config('user.nickname_max_len');
+        $pasw_min_len = config('user.password_min_len');
+
         return [
-            $this->nicknameParam => ['required', 'min:6', 'max:32', new Nickname, 'unique:users,nickname'],
+            $this->nicknameParam => [
+                'required',
+                "min:$nick_min_len",
+                "max:$nick_max_len",
+                new Nickname,
+                'unique:users,nickname'
+            ],
             $this->emailParam => ['required', 'max:255', 'email:rfc,dns', 'unique:users,email'],
             $this->fullnameParam => ['required', 'string', 'max:255', new Fullname],
             $this->birthdateParam => [
@@ -64,7 +73,7 @@ class RegisterRequest extends ApiRequest
                 new DateRelevantFuture,
                 new AdultUser
             ],
-            $this->passwordParam => ['required', 'min:8', 'max:255', new StringComplexity, 'confirmed']
+            $this->passwordParam => ['required', "min:$pasw_min_len", 'max:255', new StringComplexity, 'confirmed']
         ];
     }
 }
