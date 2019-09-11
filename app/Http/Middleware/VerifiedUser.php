@@ -11,7 +11,7 @@ class VerifiedUser
     {
         $user = $request->user();
 
-        if (!$user->isVerified) throw new UnverifiedUserException;
+        if (!$user->isVerified()) throw new UnverifiedUserException;
 
         return $next($request);
     }

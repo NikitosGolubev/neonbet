@@ -18,7 +18,8 @@ class UserController extends Controller
      * Provides user data
      */
     public function index(Request $request) {
-        return $request->user();
+        $user = $request->user();
+        return response()->json($user, 200);
     }
 
     /**

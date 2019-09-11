@@ -16,7 +16,7 @@ Route::group(['namespace' => 'API', 'middleware' => 'user.general_data'], functi
         // reset password validation & functionality
     });
 
-    Route::group(['middleware' => 'auth:api'], function () {
+    Route::group(['middleware' => 'user.valid'], function () {
         Route::get('/user', 'UserController@index');
     });
 
