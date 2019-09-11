@@ -20,6 +20,11 @@ class AuthController extends Controller
         $this->http = $http;
     }
 
+    /*****************************************************/
+    /*----------------REQUEST HANDLERS-------------------*/
+    /*****************************************************/
+
+
     public function signin(LoginRequest $request) {
         $user_data = $request->getData();
 
@@ -30,9 +35,16 @@ class AuthController extends Controller
         return response()->json($response, 200);
     }
 
+
+
     public function logout(Request $request) {
 
     }
+
+
+    /*****************************************************/
+    /*-------------------HELPERS-------------------------*/
+    /*****************************************************/
 
     /**
      * @throws UnverifiedUserException
