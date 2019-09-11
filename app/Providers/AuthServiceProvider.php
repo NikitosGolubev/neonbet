@@ -29,5 +29,28 @@ class AuthServiceProvider extends ServiceProvider
         Passport::routes(function ($router) {
             $router->forAccessTokens();
         });
+
+        Passport::tokensExpireIn(
+            $this->getAccessTokenExpiration()
+        );
+
+        Passport::refreshTokensExpireIn(
+            now()->addSeconds(config('auth.passport.tokens_exp_sec.refresh'))
+        );
+    }
+
+    /**
+     * Calculates the expiration of access token
+     */
+    private function getAccessTokenExpiration() {
+        $remember_me_param =  config('auth.passport.remember_me_param');
+
+        $token_exp_secs = config('auth.passport.tokens_exp_sec.access'); // default exp
+
+        if (request($remember_me_param)) {
+            $token_exp_secs = config('auth.passport.tokens_exp_sec.remembered_access');
+        }
+
+        return now()->addSeconds($token_exp_secs);
     }
 }

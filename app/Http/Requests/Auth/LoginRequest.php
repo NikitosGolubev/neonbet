@@ -15,6 +15,7 @@ class LoginRequest extends ApiRequest
 
     private $loginParam = 'login';
     private $passwordParam = 'password';
+    private $rememberMeParam = 'remember_me';
 
 
 
@@ -22,7 +23,8 @@ class LoginRequest extends ApiRequest
     {
         return [
             'login' => request($this->loginParam),
-            'password' => request($this->passwordParam)
+            'password' => request($this->passwordParam),
+            'remember_me' => !!request($this->rememberMeParam)
         ];
     }
 
@@ -38,8 +40,8 @@ class LoginRequest extends ApiRequest
         $pasw_min_len = config('user.password_min_len');
 
         return [
-            'login' => LoginType::getRules(),
-            'password' => ['required', "min:$pasw_min_len", "max:255"]
+            $this->loginParam => LoginType::getRules(),
+            $this->passwordParam => ['required', "min:$pasw_min_len", "max:255"]
         ];
     }
 

@@ -51,7 +51,13 @@ return [
     'passport' => [
         'client_id' => env('OAUTH_CLIENT_ID'),
         'client_secret' => env('OAUTH_CLIENT_SECRET'),
-        'grant_type' => env('OAUTH_GRANT_TYPE')
+        'grant_type' => env('OAUTH_GRANT_TYPE'),
+        'tokens_exp_sec' => [
+            'access' => 86400, // day
+            'remembered_access' => 1296000, // 15 days
+            'refresh' => 5184000 // 60 days
+        ],
+        'remember_me_param' => 'remember_me'
     ],
 
     /*
