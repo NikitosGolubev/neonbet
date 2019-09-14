@@ -187,6 +187,7 @@ return [
         App\Providers\TelescopeServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\LoginTypeServiceProvider::class,
+        App\Providers\TimezoneServiceProvider::class,
 
     ],
 
@@ -239,7 +240,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'LoginType' => App\Services\Facades\LoginType::class,
-
+        'Timezone' => App\Services\Facades\Timezone::class,
     ],
 
 ];

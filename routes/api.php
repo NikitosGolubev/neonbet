@@ -11,13 +11,16 @@ Route::group(['namespace' => 'API', 'middleware' => 'user.general_data'], functi
         Route::put('/user-verification', 'UserVerificationController@update');
         Route::delete('/user-verification', 'UserVerificationController@destroy');
 
-        // user email verification
         // reset password apply
         // reset password validation & functionality
     });
 
     Route::group(['middleware' => 'user.valid'], function () {
-        Route::get('/user', 'UserController@index');
+        Route::get('/user', 'UserController@show');
     });
 
+    Route::group(['namespace' => 'GeneralData'], function() {
+        Route::get('/locales', 'LocaleController@show');
+        Route::get('/timezones', 'TimezoneController@show');
+    });
 });

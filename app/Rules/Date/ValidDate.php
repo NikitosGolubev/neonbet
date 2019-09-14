@@ -2,6 +2,7 @@
 
 namespace App\Rules\Date;
 
+use App\Services\Facades\Timezone;
 use Carbon\Carbon;
 use Illuminate\Contracts\Validation\Rule;
 
@@ -10,7 +11,7 @@ class ValidDate implements Rule
 
     public function passes($attribute, $value)
     {
-        $timezone = request('timezone');
+        $timezone = Timezone::getCurrent();
 
         try {
             $date = Carbon::createFromFormat('d.m.Y', $value, $timezone)->startOfDay()->toArray();
