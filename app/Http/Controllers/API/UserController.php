@@ -32,7 +32,8 @@ class UserController extends Controller
 
         $user->assignRole(config('user.roles.ordinary'));
 
-        $user->notify(new AccountVerificationRequest);
+        $locale = app()->getLocale();
+        $user->notify((new AccountVerificationRequest)->locale($locale));
 
         return response()->json([
             'message' => 'Created',

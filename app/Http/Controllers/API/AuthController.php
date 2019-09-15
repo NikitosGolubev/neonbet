@@ -74,6 +74,7 @@ class AuthController extends Controller
                     'username' => $login,
                     'password' => $password,
                     config('auth.passport.remember_me_param') => $remember_me,
+                    'login_type' => LoginType::identify(),
                     'scope' => '*',
                 ],
             ]);
