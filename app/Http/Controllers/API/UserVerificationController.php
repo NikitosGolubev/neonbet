@@ -16,8 +16,7 @@ class UserVerificationController extends Controller
         $token = $request->getData()['verification_token'];
         $user = User::verify($token);
 
-        $locale = app()->locale();
-        $user->notify((new AccountVerified)->locale($locale));
+        $user->notify((new AccountVerified)->locale($this->locale()));
 
         return response()->json([
             'message' => 'Verified'
