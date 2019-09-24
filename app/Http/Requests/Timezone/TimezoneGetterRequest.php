@@ -8,7 +8,7 @@ class TimezoneGetterRequest extends ApiRequest
 {
     private $tzGroupsParam = 'groups';
 
-    public function getData()
+    public function getData(): array
     {
         return [
             'groups' => $this->handleTimezoneGroups()

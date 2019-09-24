@@ -10,7 +10,7 @@ $factory->define(User::class, function (Faker $faker) {
     return [
         'nickname' => $faker->unique()->userName,
         'email' => $faker->unique()->safeEmail,
-        'password' => Hash::make('secret'),
+        'password' => 'secret',
         'fullname' => $faker->firstName.' '.$faker->lastName,
         'birthdate' => $faker->date('d.m.Y', Carbon::create(2000, 1, 1, 0, 0, 0)->timestamp),
         'verified_at' => getVerifiedAt()

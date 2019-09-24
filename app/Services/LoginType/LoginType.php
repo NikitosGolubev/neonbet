@@ -4,13 +4,14 @@
 namespace App\Services\LoginType;
 
 
+use App\Rules\VerifiedUser;
 use App\User;
 
 /**
  * Provides opportunity for flexible selection between multiple login types and
  * all the facilities surrounding them.
  */
-class LoginType
+class LoginType implements LoginTypeContract
 {
     /******---------------------------------------------*******/
     /***************DEFAULT SETTINGS (CHANGEABLE)**************/
@@ -27,8 +28,15 @@ class LoginType
         $nick_max_len = config('user.nickname_max_len');
 
         return [
-            'nickname' => ['required', "min:$nick_min_len", "max:$nick_max_len", 'exists:users,nickname'],
-            'email' => ['required', 'max:255', 'email', 'exists:users,email']
+            'nickname' => [
+                'bail', 'required', "min:$nick_min_len",
+                "max:$nick_max_len", 'exists:users,nickname', new VerifiedUser('nickname')
+            ],
+
+            'email' => [
+                'bail', 'required', 'max:255',
+                'email', 'exists:users,email', new VerifiedUser('email')
+            ]
         ];
     }
 
@@ -36,10 +44,9 @@ class LoginType
     /***********************PUBLIC API*************************/
     /******---------------------------------------------*******/
 
-    /**
-     * Returns array with 1 validation message for all the validation rules of login input.
-     */
-    public function unitedValidationMessage($validation_message) {
+    // (check comments to methods in their contracts)
+
+    public function unitedValidationMessage(string $validation_message): array {
         return [
             'required' => $validation_message,
             'min' => $validation_message,
@@ -49,9 +56,6 @@ class LoginType
         ];
     }
 
-    /**
-     * Finds user at db by provided login.
-     */
     public function findUserByLogin($login) {
         $login_type = $this->identify();
 
@@ -59,10 +63,7 @@ class LoginType
         return $user;
     }
 
-    /**
-     * Returns a login type which user have chosen.
-     */
-    public function identify() {
+    public function identify(): string {
         $default_login_type = $this->defaultType();
         $login_type_param = self::LOGIN_TYPE_PARAM;
         $supported_login_types = $this->types();
@@ -76,10 +77,8 @@ class LoginType
         return $default_login_type;
     }
 
-    /**
-     * Return rules for validation of currently chosen login type.
-     */
-    public function getRules() {
+
+    public function getRules(): array {
         $login_type = $this->identify();
         return $this->typesAndRules()[$login_type];
     }

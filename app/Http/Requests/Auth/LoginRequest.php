@@ -19,7 +19,7 @@ class LoginRequest extends ApiRequest
 
 
 
-    public function getData()
+    public function getData(): array
     {
         return [
             'login' => request($this->loginParam),

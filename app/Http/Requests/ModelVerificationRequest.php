@@ -9,7 +9,7 @@ class ModelVerificationRequest extends ApiRequest
     private $verificationTokenParam = 'v_token';
 
 
-    public function getData()
+    public function getData(): array
     {
         return [
             'verification_token' => request($this->verificationTokenParam)

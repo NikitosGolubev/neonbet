@@ -45,7 +45,11 @@ class Kernel extends HttpKernel
         'user.valid' => [
             'auth:api',
             'user.verified'
-        ]
+        ],
+
+        'local' => [
+            'local.fake_ip'
+        ],
     ];
 
     /**
@@ -84,5 +88,9 @@ class Kernel extends HttpKernel
         'recaptcha' => \App\Http\Middleware\ReCaptcha::class,
         'user.general_data' => \App\Http\Middleware\GeneralUserData::class,
         'user.verified' => \App\Http\Middleware\VerifiedUser::class,
+        'security.filter_ip' => \App\Http\Middleware\FilterIp::class,
+
+        // Local middlewares
+        'local.fake_ip' => \App\Http\Middleware\LocalDev\IpChanger::class,
     ];
 }

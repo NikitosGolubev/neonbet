@@ -8,7 +8,7 @@ namespace App\Services\Timezone;
  * Supposed to be registered as singleton.
  * Encapsulates every piece of functionality for determining and fetching timezones.
  */
-class Timezone
+class Timezone implements TimezoneContract
 {
     /** This list is taken from https://www.php.net/manual/en/timezones.php */
     const PHP_SUPPORTED_TIMEZONE_GROUPS = [
@@ -32,14 +32,13 @@ class Timezone
     /*----------------API--------------------*/
     /*****************************************/
 
-    /**
-     * Checks if provided timezone group exists.
-     */
-    public function isTzGroupExists($tz_group) {
+    // (check methods comments in contacts)
+
+    public function isTzGroupExists($tz_group): bool {
         return in_array($tz_group, self::PHP_SUPPORTED_TIMEZONE_GROUPS);
     }
 
-    public function setCurrent() {
+    public function setCurrent(): void {
         $tz_param = self::TZ_REQUEST_PARAM;
 
         if (request()->has($tz_param) && !is_null(request($tz_param))) {

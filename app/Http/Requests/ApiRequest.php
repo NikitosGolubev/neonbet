@@ -9,5 +9,5 @@ abstract class ApiRequest extends FormRequest
     /**
      * Returns collection with data which can be access by clients of request.
      */
-    abstract public function getData();
+    abstract public function getData(): array;
 }

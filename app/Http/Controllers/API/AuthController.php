@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\API;
 
 use App\Exceptions\User\InvalidCredentialsException;
-use App\Exceptions\User\UnverifiedUserException;
 use App\Http\Requests\Auth\LoginRequest;
 use App\Services\Facades\LoginType;
 use GuzzleHttp\Client;
@@ -28,8 +27,6 @@ class AuthController extends Controller
     public function signin(LoginRequest $request) {
         $user_data = $request->getData();
 
-        $this->checkIfUserVerified($user_data['login']);
-
         $response = $this->requestUserAuth($user_data['login'], $user_data['password'], $user_data['remember_me']);
 
         return response()->json($response, 200);
@@ -47,15 +44,6 @@ class AuthController extends Controller
     /*****************************************************/
     /*-------------------HELPERS-------------------------*/
     /*****************************************************/
-
-    /**
-     * @throws UnverifiedUserException
-     */
-    private function checkIfUserVerified($login) {
-        $user = LoginType::findUserByLogin($login);
-
-        if (!$user->isVerified()) throw new UnverifiedUserException;
-    }
 
     /**
      * Attempts to authorize user at system by provided credentials.

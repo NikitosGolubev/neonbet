@@ -3,14 +3,12 @@
 namespace App\Exceptions\Verification;
 
 use Exception;
+use Illuminate\Http\Response;
 
 class VerificationTokenInvalidException extends Exception
 {
     public function render($request) {
-        return response()->json([
-            'error' => [
-                'message' => trans('custom-validation.invalid_verification_token')
-            ]
-        ], 400);
+        $message = trans('custom-validation.invalid_verification_token');
+        return Response::printError($message, 400);
     }
 }

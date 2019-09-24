@@ -62,4 +62,25 @@ class User extends Authenticatable
     public function setBirthdateAttribute($value) {
         $this->attributes['birthdate'] = Carbon::createFromFormat('d.m.Y', $value)->toDate();
     }
+
+
+    /*****************************************/
+    /*************MODEL SCOPES****************/
+    /*****************************************/
+
+    public function scopeFindByEmail($query, $email) {
+        return $query->where('email', $email);
+    }
+
+    /*****************************************/
+    /***********MODEL RELATIONSHIPS***********/
+    /*****************************************/
+
+    public function passwordResetRecords() {
+        return $this->hasMany('App\PasswordResetRecord', 'user_id');
+    }
+
+    /*****************************************/
+    /***********CONVENIENT GETTERS************/
+    /*****************************************/
 }

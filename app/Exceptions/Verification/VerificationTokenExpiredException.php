@@ -3,14 +3,12 @@
 namespace App\Exceptions\Verification;
 
 use Exception;
+use Illuminate\Http\Response;
 
 class VerificationTokenExpiredException extends Exception
 {
     public function render($request) {
-        return response()->json([
-            'error' => [
-                'message' => trans('custom-validation.verification_token_expired')
-            ]
-        ], 408);
+        $message = trans('custom-validation.verification_token_expired');
+        return Response::printError($message, 408);
     }
 }

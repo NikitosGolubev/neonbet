@@ -3,14 +3,12 @@
 namespace App\Exceptions\User;
 
 use Exception;
+use Illuminate\Http\Response;
 
 class UnverifiedUserException extends Exception
 {
     public function render($request) {
-        return response()->json([
-            'error' => [
-                'message' => trans('custom-validation.unverified_user')
-            ]
-        ], 403);
+        $message = trans('custom-validation.unverified_user');
+        return Response::printError($message, 403);
     }
 }
