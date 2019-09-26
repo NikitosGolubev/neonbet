@@ -3,6 +3,7 @@
 
 namespace App\Services\PasswordReset;
 
+use App\Events\PasswordResetAttemptCreated;
 use App\Services\PasswordReset\Storage;
 use App\Services\PasswordReset\Contracts\StorageContract;
 use App\User;
@@ -19,7 +20,9 @@ abstract class AbstractPasswordResetService
         $validation_rules = $this->rules($storage);
         $this->validate($validation_rules);
 
-        $this->createAttempt($storage);
+        $attempt = $this->createAttempt($storage);
+
+        event(new PasswordResetAttemptCreated($user, $attempt));
     }
 
     /** Creates a data representation of users' attempt to reset password. */
@@ -31,6 +34,8 @@ abstract class AbstractPasswordResetService
             'ip_id' => $storage->getIpModel()->id,
             'expires_at' => Carbon::now()->addSeconds($attempt_expiration)
         ]);
+
+        return $attempt;
     }
 
     /** Provides list of validation layers to apply before creating attempt */

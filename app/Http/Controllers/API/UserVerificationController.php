@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\AccountVerified;
 use App\Http\Requests\ModelVerificationRequest;
 use App\Http\Controllers\Controller;
-use App\Notifications\User\AccountVerified;
 use App\User;
 
 class UserVerificationController extends Controller
@@ -16,7 +16,7 @@ class UserVerificationController extends Controller
         $token = $request->getData()['verification_token'];
         $user = User::verify($token);
 
-        $user->notify((new AccountVerified)->locale($this->locale()));
+        event(new AccountVerified($user));
 
         return response()->json([
             'message' => 'Verified'

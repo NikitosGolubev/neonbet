@@ -17,7 +17,13 @@ class PasswordResetRecord extends Model
     }
 
     public function isClosed() {
-        return !is_null($this->reported_at);
+        return !is_null($this->closed_at);
+    }
+
+    public function approve($value) {
+        $this->approved_at = $value;
+        $this->closed_at = now();
+        $this->save();
     }
 
     /*****************************************/

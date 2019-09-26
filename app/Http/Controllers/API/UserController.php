@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\UserRegistered;
 use App\Http\Requests\Auth\RegisterRequest;
-use App\Notifications\User\AccountVerificationRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -32,7 +32,7 @@ class UserController extends Controller
 
         $user->assignRole(config('user.roles.ordinary'));
 
-        $user->notify((new AccountVerificationRequest)->locale($this->locale()));
+        event(new UserRegistered($user));
 
         return response()->json([
             'message' => 'Created',
