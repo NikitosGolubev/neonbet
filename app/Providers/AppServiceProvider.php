@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -41,6 +42,22 @@ class AppServiceProvider extends ServiceProvider
             if (app()->isLocal()) {
                 $_SERVER['REMOTE_ADDR'] = $fake_ip;
             }
+        });
+
+        Router::macro('getUserVerificationUrl', function ($token) {
+            return config('user.verification_url').'?v_token='.$token;
+        });
+
+        Router::macro('getResetUserVerificationUrl', function ($token) {
+            return config('user.reset_registration_url').'?v_token='.$token;
+        });
+
+        Router::macro('getPasswordResetApproveUrl', function ($token) {
+            return config('user.password_reset.approve_url').'?v_token='.$token;
+        });
+
+        Router::macro('getPasswordResetReportUrl', function ($token) {
+            return config('user.password_reset.report_url').'?v_token='.$token;
         });
     }
 }

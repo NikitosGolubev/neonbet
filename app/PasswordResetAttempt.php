@@ -29,4 +29,8 @@ class PasswordResetAttempt extends Model
     public function record() {
         return $this->belongsTo('App\PasswordResetRecord', 'record_id');
     }
+
+    public function ipModel() {
+        return $this->belongsTo('App\CollectedIp', 'ip_id');
+    }
 }

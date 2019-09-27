@@ -33,4 +33,8 @@ class PasswordResetRecord extends Model
     public function attempts() {
         return $this->hasMany('App\PasswordResetAttempt', 'record_id');
     }
+
+    public function user() {
+        return $this->belongsTo('App\User', 'user_id');
+    }
 }

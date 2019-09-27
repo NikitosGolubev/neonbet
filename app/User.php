@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Exceptions\User\ProvidedNewPasswordEqualToOldException;
 use App\ModelEnhancers\Verifiable;
 use App\Services\Facades\LoginType;
 use Cog\Laravel\Ban\Traits\Bannable;
@@ -34,16 +35,6 @@ class User extends Authenticatable
     {
         $login_type = LoginType::identify();
         return $this->where($login_type, $username)->first();
-    }
-
-    // Verification URL for user to follow
-    public function getVerificationURL($token) {
-        return config('user.verification_url').'?v_token='.$token;
-    }
-
-    // Reset URL for user to follow
-    public function getResetVerificationURL($token) {
-        return config('user.reset_registration_url').'?v_token='.$token;
     }
 
     public function getVerificationExpiration() {
@@ -81,6 +72,15 @@ class User extends Authenticatable
     }
 
     /*****************************************/
-    /***********CONVENIENT GETTERS************/
+    /***********CONVENIENT SETTERS************/
     /*****************************************/
+
+    public function setNewPassword($password) {
+        if (Hash::check($password, $this->password)) {
+            throw new ProvidedNewPasswordEqualToOldException;
+        }
+
+        $this->password = $password;
+        $this->save();
+    }
 }

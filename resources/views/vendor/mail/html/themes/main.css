@@ -217,6 +217,11 @@ img {
     -webkit-text-size-adjust: none;
 }
 
+.text_primary {color: #c000ff;}
+.text_secondary {color: #656f79;}
+.text_danger {color: #dd3659;}
+.text_success {color: #80ce83;}
+
 .button-purple, .button-primary {
     background-color: #c000ff;
     border-top: 10px solid #c000ff;

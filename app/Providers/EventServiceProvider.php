@@ -20,6 +20,10 @@ class EventServiceProvider extends ServiceProvider
 
         'App\Events\AccountVerified' => [
             'App\Listeners\Notifications\SendUserAccountVerifiedNotification'
+        ],
+
+        'App\Events\PasswordResetApproved' => [
+            'App\Listeners\Notifications\SendUserPasswordResetApprovedNotification'
         ]
     ];
 

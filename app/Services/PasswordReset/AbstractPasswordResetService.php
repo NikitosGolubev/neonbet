@@ -3,7 +3,9 @@
 
 namespace App\Services\PasswordReset;
 
+use App\Events\PasswordResetApproved;
 use App\Events\PasswordResetAttemptCreated;
+use App\PasswordResetAttempt;
 use App\Services\PasswordReset\Storage;
 use App\Services\PasswordReset\Contracts\StorageContract;
 use App\User;
@@ -11,9 +13,7 @@ use Carbon\Carbon;
 
 abstract class AbstractPasswordResetService
 {
-    /**
-     * Tries to offer to user password reset option.
-     */
+    /** Tries to offer to user password reset option. */
     public function attempt(User $user) {
         $storage = $this->makeStorage($user);
 
@@ -23,6 +23,20 @@ abstract class AbstractPasswordResetService
         $attempt = $this->createAttempt($storage);
 
         event(new PasswordResetAttemptCreated($user, $attempt));
+    }
+
+    /** Tries to change user password to new one */
+    public function attemptToSetNewPassword($token, $new_password) {
+        $reset_attempt = PasswordResetAttempt::getModelFromToken($token);
+        PasswordResetAttempt::validate($token, $reset_attempt);
+
+        $user = $reset_attempt->record->user;
+
+        $user->setNewPassword($new_password);
+
+        PasswordResetAttempt::verify($token, false, $reset_attempt);
+
+        event(new PasswordResetApproved($user));
     }
 
     /** Creates a data representation of users' attempt to reset password. */

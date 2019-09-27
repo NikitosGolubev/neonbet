@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
+use App\Events\PasswordResetApproved;
 use App\Http\Requests\Auth\ForgetPasswordRequest;
+use App\Http\Requests\Auth\PasswordResetApproveRequest;
 use App\Http\Requests\ModelVerificationRequest;
 use App\PasswordResetAttempt;
 use App\Services\PasswordReset\PasswordReset;
 use App\User;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
 class PasswordResetController extends Controller
@@ -21,6 +22,7 @@ class PasswordResetController extends Controller
         $this->middleware('recaptcha')->only(['store']);
     }
 
+    /** Request for password change */
     public function store(ForgetPasswordRequest $request) {
         $user_email = $request->getData()['email'];
 
@@ -31,16 +33,24 @@ class PasswordResetController extends Controller
         return response()->json(['message' => 'OK'], 200);
     }
 
+    /** If client is permitted to change password? */
     public function edit(ModelVerificationRequest $request) {
         $token = $request->getData()['verification_token'];
-        PasswordResetAttempt::validate($token);
 
-        PasswordResetAttempt::verify($token, false);
+        PasswordResetAttempt::validate($token);
 
         return response()->json(['message' => 'OK'], 200);
     }
 
-    public function update() {
+    /** Changing old password to new one */
+    public function update(PasswordResetApproveRequest $request) {
+        $request_data = $request->getData();
 
+        $token = $request_data['verification_token'];
+        $new_password = $request_data['new_password'];
+
+        $this->passwordResetService->attemptToSetNewPassword($token, $new_password);
+
+        return response()->json(['message' => 'OK'], 200);
     }
 }

@@ -25,4 +25,6 @@ return [
     'recent_password_reset_report' => 'You have recently reported an attempt to reset password from your account. The attempt to reset password would be allowed at :date.',
 
     'recent_password_reset_attempt' => 'Your email has recently been passed with a purpose of attempting to reset password from your account. We suppose that you have received an e-mail from us. If you have not attempted to reset your password, please open the email and REPORT it. Otherwise, confirm it or ignore. The next attempt is going to be available at :date.',
-];
+
+    'new_password_equal_to_old' => 'Provided password is equals to old one you have, make it different.',
+    ];

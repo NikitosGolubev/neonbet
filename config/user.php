@@ -20,7 +20,9 @@ return [
         'min_time_to_allow_attempt_after_approve' => 86400,
         'min_time_to_allow_attempt_after_report' => 3600,
         'attempts_delays' => [180,  600, 3600],
-        'attempt_expiration' => 86400
+        'attempt_expiration' => 86400,
+        'approve_url' => env('APP_URL').'/mock-pages/can-set-password',
+        'report_url' => env('APP_URL').'/mock-pages/report-set-password',
     ]
 
 ];

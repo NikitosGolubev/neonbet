@@ -6,7 +6,7 @@
                     <td align="{{ $align ?? 'left' }}">
                         <table border="0" cellpadding="0" cellspacing="0" role="presentation">
                             <tr>
-                                <td>
+                                <td style="text-align: center;">
                                     <a href="{{ $url }}" class="button button-{{ $color ?? 'primary' }}" target="_blank">{{ $slot }}</a>
                                 </td>
                             </tr>

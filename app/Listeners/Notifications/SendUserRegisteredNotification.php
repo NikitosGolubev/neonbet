@@ -12,8 +12,9 @@ class SendUserRegisteredNotification
     public function handle(UserRegistered $event)
     {
         $user = $event->getUser();
+        $token = $user->getToken();
         $locale = app()->getLocale();
 
-        $user->notify((new AccountVerificationRequest)->locale($locale));
+        $user->notify((new AccountVerificationRequest($token))->locale($locale));
     }
 }

@@ -8,6 +8,7 @@ use App\Exceptions\Verification\VerificationTokenExpiredException;
 use App\Exceptions\Verification\VerificationTokenInvalidException;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Crypt;
+use mysql_xdevapi\Exception;
 
 /**
  * Verifies some model using token-based approach.
@@ -35,8 +36,10 @@ trait Verifiable
     }
 
     /** Attempts to verify model. */
-    public static function verify($token, $is_validation_required = true) {
-        $model = self::getModelFromToken($token);
+    public static function verify($token, $is_validation_required = true, $model = null) {
+        if (is_null($model)) {
+            $model = self::getModelFromToken($token);
+        }
 
         if ($is_validation_required) {
             self::validate($token, $model);
@@ -114,6 +117,7 @@ trait Verifiable
     public static function validateExpiration($model, $token) {
         $token_data = self::parseToken($token);
         $expiration_date = $token_data['exp'];
+
 
         if (self::isDateExpired($expiration_date)) {
             throw self::getTokenExpiredException();
