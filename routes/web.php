@@ -13,4 +13,5 @@ Route::group(['prefix' => 'mock-pages', 'namespace' => 'Mock'], function () {
    Route::get('/forget-password', 'MockController@forgetPassword');
    Route::get('/set-password', 'MockController@setPassword');
    Route::get('/can-set-password', 'MockController@canSetPassword');
+   Route::get('/report-set-password', 'MockController@reportSetPassword');
 });

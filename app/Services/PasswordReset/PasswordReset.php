@@ -16,10 +16,9 @@ class PasswordReset extends AbstractPasswordResetService
         $last_reset_record = $storage->getLastResetRecord();
 
         return [
-//            new EnoughTimePassedSinceLastApproval($last_reset_record),
+            new EnoughTimePassedSinceLastApproval($last_reset_record),
             new EnoughTimePassedSinceLastReport($last_reset_record),
-            /** @todo Remove validation comment */
-//            new EnoughTimePassedSinceLastAttempt($last_reset_record)
+            new EnoughTimePassedSinceLastAttempt($last_reset_record)
         ];
     }
 }

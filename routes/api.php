@@ -19,6 +19,7 @@ Route::group([
             Route::post('/reset-password', 'PasswordResetController@store');
             Route::get('/reset-password', 'PasswordResetController@edit');
             Route::put('/reset-password', 'PasswordResetController@update');
+            Route::delete('/reset-password', 'PasswordResetController@destroy');
         });
 
         Route::group(['middleware' => 'user.valid'], function () {

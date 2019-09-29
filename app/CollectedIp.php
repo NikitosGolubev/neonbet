@@ -29,6 +29,42 @@ class CollectedIp extends Model implements BannableContract
 
     /** Returns ban-specific data */
     public function getBanData() {
-        return $this->bans->first();
+        return $this->bans->last();
+    }
+
+    public function banForPasswordResetAbuse() {
+        if ($this->isNotBanned()) {
+            $reason = trans('bans.ip_password_reset_abuse');
+
+            $isDerivedPermanentBan = $this->banPermanentIfTempBansExceeded($reason);
+
+            if (!$isDerivedPermanentBan) {
+                $ban_length = config('user.ip.bans_length.password_reset_abuse');
+
+                $exp = Carbon::now()->addSeconds($ban_length);
+                return $this->ban([
+                    'expired_at' => $exp,
+                    'comment' => $reason
+                ]);
+            }
+        }
+    }
+
+    /** Bans model permanently if it has more than allowed temporary bans in the past. */
+    public function banPermanentIfTempBansExceeded($current_ban_reason) {
+        $max_num_temp_bans = config('user.ip.max_temp_bans');
+        $num_prev_bans = count($this->bans);
+        $permanent_ban_reason = trans('bans.ip_temp_bans_exceeded', ['number' => $max_num_temp_bans]);
+        $reason = $permanent_ban_reason.' '.$current_ban_reason;
+
+        if ($num_prev_bans >= $max_num_temp_bans) {
+            $this->ban([
+                'comment' => $reason
+            ]);
+
+            return true;
+        }
+
+        return false;
     }
 }

@@ -6,6 +6,7 @@ namespace App\Services\PasswordReset;
 use App\Events\PasswordResetApproved;
 use App\Events\PasswordResetAttemptCreated;
 use App\PasswordResetAttempt;
+use App\Services\PasswordReset\Exceptions\IpAlreadyBeenReportedException;
 use App\Services\PasswordReset\Storage;
 use App\Services\PasswordReset\Contracts\StorageContract;
 use App\User;
@@ -37,6 +38,24 @@ abstract class AbstractPasswordResetService
         PasswordResetAttempt::verify($token, false, $reset_attempt);
 
         event(new PasswordResetApproved($user));
+    }
+
+    /** Tries to ban ip which requested password reset */
+    public function attemptToReportIp($token) {
+        $committed_attempt = PasswordResetAttempt::getModelFromToken($token);
+        PasswordResetAttempt::validateOnRecentVerification($committed_attempt);
+
+        $record = $committed_attempt->record;
+
+        if ($record->isReported()) throw new IpAlreadyBeenReportedException;
+
+        $record->report();
+
+        $ip = $committed_attempt->ipModel;
+
+        $ip->banForPasswordResetAbuse($committed_attempt);
+
+        return $ip->ip;
     }
 
     /** Creates a data representation of users' attempt to reset password. */

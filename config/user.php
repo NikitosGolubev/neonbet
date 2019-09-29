@@ -8,6 +8,13 @@ return [
         'ordinary' => 'ordinary'
     ],
 
+    'ip' => [
+        'max_temp_bans' => 3,
+        'bans_length' => [
+            'password_reset_abuse' => 86400
+        ],
+    ],
+
     'nickname_min_len' => 6,
     'nickname_max_len' => 32,
     'password_min_len' => 8,

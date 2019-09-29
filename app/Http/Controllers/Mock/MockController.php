@@ -177,4 +177,31 @@ class MockController extends Controller
         $response = json_decode((string) $response->getBody(), true);
         return dd($response);
     }
+
+    public function reportSetPassword(Request $request) {
+        $validated = $request->validate([
+            'v_token' => 'required|string|min:150|max:500'
+        ]);
+
+        $token = $validated['v_token'];
+
+        try  {
+            $response = $this->http->delete(url('/api/auth/reset-password'), [
+                'headers' => [
+                    'Content-Type' => 'application/json',
+                    'X-Requested-With' => 'XMLHttpRequest'
+                ],
+                'json' => [
+                    'v_token' => $token
+                ]
+            ]);
+        } catch(\Exception $e) {
+            $response = json_decode((string) $e->getResponse()->getBody(true), true);
+            dd($response);
+        }
+
+
+        $response = json_decode((string) $response->getBody(), true);
+        return dd($response);
+    }
 }

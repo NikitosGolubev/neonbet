@@ -9,6 +9,10 @@ class PasswordResetAttempt extends Model
 {
     use Verifiable;
 
+    /************************************/
+    /*******VERIFICATION SETTINGS********/
+    /************************************/
+
     protected function getVerificationExpiration()
     {
         return config('user.password_reset.attempt_expiration');
@@ -22,9 +26,18 @@ class PasswordResetAttempt extends Model
         $model->record->approve($value);
     }
 
+    /************************************/
+    /********LARAVEL ENV SETTINGS********/
+    /************************************/
+
     public $timestamps = false;
 
     protected $guarded = [];
+
+
+    /************************************/
+    /***********RELATIONSHIPS************/
+    /************************************/
 
     public function record() {
         return $this->belongsTo('App\PasswordResetRecord', 'record_id');

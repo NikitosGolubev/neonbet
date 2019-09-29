@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\API;
 
-use App\Events\PasswordResetApproved;
 use App\Http\Requests\Auth\ForgetPasswordRequest;
 use App\Http\Requests\Auth\PasswordResetApproveRequest;
 use App\Http\Requests\ModelVerificationRequest;
@@ -52,5 +51,17 @@ class PasswordResetController extends Controller
         $this->passwordResetService->attemptToSetNewPassword($token, $new_password);
 
         return response()->json(['message' => 'OK'], 200);
+    }
+
+    /** Report from original email owner to ip which requested reset operation. */
+    public function destroy(ModelVerificationRequest $request) {
+        $token = $request->getData()['verification_token'];
+
+        $reported_ip = $this->passwordResetService->attemptToReportIp($token);
+
+        return response()->json([
+            'message' => 'OK',
+            'banned_ip' => $reported_ip
+        ], 200);
     }
 }

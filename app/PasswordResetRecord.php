@@ -26,6 +26,12 @@ class PasswordResetRecord extends Model
         $this->save();
     }
 
+    public function report() {
+        $this->reported_at = now();
+        $this->closed_at = now();
+        $this->save();
+    }
+
     /*****************************************/
     /***********MODEL RELATIONSHIPS***********/
     /*****************************************/

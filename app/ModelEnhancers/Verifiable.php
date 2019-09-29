@@ -8,7 +8,6 @@ use App\Exceptions\Verification\VerificationTokenExpiredException;
 use App\Exceptions\Verification\VerificationTokenInvalidException;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\Crypt;
-use mysql_xdevapi\Exception;
 
 /**
  * Verifies some model using token-based approach.
