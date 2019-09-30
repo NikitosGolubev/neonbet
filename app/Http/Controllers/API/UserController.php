@@ -36,7 +36,7 @@ class UserController extends Controller
 
         return response()->json([
             'message' => 'Created',
-            'verification_expiration' => $user->getVerificationExpiration()
+            'verification_expiration' => User::getVerificationExpiration()
             ], 201);
     }
 }

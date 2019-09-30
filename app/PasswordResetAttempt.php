@@ -13,7 +13,7 @@ class PasswordResetAttempt extends Model
     /*******VERIFICATION SETTINGS********/
     /************************************/
 
-    protected function getVerificationExpiration()
+    public static function getVerificationExpiration()
     {
         return config('user.password_reset.attempt_expiration');
     }

@@ -24,7 +24,7 @@ trait Verifiable
      * Generates token which should be used for verification.
      */
     public function getToken() {
-        $token_expiration = $this->getVerificationExpiration();
+        $token_expiration = self::getVerificationExpiration();
         $expiration_date = Carbon::now()->addSeconds($token_expiration)->toDateTimeString();
         $unique_data = $this->getUniqueData();
 
@@ -129,6 +129,11 @@ trait Verifiable
      ****configuration for particular model****
      ******************************************/
 
+    /** Returns a timestamp for how much time token can be relevant. */
+    public static function getVerificationExpiration() {
+        return 3600;
+    }
+
     /** Returns a field which stores unique piece of data about model. */
     protected static function getUniqueDataField() {
         return 'id';
@@ -143,11 +148,6 @@ trait Verifiable
     protected static function setModelVerificationFieldValue($model, $value) {
         $model->verified_at = $value;
         $model->save();
-    }
-
-    /** Returns a timestamp for how much time token can be relevant. */
-    protected function getVerificationExpiration() {
-        return 3600;
     }
 
     /** Exception which should be thrown whenever token is considered to be invalid */

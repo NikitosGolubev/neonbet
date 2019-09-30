@@ -1,6 +1,8 @@
 <?php
 
 return [
+    'verification_time' => 86400,
+
     'roles' => [
         'owner' => 'owner',
         'admin' => 'admin',

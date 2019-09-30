@@ -18,7 +18,6 @@ class User extends Authenticatable
     use Notifiable, Bannable, HasApiTokens, Verifiable, HasRoles;
 
     protected $guard_name = 'api';
-    protected $verification_expiration = 86400;
 
     protected $fillable = [
         'nickname', 'email', 'password', 'fullname', 'birthdate', 'userpick'
@@ -28,20 +27,32 @@ class User extends Authenticatable
         'password'
     ];
 
-    /**
-     * Laravel passport username field customization
-     */
+
+    /*****************************************/
+    /*************VERIFICATION****************/
+    /*****************************************/
+
+    public static function getVerificationExpiration()
+    {
+        return config('user.password_reset.attempt_expiration');
+    }
+
+
+    /*****************************************/
+    /*****LARAVEL PASSPORT CUSTOMIZATION******/
+    /*****************************************/
+
     public function findForPassport($username)
     {
         $login_type = LoginType::identify();
         return $this->where($login_type, $username)->first();
     }
 
-    public function getVerificationExpiration() {
-        return $this->verification_expiration;
-    }
 
-    // Mutators
+    /*****************************************/
+    /***************MUTATORS******************/
+    /*****************************************/
+
     public function setEmailAttribute($value) {
         $this->attributes['email'] = strtolower($value);
     }
@@ -63,6 +74,14 @@ class User extends Authenticatable
         return $query->where('email', $email);
     }
 
+    public function scopeUnverified($query) {
+        return $query->whereNull('verified_at');
+    }
+
+    public function scopeVerified($query) {
+        return $query->whereNotNull('verified_at');
+    }
+
     /*****************************************/
     /***********MODEL RELATIONSHIPS***********/
     /*****************************************/
@@ -70,6 +89,7 @@ class User extends Authenticatable
     public function passwordResetRecords() {
         return $this->hasMany('App\PasswordResetRecord', 'user_id');
     }
+
 
     /*****************************************/
     /***********CONVENIENT SETTERS************/
