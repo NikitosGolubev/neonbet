@@ -18,8 +18,8 @@ class PruneTable extends Command
     }
 
 
-    public function handle(DeleteUnverifiedExpiredUserAccountsAction $removeUnverifiedAccounts)
+    public function handle(DeleteUnverifiedExpiredUserAccountsAction $remove_unverified_accounts)
     {
-        $removeUnverifiedAccounts->execute();
+        $remove_unverified_accounts->execute();
     }
 }

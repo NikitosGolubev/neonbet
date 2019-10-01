@@ -8,6 +8,11 @@ class PasswordResetRecord extends Model
 {
     protected $guarded = [];
 
+
+    /*****************************************/
+    /***********CORE FUNCTIONALITY************/
+    /*****************************************/
+
     public function isApproved() {
         return !is_null($this->approved_at);
     }
@@ -32,6 +37,7 @@ class PasswordResetRecord extends Model
         $this->save();
     }
 
+
     /*****************************************/
     /***********MODEL RELATIONSHIPS***********/
     /*****************************************/
@@ -42,5 +48,14 @@ class PasswordResetRecord extends Model
 
     public function user() {
         return $this->belongsTo('App\User', 'user_id');
+    }
+
+
+    /*****************************************/
+    /**************QUERY SCOPES***************/
+    /*****************************************/
+
+    public function scopeIsNotClosed($query) {
+        return $query->whereNull('closed_at');
     }
 }

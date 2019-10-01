@@ -67,4 +67,13 @@ class CollectedIp extends Model implements BannableContract
 
         return false;
     }
+
+
+    /*****************************************/
+    /***********MODEL RELATIONSHIPS***********/
+    /*****************************************/
+
+    public function passwordResetAttempts() {
+        return $this->hasMany('App\PasswordResetAttempt', 'ip_id');
+    }
 }

@@ -10,18 +10,29 @@ use Carbon\Carbon;
 
 class DeleteUnverifiedExpiredUserAccountsAction extends Action
 {
+    protected $userVerificationExpirationTime;
+
+    public function __construct()
+    {
+        $this->userVerificationExpirationTime = User::getVerificationExpiration();
+    }
+
     public function execute(): void
     {
-        $verification_exp = User::getVerificationExpiration();
-
-        User::unverified()->chunkById(100, function ($users) use ($verification_exp) {
+        User::unverified()->chunkById(100, function ($users) {
             foreach ($users as $user) {
-                $is_verification_expired = Carbon::parse($user->created_at)->addSeconds($verification_exp)->isPast();
 
-                if ($is_verification_expired) {
-                    $user->delete();
-                }
+                $this->removeUserIfVerificationExpired($user);
+
             }
         });
+    }
+
+    private function removeUserIfVerificationExpired($user) {
+        $exp = $this->userVerificationExpirationTime;
+
+        $is_verification_expired = Carbon::parse($user->created_at)->addSeconds($exp)->isPast();
+
+        if ($is_verification_expired) $user->delete();
     }
 }

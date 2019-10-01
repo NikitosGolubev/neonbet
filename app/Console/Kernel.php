@@ -17,6 +17,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('telescope:prune')->daily();
         $schedule->command('users:prune')->daily()->runInBackground();
+        $schedule->command('password-reset-attempts:ban-abuse-ips')->weekly()->runInBackground();
     }
 
 

@@ -46,4 +46,18 @@ class PasswordResetAttempt extends Model
     public function ipModel() {
         return $this->belongsTo('App\CollectedIp', 'ip_id');
     }
+
+
+    /*****************************************/
+    /**************QUERY SCOPES***************/
+    /*****************************************/
+
+    public function scopeIsExpired($query) {
+        $now = now();
+        return $query->where('expires_at', '<', $now);
+    }
+
+    public function scopeAttemptedAtSince($query, $since_date) {
+        return $query->where('attempted_at', '>', $since_date);
+    }
 }

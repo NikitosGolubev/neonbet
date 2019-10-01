@@ -32,6 +32,8 @@ return [
         'attempt_expiration' => 86400,
         'approve_url' => env('APP_URL').'/mock-pages/can-set-password',
         'report_url' => env('APP_URL').'/mock-pages/report-set-password',
+        'timespan_to_count_abuse_from_ip' => 604800, // 7 days
+        'max_num_canceled_attempt_during_timespan' => 5
     ]
 
 ];
