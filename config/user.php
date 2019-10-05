@@ -21,6 +21,19 @@ return [
     'nickname_max_len' => 32,
     'password_min_len' => 8,
 
+    'userpick' => [
+        'accepted_mimes' => 'jpeg,jpg,png,gif',
+        'height' => [
+            'min' => 100,
+            'max' => 750
+        ],
+        'width' => [
+            'min' => 100,
+            'max' => 750
+        ],
+        'max_size' => 1024
+    ],
+
     'verification_url' => env('APP_URL').'/mock-pages/verify-user',
     'reset_registration_url' => env('APP_URL').'/mock-pages/reset-verification',
     'login_url' => env('APP_URL').'/mock-pages/login',

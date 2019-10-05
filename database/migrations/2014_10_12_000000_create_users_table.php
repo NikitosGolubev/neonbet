@@ -13,14 +13,16 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        $default_userpick_path = Storage::url('defaults/user-avatar.png');
+
+        Schema::create('users', function (Blueprint $table) use ($default_userpick_path) {
             $table->bigIncrements('id');
             $table->string('nickname', 50)->unique();
             $table->string('email')->unique();
             $table->string('password');
             $table->string('fullname');
             $table->date('birthdate');
-            $table->string('userpick')->default('storage/defaults/user-avatar.jpg');
+            $table->string('userpick')->default($default_userpick_path);
             $table->float('balance')->unsigned()->default(0);
             $table->timestamp('banned_at')->nullable();
             $table->timestamp('verified_at')->nullable();

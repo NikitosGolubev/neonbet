@@ -3,6 +3,7 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\ApiRequest;
+use App\RuleGroups\VerificationTokenRules;
 
 class ModelVerificationRequest extends ApiRequest
 {
@@ -19,7 +20,7 @@ class ModelVerificationRequest extends ApiRequest
     public function rules()
     {
         return [
-            $this->verificationTokenParam => ['required', 'string', 'min:150', 'max:500']
+            $this->verificationTokenParam => VerificationTokenRules::get(['required'])
         ];
     }
 }

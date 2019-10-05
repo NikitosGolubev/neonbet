@@ -5,14 +5,11 @@ namespace App\Http\Requests\Auth;
 use App\Http\Requests\ApiRequest;
 use App\RequestEnhancers\Sanitizable;
 
-use App\Rules\Date\DateRelevantFuture;
-use App\Rules\Date\DateRelevantPast;
-use App\Rules\Date\DdMmYyyyDateFormat;
-use App\Rules\Date\AdultUser;
-use App\Rules\Date\ValidDate;
-use App\Rules\Fullname;
-use App\Rules\StringComplexity;
-use App\Rules\Nickname;
+use App\RuleGroups\BirthdateRules;
+use App\RuleGroups\EmailRules;
+use App\RuleGroups\FullnameRules;
+use App\RuleGroups\NicknameRules;
+use App\RuleGroups\PasswordRules;
 
 class RegisterRequest extends ApiRequest
 {
@@ -50,30 +47,18 @@ class RegisterRequest extends ApiRequest
 
     public function rules()
     {
-        $nick_min_len = config('user.nickname_min_len');
-        $nick_max_len = config('user.nickname_max_len');
         $pasw_min_len = config('user.password_min_len');
 
         return [
-            $this->nicknameParam => [
-                'required',
-                "min:$nick_min_len",
-                "max:$nick_max_len",
-                new Nickname,
-                'unique:users,nickname'
-            ],
-            $this->emailParam => ['required', 'max:255', 'email:rfc,dns', 'unique:users,email'],
-            $this->fullnameParam => ['required', 'string', 'max:255', new Fullname],
-            $this->birthdateParam => [
-                'required',
-                'string',
-                new DdMmYyyyDateFormat,
-                new ValidDate,
-                new DateRelevantPast,
-                new DateRelevantFuture,
-                new AdultUser
-            ],
-            $this->passwordParam => ['required', "min:$pasw_min_len", 'max:255', new StringComplexity, 'confirmed']
+            $this->nicknameParam => NicknameRules::get(['required'], ['unique:users,nickname']),
+
+            $this->emailParam => EmailRules::get(['required'], ['unique:users,email']),
+
+            $this->fullnameParam => FullnameRules::get(['required']),
+
+            $this->birthdateParam => BirthdateRules::get(['required']),
+
+            $this->passwordParam => PasswordRules::get(['required'], ['confirmed']),
         ];
     }
 }

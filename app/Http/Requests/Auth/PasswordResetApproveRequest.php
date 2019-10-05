@@ -3,7 +3,7 @@
 namespace App\Http\Requests\Auth;
 
 use App\Http\Requests\ModelVerificationRequest;
-use App\Rules\StringComplexity;
+use App\RuleGroups\PasswordRules;
 
 class PasswordResetApproveRequest extends ModelVerificationRequest
 {
@@ -12,6 +12,7 @@ class PasswordResetApproveRequest extends ModelVerificationRequest
     public function getData(): array
     {
         $parent_data = parent::getData();
+
         $data = [
             'new_password' => request($this->newPasswordParam)
         ];
@@ -22,12 +23,10 @@ class PasswordResetApproveRequest extends ModelVerificationRequest
 
     public function rules()
     {
-        $pasw_min_len = config('user.password_min_len');
-
         $parent_rules = parent::rules();
+
         $rules = [
-            $this->newPasswordParam => ['bail', 'required', "min:$pasw_min_len", 'max:255',
-                                        new StringComplexity, 'confirmed']
+            $this->newPasswordParam => PasswordRules::get(['bail', 'required'], ['confirmed'])
         ];
 
         return array_merge($parent_rules, $rules);

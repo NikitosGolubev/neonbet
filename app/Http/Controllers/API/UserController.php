@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Events\UserRegistered;
 use App\Http\Requests\Auth\RegisterRequest;
+use App\Http\Requests\User\UpdateProfileDataRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,7 +12,7 @@ use App\Http\Controllers\Controller;
 class UserController extends Controller
 {
     public function __construct() {
-        $this->middleware('recaptcha')->only(['store']);
+        $this->middleware('recaptcha')->only(['store', 'update']);
     }
 
     /**
@@ -38,5 +39,17 @@ class UserController extends Controller
             'message' => 'Created',
             'verification_expiration' => User::getVerificationExpiration()
             ], 201);
+    }
+
+    /**
+     * Updates users data
+     */
+    public function update(UpdateProfileDataRequest $request) {
+        $data = $request->getData();
+        $user = auth()->user();
+
+        $user->updateProfile($data);
+
+        return response()->json($user, 200);
     }
 }

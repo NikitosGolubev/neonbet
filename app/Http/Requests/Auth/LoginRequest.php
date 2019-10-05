@@ -4,7 +4,12 @@ namespace App\Http\Requests\Auth;
 
 use App\Http\Requests\ApiRequest;
 use App\RequestEnhancers\Sanitizable;
+use App\RuleGroups\PasswordRules;
 use App\Services\Facades\LoginType;
+use Illuminate\Contracts\Validation\Validator;
+use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Http\Response;
+
 
 /**
  * Handles the validation for sign up request.
@@ -37,28 +42,17 @@ class LoginRequest extends ApiRequest
 
     public function rules()
     {
-        $pasw_min_len = config('user.password_min_len');
-
         return [
             $this->loginParam => LoginType::getRules(),
-            $this->passwordParam => ['required', "min:$pasw_min_len", "max:255"]
+            $this->passwordParam => PasswordRules::get(['bail', 'required']),
         ];
     }
 
-
-    public function messages()
+    // United message for any kind of errors
+    protected function failedValidation(Validator $validator)
     {
-        // Setting 1 united message to any kind of validation errors.
         $validation_message = trans('custom-validation.invalid_login_credentials');
 
-        $login_validation_messages = LoginType::unitedValidationMessage($validation_message);
-
-        $messages = [
-            'password.required' => $validation_message,
-            'password.min' => $validation_message,
-            'password.max' => $validation_message
-        ];
-
-        return array_merge($messages, $login_validation_messages);
+        Response::printError($validation_message, 422);
     }
 }

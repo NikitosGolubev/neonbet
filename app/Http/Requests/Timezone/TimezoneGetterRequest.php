@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Timezone;
 
 use App\Http\Requests\ApiRequest;
+use App\RuleGroups\TimezoneGroupsRules;
 
 class TimezoneGetterRequest extends ApiRequest
 {
@@ -18,7 +19,7 @@ class TimezoneGetterRequest extends ApiRequest
     public function rules()
     {
         return [
-            $this->tzGroupsParam => ['nullable', 'array']
+            $this->tzGroupsParam => TimezoneGroupsRules::get(['nullable'])
         ];
     }
 

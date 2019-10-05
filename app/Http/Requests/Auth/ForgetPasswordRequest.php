@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Auth;
 
 use App\Http\Requests\ApiRequest;
+use App\RuleGroups\EmailRules;
 use App\Rules\VerifiedUser;
 
 class ForgetPasswordRequest extends ApiRequest
@@ -19,9 +20,10 @@ class ForgetPasswordRequest extends ApiRequest
     public function rules()
     {
         return [
-            $this->emailParam => [
-                'bail', 'required', 'email', 'max:255', 'exists:users,email', new VerifiedUser('email')
-            ]
+            $this->emailParam => EmailRules::get(
+                ['bail', 'required'],
+                ['exists:users,email', new VerifiedUser('email')]
+            ),
         ];
     }
 }

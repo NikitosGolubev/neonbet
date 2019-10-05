@@ -4,6 +4,8 @@
 namespace App\Services\LoginType;
 
 
+use App\RuleGroups\EmailRules;
+use App\RuleGroups\NicknameRules;
 use App\Rules\VerifiedUser;
 use App\User;
 
@@ -24,19 +26,16 @@ class LoginType implements LoginTypeContract
      * Provides array with all the possible login types an rules for validating them.
      */
     protected function typesAndRules() {
-        $nick_min_len = config('user.nickname_min_len');
-        $nick_max_len = config('user.nickname_max_len');
-
         return [
-            'nickname' => [
-                'bail', 'required', "min:$nick_min_len",
-                "max:$nick_max_len", 'exists:users,nickname', new VerifiedUser('nickname')
-            ],
+            'nickname' => NicknameRules::get(
+                ['bail', 'required'],
+                ['exists:users,nickname', new VerifiedUser('nickname')]
+            ),
 
-            'email' => [
-                'bail', 'required', 'max:255',
-                'email', 'exists:users,email', new VerifiedUser('email')
-            ]
+            'email' => EmailRules::get(
+                ['bail', 'required'],
+                ['exists:users,email', new VerifiedUser('email')]
+            ),
         ];
     }
 
@@ -45,16 +44,6 @@ class LoginType implements LoginTypeContract
     /******---------------------------------------------*******/
 
     // (check comments to methods in their contracts)
-
-    public function unitedValidationMessage(string $validation_message): array {
-        return [
-            'required' => $validation_message,
-            'min' => $validation_message,
-            'max' => $validation_message,
-            'exists' => $validation_message,
-            'email' => $validation_message
-        ];
-    }
 
     public function findUserByLogin($login) {
         $login_type = $this->identify();
