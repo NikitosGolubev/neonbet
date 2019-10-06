@@ -6,6 +6,7 @@ use Exception;
 use Illuminate\Contracts\Container\Container;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Illuminate\Http\Response;
+use Illuminate\Validation\ValidationException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class Handler extends ExceptionHandler
@@ -37,5 +38,13 @@ class Handler extends ExceptionHandler
         }
 
         return parent::render($request, $exception);
+    }
+
+    /** Custom response for validation errors */
+    protected function invalidJson($request, ValidationException $exception)
+    {
+        return Response::error('Validation failed', $exception->status, [
+            'invalid_params' => $exception->errors()
+        ]);
     }
 }
