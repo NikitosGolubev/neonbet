@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API\GeneralData;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Timezone\TimezoneGetterRequest;
 use App\Services\Facades\Timezone;
+use Illuminate\Http\Response;
 
 class TimezoneController extends Controller
 {
@@ -13,8 +14,13 @@ class TimezoneController extends Controller
 
         $timezones = $this->getRequestedTimezones($tz_groups);
 
-        return response()->json($timezones, 200);
+        return Response::ok(['timezones' => $timezones]);
     }
+
+
+    /*****************************************************/
+    /*-------------------HELPERS-------------------------*/
+    /*****************************************************/
 
     /**
      * Builds response of derived timezones according to the request.

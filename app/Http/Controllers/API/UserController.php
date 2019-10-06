@@ -8,6 +8,7 @@ use App\Http\Requests\User\UpdateProfileDataRequest;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 class UserController extends Controller
 {
@@ -20,7 +21,8 @@ class UserController extends Controller
      */
     public function show(Request $request) {
         $user = $request->user();
-        return response()->json($user, 200);
+
+        return Response::ok(['user' => $user]);
     }
 
     /**
@@ -35,10 +37,9 @@ class UserController extends Controller
 
         event(new UserRegistered($user));
 
-        return response()->json([
-            'message' => 'Created',
-            'verification_expiration' => User::getVerificationExpiration()
-            ], 201);
+        $verification_exp = User::getVerificationExpiration();
+
+        return Response::success('Created', 201, ['verification_exp' => $verification_exp]);
     }
 
     /**
@@ -50,6 +51,6 @@ class UserController extends Controller
 
         $user->updateProfile($data);
 
-        return response()->json($user, 200);
+        return Response::ok(['user' => $user]);
     }
 }

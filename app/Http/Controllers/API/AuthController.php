@@ -8,6 +8,7 @@ use App\Services\Facades\LoginType;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 
 class AuthController extends Controller
@@ -29,7 +30,7 @@ class AuthController extends Controller
 
         $response = $this->requestUserAuth($user_data['login'], $user_data['password'], $user_data['remember_me']);
 
-        return response()->json($response, 200);
+        return Response::ok(['auth' => $response]);
     }
 
 
@@ -37,7 +38,7 @@ class AuthController extends Controller
     public function logout(Request $request) {
         $request->user()->token()->revoke();
 
-        return response()->json(['message' => 'OK'], 200);
+        return Response::ok();
     }
 
 

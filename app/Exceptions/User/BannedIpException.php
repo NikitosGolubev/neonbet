@@ -29,7 +29,7 @@ class BannedIpException extends Exception
             $message = trans('custom-validation.temporary_banned_ip', ['ip' => $banned_ip, 'exp' => $ban_exp]);
         }
 
-        return Response::printError($message, 403, [
+        return Response::error($message, 403, [
             'ban_reason' => $ban_reason
         ]);
     }

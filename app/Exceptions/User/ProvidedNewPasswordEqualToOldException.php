@@ -9,6 +9,6 @@ class ProvidedNewPasswordEqualToOldException extends Exception
 {
     public function render($request) {
         $message = trans('custom-validation.new_password_equal_to_old');
-        return Response::printError($message, 400);
+        return Response::error($message, 400);
     }
 }

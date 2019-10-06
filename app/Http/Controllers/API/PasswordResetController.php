@@ -9,6 +9,7 @@ use App\PasswordResetAttempt;
 use App\Services\PasswordReset\PasswordReset;
 use App\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 class PasswordResetController extends Controller
 {
@@ -29,7 +30,7 @@ class PasswordResetController extends Controller
 
         $this->passwordResetService->attempt($user);
 
-        return response()->json(['message' => 'OK'], 200);
+        return Response::ok();
     }
 
     /** If client is permitted to change password? */
@@ -38,7 +39,7 @@ class PasswordResetController extends Controller
 
         PasswordResetAttempt::validate($token);
 
-        return response()->json(['message' => 'OK'], 200);
+        return Response::ok();
     }
 
     /** Changing old password to new one */
@@ -50,7 +51,7 @@ class PasswordResetController extends Controller
 
         $this->passwordResetService->attemptToSetNewPassword($token, $new_password);
 
-        return response()->json(['message' => 'OK'], 200);
+        return Response::ok();
     }
 
     /** Report from original email owner to ip which requested reset operation. */
@@ -59,9 +60,6 @@ class PasswordResetController extends Controller
 
         $reported_ip = $this->passwordResetService->attemptToReportIp($token);
 
-        return response()->json([
-            'message' => 'OK',
-            'banned_ip' => $reported_ip
-        ], 200);
+        return Response::ok(['banned_ip' => $reported_ip]);
     }
 }

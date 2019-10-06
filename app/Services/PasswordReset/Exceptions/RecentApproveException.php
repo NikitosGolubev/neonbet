@@ -23,6 +23,6 @@ class RecentApproveException extends Exception
             'date' => $this->allowedAt
         ]);
 
-        return Response::printError($message, 403);
+        return Response::error($message, 403);
     }
 }

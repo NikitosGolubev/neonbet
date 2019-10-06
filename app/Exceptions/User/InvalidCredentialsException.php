@@ -9,6 +9,6 @@ class InvalidCredentialsException extends Exception
 {
     public function render($request) {
         $message = trans('custom-validation.invalid_login_credentials');
-        return Response::printError($message, 401);
+        return Response::error($message, 401);
     }
 }

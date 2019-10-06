@@ -9,6 +9,6 @@ class VerificationTokenExpiredException extends Exception
 {
     public function render($request) {
         $message = trans('custom-validation.verification_token_expired');
-        return Response::printError($message, 408);
+        return Response::error($message, 408);
     }
 }

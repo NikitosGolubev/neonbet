@@ -6,6 +6,7 @@ use App\Events\AccountVerified;
 use App\Http\Requests\ModelVerificationRequest;
 use App\Http\Controllers\Controller;
 use App\User;
+use Illuminate\Http\Response;
 
 class UserVerificationController extends Controller
 {
@@ -18,9 +19,7 @@ class UserVerificationController extends Controller
 
         event(new AccountVerified($user));
 
-        return response()->json([
-            'message' => 'Verified'
-        ], 200);
+        return Response::ok();
     }
 
     /**
@@ -28,10 +27,9 @@ class UserVerificationController extends Controller
      */
     public function destroy(ModelVerificationRequest $request) {
         $token = $request->getData()['verification_token'];
+
         User::resetVerification($token);
 
-        return response()->json([
-            'message' => 'User removed'
-        ], 200);
+        return Response::ok();
     }
 }

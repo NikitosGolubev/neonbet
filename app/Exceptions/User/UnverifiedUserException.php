@@ -9,6 +9,6 @@ class UnverifiedUserException extends Exception
 {
     public function render($request) {
         $message = trans('custom-validation.unverified_user');
-        return Response::printError($message, 403);
+        return Response::error($message, 403);
     }
 }

@@ -53,6 +53,6 @@ class LoginRequest extends ApiRequest
     {
         $validation_message = trans('custom-validation.invalid_login_credentials');
 
-        Response::printError($validation_message, 422);
+        Response::error($validation_message, 422);
     }
 }

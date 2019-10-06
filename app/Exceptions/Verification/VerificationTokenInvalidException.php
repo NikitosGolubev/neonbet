@@ -9,6 +9,6 @@ class VerificationTokenInvalidException extends Exception
 {
     public function render($request) {
         $message = trans('custom-validation.invalid_verification_token');
-        return Response::printError($message, 400);
+        return Response::error($message, 400);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\API\GeneralData;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Response;
 
 class LocaleController extends Controller
 {
@@ -11,6 +12,7 @@ class LocaleController extends Controller
      */
     public function show() {
         $supported_locales = config('app.supported_locales');
-        return response()->json($supported_locales, 200);
+
+        return Response::ok(['supported_locales' => $supported_locales]);
     }
 }
