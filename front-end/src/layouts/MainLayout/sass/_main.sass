@@ -1,0 +1,48 @@
+@import "settings"
+
+@import ../../../sass/blocks/default/fonts/default
+@import ../../../sass/blocks/default/structure-determinants/default
+@import ../../../sass/blocks/default/typography/default
+@import ../../../sass/blocks/default/colors/default
+
+@import ../../../sass/blocks/basic/links/links
+@import ../../../sass/blocks/basic/captcha/grecaptcha
+@import ../../../sass/blocks/basic/tables/table
+@import ../../../sass/blocks/basic/form-elements/main
+@import ../../../sass/blocks/basic/form-elements/inputs
+@import ../../../sass/blocks/basic/lists/lists
+@import ../../../sass/blocks/basic/buttons/buttons
+@import ../../../sass/blocks/basic/socials/socials
+@import ../../../sass/blocks/basic/cards/cards
+@import ../../../sass/blocks/basic/items-img/items
+@import ../../../sass/blocks/basic/user-attributes/avatar
+@import ../../../sass/blocks/basic/user-attributes/balance
+
+::selection
+  background: rgba(color(primary-dark), 0.4)
+
+
+body
+  min-height: 100vh
+  @include setBgImg('img/header-bg.jpg', "top center no-repeat", true, color(muted))
+  background-size: 100%
+  color: color(secondary)
+
+.page
+  &_wrap
+    padding: 4% 20px
+    box-sizing: border-box
+    margin: auto
+
+.no-padding
+  padding: 0 !important
+
+.no-margin
+  margin: 0 !important
+
+@media screen and (max-width: breakpoint(xs))
+  .page
+    &_wrap
+      padding:
+        left: 10px
+        right: 10px

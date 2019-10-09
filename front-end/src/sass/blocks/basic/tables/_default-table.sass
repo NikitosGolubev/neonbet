@@ -1,0 +1,62 @@
+$default_table_gap: 0.75rem
+
+.default-table
+  background: color(default)
+
+  &_horizontal
+    border: $default_restrict_border
+    margin: 2rem 0
+
+  &_horizontal &__row
+    border-bottom: $default_restrict_border
+
+  &__header
+    box-shadow: 0 1px 13px rgba(22, 26, 29, 0.4)
+    @extend %removeUserSelect
+
+  &__head-cell
+    border-right: $default_restrict_border
+    text-align: center
+    word-break: break-word
+    padding: $default_table_gap
+    vertical-align: middle
+
+    &:last-child
+      border-right: none
+
+  &__content
+    box-sizing: border-box
+    box-shadow: 0 4px 10px rgba(22, 26, 29, 1)
+    padding: $default_table_gap
+    background-color: color(muted)
+    @include flex(center, center)
+
+  &_little-content-gap
+    .default-table__content
+     padding: $default_table_gap / 2
+
+  &__cell
+    padding: $default_table_gap
+    vertical-align: middle
+    word-break: break-word
+
+  // Doubled upper gap of first row
+  &__body &__row:first-child &__cell
+    padding-top: $default_table_gap * 2
+
+  // Doubled bottom gap of last row
+  &__body &__row:last-child &__cell
+    padding-bottom: $default_table_gap * 2
+
+  &__dropdown-container
+    position: relative
+
+    &_content
+      padding: 0 20px
+
+  &__dropdown
+    position: absolute
+    right: 10px
+    top: calc(50% - 5px)
+
+@import default-table-responsivity

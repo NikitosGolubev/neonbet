@@ -1,0 +1,30 @@
+@import "settings"
+
+.top-users
+  &__header
+    @extend %removeUserSelect
+
+  &__record
+    @include flex(space-between, center)
+    width: 100%
+
+    &_wrap
+      padding:
+        top: 1rem
+        bottom: 1rem
+      border-bottom: $default_restrict_border
+
+      &:last-child
+        border-bottom: none
+
+    &_left
+      @include flex(false, center)
+
+  &__avatar
+    width: 2.4rem
+    height: 2.4rem
+
+  &__nickname
+    margin-left: 1rem
+    padding-right: 0.3rem
+    word-break: break-word

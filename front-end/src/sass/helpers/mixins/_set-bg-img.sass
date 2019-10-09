@@ -1,0 +1,16 @@
+@import ../variables/basic
+
+/**
+ * Sets background image
+ *
+ * @param {String} $path_to_bg - path to background image
+ * @param {String} $bg_settings = "" - properties that can be added to bg,
+ *     for instance: "center center no-repeat"
+ * @param {Boolean} $is_default = true - if it's true than it's assumed that path
+ *     to images folder starts from exit of current folder
+ * @param {Color} $default_color = transparent - bg color under bg img
+ */
+@mixin setBgImg($path_to_bg, $bg_settings: "", $is_default: true, $default_color: transparent)
+  @if $is_default
+    $path_to_bg: $root_folder_depth + $path_to_bg
+  background: $default_color url($path_to_bg) #{$bg_settings}

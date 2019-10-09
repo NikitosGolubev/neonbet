@@ -1,0 +1,54 @@
+// THIS FILE REQUIRES ACCESS TO "settings"
+
+a
+  text-decoration: none
+
+.link
+  cursor: pointer
+
+  // Default, simple links
+  &_default
+    @extend %fastTransition
+    &:hover
+      opacity: 0.8
+
+    &:active
+      opacity: 0.6
+
+  // Link #1
+  &_alternative
+    color: color(alternative)
+    @extend %mediumTransition
+
+    &:hover, &-active
+      color: color(primary-light)
+
+    &:active
+      opacity: 0.8
+
+  // Link #2
+  &_primary-gradient
+    @extend %mediumTransition
+    @include gradientText($text-gradient-default, color(primary-light))
+
+    &:hover
+      opacity: 0.8
+
+    &:active
+      @include gradientTextReset(color(alternative))
+
+  // Link #3
+  &_primary-light
+    color: color(primary-light)
+    @extend %mediumTransition
+
+    &:hover, &-active
+      color: color(alternative)
+
+    &:active
+      opacity: 0.8
+
+  // Link specially for article to use in text
+  &_article
+    @extend .link_alternative
+    font-style: italic

@@ -1,0 +1,9 @@
+.header
+  &__sidebar-burger
+    @media screen and (max-width: breakpoint(lg))
+      display: block
+
+  // Hiding central nav, everything from actions-list EXCEPT language-picker
+  &__central-nav, &__actions-list_item:not(&__language-picker)
+    @media screen and (max-width: breakpoint(lg))
+      display: none

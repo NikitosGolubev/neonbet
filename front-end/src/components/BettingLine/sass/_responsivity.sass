@@ -1,0 +1,17 @@
+.betting-line
+  @media screen and (max-width: breakpoint(sm))
+    &__content
+      grid-template-columns: 1fr
+
+    &__header
+      @include flex(space-between, center)
+      padding:
+        top: 0
+        bottom: 0
+
+    &__header-controls
+      margin: 0.3rem 0
+      @include flex(center, center, column)
+
+      &_gap
+        margin: 0.2rem 0

@@ -1,0 +1,39 @@
+@import settings
+
+// "BASIC COMPONENTS"
+@import ../../../../sass/blocks/basic/matches/betting-event
+@import ../../../../sass/blocks/basic/matches/game-logo
+@import ../../../../sass/blocks/basic/matches/team-logo-bubble
+@import ../../../../sass/blocks/basic/matches/event-time-data
+@import ../../../../sass/blocks/basic/matches/live-sensor
+@import ../../../../sass/blocks/basic/matches/coefficient
+@import ../../../../sass/blocks/basic/matches/score
+@import ../../../../sass/blocks/basic/matches/additional-event
+
+// SUBBLOCKS
+@import ../../../../sass/blocks/subblocks/selected-bet/selected-bet
+@import ../../../../sass/blocks/subblocks/place-bet/place-bet
+
+
+// Main content
+$content-gap: 2.2rem
+
+.index-content
+  margin-top: 5rem
+
+  &__aside
+    padding-right: $content-gap / 2
+
+  &__main
+    padding-left: $content-gap / 2
+
+  &__section
+    margin: $content-gap 0
+
+  &__aside &__section:first-child, &__main &__section:first-child
+    margin-top: 0
+
+  &__aside &__section:last-child, &__main &__section:last-child
+    margin-bottom: 0
+
+@import responsivity/main

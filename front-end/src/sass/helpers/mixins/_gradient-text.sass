@@ -1,0 +1,16 @@
+// Colors text inside some block in gradient.
+@mixin gradientText($gradient, $fallback_color: false)
+  // Checking for gradient text support
+  @supports (((background-clip: text) or (-moz-background-clip: text) or (-webkit-background-clip: text)) and ((text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-webkit-text-fill-color: transparent)))
+    background-clip: text
+    -moz-background-clip: text
+    -webkit-background-clip: text
+    text-fill-color: transparent
+    -moz-text-fill-color: transparent
+    -webkit-text-fill-color: transparent
+    background-image: $gradient
+
+  @if $fallback_color
+    // Fallback if gradient text is not supported
+    @supports not (((background-clip: text) or (-moz-background-clip: text) or (-webkit-background-clip: text)) and ((text-fill-color: transparent) or (-moz-text-fill-color: transparent) or (-webkit-text-fill-color: transparent)))
+      color: $fallback_color

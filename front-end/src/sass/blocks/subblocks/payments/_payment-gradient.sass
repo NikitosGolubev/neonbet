@@ -1,0 +1,25 @@
+@include gradientBorder('.payment-gradient', $dark-gradient, 2.5px, 10px, color(default))
+
+.payments-container
+  &__item
+    padding: 0 0.5rem 1rem 0.5rem
+
+.payment-gradient
+  display: block
+  width: 180px
+  height: 70px
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: 70%
+
+  &_wrap
+    cursor: pointer
+
+  &_active, &_wrap:hover
+    @include gradientBorder('.payment-gradient', $primary-gradient, 2.5px, 10px, color(default))
+    box-shadow: $medium-primary-shadow
+
+  &_active &, &_wrap:hover &
+    background-size: 80%
+
+@import payment-gradient-responsivity

@@ -1,0 +1,32 @@
+@import "settings"
+
+.header
+  font-size: $medium_font_size
+  @include flex(space-between, center)
+  @extend %removeUserSelect
+
+  // both central part and action call
+  &__list
+    @include flex(false, center)
+    white-space: nowrap
+
+    &-item
+      margin: 0 1.5vw
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+  // Action call
+  &__actions-list
+    margin-left: 15px
+    &_item
+      margin: 0 7px
+
+  &__sidebar-burger
+    display: none
+    padding: 0 0.5rem
+
+@import responsivity

@@ -1,0 +1,36 @@
+.score
+  font-family: font(black)
+  @extend %removeUserSelect
+  @include flex(center, center)
+  font-size: $big_font_size
+  color: color(alternative)
+
+  &__separator
+    margin: 0 0.5rem
+
+  &__concrete
+    background: color(muted)
+    padding: 0.3rem 0.5rem
+
+  &_winner
+    box-shadow: $weak-primary-shadow
+
+.simple-score
+  @extend %removeUserSelect
+  text-align: center
+  font-family: font(black)
+  font-size: $medium_font_size
+  border-radius: 3px
+  box-sizing: border-box
+  min-width: 2.5rem
+  white-space: nowrap
+  padding: 0.5rem
+
+  &_muted
+    background: color(muted)
+
+  &_default
+    background: color(default)
+
+  &__separator
+    font-family: font(regular)

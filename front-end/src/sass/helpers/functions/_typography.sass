@@ -1,0 +1,14 @@
+@import ../variables/typography
+
+/**
+ * Retrives font from "fonts" map
+ *
+ * @param  {String} $font_name Font key
+ * @return {Null|String}
+ */
+@function font($font_name)
+  @if (map-has-key($fonts, $font_name))
+  @return map-get($fonts, $font_name)
+
+  @warn "Unknown `#{$font_name}` in $fonts"
+  @return null

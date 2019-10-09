@@ -1,0 +1,39 @@
+$btn_height: 14rem
+$btn_width: 3rem
+
+@media screen and (max-width: breakpoint(sm))
+  .my-bets
+    &__btn
+      height: $btn_height
+      width: $btn_width
+
+    &_open
+      top: calc(50% - #{$btn_height}/2)
+
+@media screen and (max-width: breakpoint(xs))
+  .my-bets
+    &__btn
+      &_open
+        height: 6rem
+        width: $btn_width
+        top: calc(50% - #{6rem}/2)
+        border-top-left-radius: 10px
+        border-bottom-left-radius: 10px
+
+      &-bets-counter
+        margin-top: 0.4rem
+
+      &_text-open
+        display: none
+
+    &__content
+      width: 100%
+
+    &__data
+      max-height: calc(100vh - 5rem)
+      padding:
+        top: 0.5rem
+        bottom: 0.5rem
+
+    &__type
+      font-size: $super_big_font_size_xs

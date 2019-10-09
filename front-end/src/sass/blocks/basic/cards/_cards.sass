@@ -1,0 +1,60 @@
+// THIS FILE REQUIRES ACCESS TO "settings"
+
+$card_shadow: 0 1px 13px rgba(22, 26, 29, 0.4)
+
+$card_header_vertical_padding: 1.5rem
+$card_content_vertical_padding: 1.3rem
+$card_header_horizontal_padding: 1.5rem
+$card_content_horizontal_padding: 1.5rem
+
+.card
+  background: color(default)
+
+  // Card header
+  &__header
+    padding: $card_header_vertical_padding $card_header_horizontal_padding
+    box-shadow: $card_shadow
+
+  // Card content
+  &__content
+    padding: $card_content_vertical_padding $card_content_horizontal_padding
+
+  // Card navigation
+  &__nav
+    @extend %removeUserSelect
+    background: color(muted)
+    &-list
+      @include flex(space-between)
+
+    &-item
+      text-align: center
+      box-sizing: border-box
+      @extend %mediumTransition
+      cursor: pointer
+      border-right: 1px solid color(secondary-dark)
+      width: 100%
+      padding: 1rem 0
+
+      &:last-child
+        border-right: 0
+
+      &_active, &:hover
+        color: color(alternative)
+        background: rgba(color(alternative), 0.07)
+
+      &:active
+        opacity: 0.5
+
+    &_disabled &-item
+      cursor: initial
+
+    &_disabled &-item:active, &_disabled &-item:hover
+      opacity: 1
+      background: color(muted)
+      color: color(secondary)
+
+  // Card footer
+  &__footer
+    padding: $card_header_vertical_padding
+
+@import cards-responsivity

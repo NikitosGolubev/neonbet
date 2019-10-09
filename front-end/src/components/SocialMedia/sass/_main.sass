@@ -1,0 +1,31 @@
+@import "settings"
+
+// Circle social button with gradient border
+@include gradientBorder('.social-gradient-circle', $dark-gradient, 2.5px, 50%, color(secondary-dark))
+.social-gradient-circle
+  @include flex(center, center)
+  height: 3.5rem
+  width: 3.5rem
+  border: 6px solid color(muted)
+  @extend %mediumTransition
+
+  &_wrap
+    @extend %mediumTransition
+    margin: 0 0.4rem
+
+  &_wrap:hover &_border
+    background: $primary-gradient
+
+  &_wrap:hover &
+    background: transparent !important
+    box-shadow: $medium-primary-shadow
+
+  &_wrap:active
+    opacity: 0.6
+
+
+// Socials bar
+.socials
+  @include flex(space-around, center)
+
+@import responsivity

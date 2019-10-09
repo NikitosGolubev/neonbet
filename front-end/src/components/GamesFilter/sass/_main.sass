@@ -1,0 +1,66 @@
+@import "settings"
+
+// Styling
+@include gradientBorder('.games-filter__game-logo', $dark-gradient, $games_border, $game_logo_radius, color(secondary-dark))
+
+.games-filter
+  @extend %removeUserSelect
+
+  &__content
+    // Calculated width of game logo + paddings = one game filter
+    max-height: 5.3rem * 5
+
+  // Filter header
+  &__header
+    @include flex(space-between, center)
+
+  &__switcher
+    @include flex(space-between, center)
+
+    &-sign
+      margin-right: 2rem
+      font-size: $small_font_size
+
+  // Filters for particular games
+  &__concrete
+    @include flex(space-between, center)
+    border-bottom: $default_restrict_border
+    padding:
+      right: 2rem // For avoiding touching scroll
+      top: 1rem
+      bottom: 1rem
+
+  &__game
+    &-data
+      @include flex(false, center)
+
+    // Game logo with gradient border
+    &-logo
+      @include flex(center, center)
+      height: 3.2rem
+      width: 6rem
+      box-sizing: border-box
+      border: #{$games_border * 2} solid color(default)
+      &_wrap
+        display: table
+
+      &_active &_border
+        background: $primary-gradient
+        box-shadow: $weak-primary-shadow
+
+      &_img
+        max-height: 98%
+        max-width: 98%
+
+    // Game name
+    &-name
+      font-size: $medium_font_size
+      white-space: nowrap
+      margin-left: 1.3rem
+
+  // Dropdown trigger
+  &__dropdown-trigger
+    display: none
+    margin-left: 0.7rem
+
+@import "responsivity"

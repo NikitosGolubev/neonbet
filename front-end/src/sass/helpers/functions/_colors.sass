@@ -1,0 +1,14 @@
+@import ../variables/colors
+
+/**
+ * Retrives color from "colors" map
+ *
+ * @param  {String} $color_name Color key
+ * @return {Null|Color}
+ */
+@function color($color_name)
+  @if (map-has-key($colors, $color_name))
+  @return map-get($colors, $color_name)
+
+  @warn "Unknown `#{$color_name}` in $colors"
+  @return null

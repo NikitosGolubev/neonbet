@@ -1,0 +1,75 @@
+@import basic
+
+// Fonts
+$fonts: ()
+$fonts: map_merge($fonts, (light: "ProximaNova Light"))
+$fonts: map_merge($fonts, (regular: "ProximaNova"))
+$fonts: map_merge($fonts, (semibold: "ProximaNova Semibold"))
+$fonts: map_merge($fonts, (bold: "ProximaNova Bold"))
+$fonts: map_merge($fonts, (black: "ProximaNova Black"))
+
+$fonts_paths: ()
+$fonts_paths: map_merge($fonts_paths, (light: "#{$root_folder_depth}fonts/ProximaNova-Light.woff2"))
+$fonts_paths: map_merge($fonts_paths, (regular: "#{$root_folder_depth}fonts/ProximaNova-Regular.woff2"))
+$fonts_paths: map_merge($fonts_paths, (semibold: "#{$root_folder_depth}fonts/ProximaNova-Semibold.woff2"))
+$fonts_paths: map_merge($fonts_paths, (bold: "#{$root_folder_depth}fonts/ProximaNova-Bold.woff2"))
+$fonts_paths: map_merge($fonts_paths, (black: "#{$root_folder_depth}fonts/ProximaNova-Black.woff2"))
+
+$font_paths_alternatives: ()
+$font_paths_alternatives: map_merge($font_paths_alternatives, (light: "#{$root_folder_depth}fonts/ProximaNova-Light.woff"))
+$font_paths_alternatives: map_merge($font_paths_alternatives, (regular: "#{$root_folder_depth}fonts/ProximaNova-Regular.woff"))
+$font_paths_alternatives: map_merge($font_paths_alternatives, (semibold: "#{$root_folder_depth}fonts/ProximaNova-Semibold.woff"))
+$font_paths_alternatives: map_merge($font_paths_alternatives, (bold: "#{$root_folder_depth}fonts/ProximaNova-Bold.woff"))
+$font_paths_alternatives: map_merge($font_paths_alternatives, (black: "#{$root_folder_depth}fonts/ProximaNova-Black.woff"))
+
+// Font sizes
+
+// Common text
+$default_font_size: 15px
+$small_font_size: $default_font_size / 1.1
+$medium_font_size: $default_font_size * 1.18
+$big_font_size: $default_font_size * 1.5
+$super_big_font_size: $default_font_size * 1.8
+
+// Headers
+$h1_font_size: $default_font_size * 3.2
+$h2_font_size: $default_font_size * 2.5
+$h3_font_size: $default_font_size * 2.1
+$h4_font_size: $default_font_size * 1.8
+$h5_font_size: $default_font_size * 1.55
+$h6_font_size: $default_font_size * 1.2
+
+
+// Font sizes - SMALL screens
+
+// Common text
+$default_font_size_sm: 14px
+$small_font_size_sm: $default_font_size_sm / 1.1
+$medium_font_size_sm: $default_font_size_sm * 1.18
+$big_font_size_sm: $default_font_size_sm * 1.35
+$super_big_font_size_sm: $default_font_size_sm * 1.6
+
+// Headers
+$h1_font_size_sm: $default_font_size_sm * 2.7
+$h2_font_size_sm: $default_font_size_sm * 2.25
+$h3_font_size_sm: $default_font_size_sm * 1.9
+$h4_font_size_sm: $default_font_size_sm * 1.65
+$h5_font_size_sm: $default_font_size_sm * 1.45
+$h6_font_size_sm: $default_font_size_sm * 1.25
+
+// Font sizes - EXTRA SMALL screens
+
+// Common text
+$default_font_size_xs: 13px
+$small_font_size_xs: $default_font_size_xs / 1.1
+$medium_font_size_xs: $default_font_size_xs * 1.1
+$big_font_size_xs: $default_font_size_xs * 1.25
+$super_big_font_size_xs: $default_font_size_xs * 1.45
+
+// Headers
+$h1_font_size_xs: $default_font_size_xs * 2.3
+$h2_font_size_xs: $default_font_size_xs * 2.1
+$h3_font_size_xs: $default_font_size_xs * 1.8
+$h4_font_size_xs: $default_font_size_xs * 1.55
+$h5_font_size_xs: $default_font_size_xs * 1.45
+$h6_font_size_xs: $default_font_size_xs * 1.25

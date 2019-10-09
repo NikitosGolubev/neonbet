@@ -1,0 +1,52 @@
+.card
+  @media screen and (max-width: breakpoint(sm))
+    $card_header_vertical_padding: 1.2rem
+    $card_content_vertical_padding: 1.2rem
+    $card_header_horizontal_padding: 0.8rem
+    $card_content_horizontal_padding: 0.8rem
+
+    &__nav
+      &-item
+        font-size: $small_font_size_sm
+        padding: 0.7rem 0
+
+    // Card header
+    &__header
+      padding: $card_header_vertical_padding $card_header_horizontal_padding
+
+    // Card content
+    &__content
+      padding: $card_content_vertical_padding $card_content_horizontal_padding
+
+    // Card footer
+    &__footer
+      padding: $card_header_vertical_padding
+
+  @media screen and (max-width: breakpoint(xs))
+    $card_header_vertical_padding: 1rem
+    $card_content_vertical_padding: 1rem
+    $card_header_horizontal_padding: 0.65rem
+    $card_content_horizontal_padding: 0.65rem
+
+    &__nav
+      &-list
+        @include flex(center, center, column)
+
+      &-item
+        border-right: none
+        border-bottom: 1px solid color(secondary-dark)
+
+        &:last-child
+          border-bottom: 0
+
+    // Card header
+    &__header
+      padding: $card_header_vertical_padding $card_header_horizontal_padding
+
+    // Card content
+    &__content
+      padding: $card_content_vertical_padding $card_content_horizontal_padding
+
+    // Card footer
+    &__footer
+      padding: $card_header_vertical_padding

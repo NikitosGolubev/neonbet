@@ -1,0 +1,41 @@
+@import "settings"
+
+.carousel
+  @include flex(space-between, center)
+  text-align: center
+  margin: 7vmin 0
+  color: color(alternative)
+
+  &__tagline
+    text-align: center
+    margin:
+      top: 1.7rem
+      bottom: 2.1rem
+
+  &__track
+    // Space for left control, don't know why, but it's not that responsive as right one.
+    width: calc(100% - 50px)
+
+  &__slide
+    max-width: 85%
+
+  &__controls
+    padding:
+      left: 20px
+      right: 20px
+      bottom: 15px
+      top: 20px
+    border-radius: 50%
+    @extend %mediumTransition
+    background: rgba(color(alternative), 0.2)
+    cursor: pointer
+
+    &:hover
+      background: rgba(color(alternative), 0.4)
+
+    &_svg
+      fill: color(alternative)
+      width: $small_font_size
+      height: $small_font_size
+
+@import "responsivity"

@@ -1,0 +1,12 @@
+@import "../settings";
+
+$outer-margin: 0;
+$gutter-width: 0;
+$breakpoints:
+        xxs breakpoint(xxs) auto,
+        xs breakpoint(xs) auto,
+        sm breakpoint(sm) auto,
+        md breakpoint(md) auto,
+        lg breakpoint(lg) auto !default;
+
+@import "~flexboxgrid-sass/flexboxgrid";

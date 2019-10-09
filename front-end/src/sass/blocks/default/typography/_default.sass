@@ -1,0 +1,131 @@
+// THIS FILE REQUIRES ACCESS TO "settings"
+
+/* Global typography settings */
+body
+  font-family: font(regular)
+  font-size: $default_font_size
+
+p
+  margin: 1.2rem 0
+  line-height: 1.4
+
+/* Headers */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  display: block
+
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4
+  font-family: font(black)
+
+h5, h6,
+.h5, .h6
+  font-family: font(bold)
+  margin: 0.5rem 0
+
+h1, .h1
+  font-size: $h1_font_size
+  margin: 1.2rem 0
+
+h2, .h2
+  font-size: $h2_font_size
+  margin: 0.8rem 0
+
+h3, .h3
+  font-size: $h3_font_size
+  margin: 0.6rem 0
+
+h4, .h4
+  font-size: $h4_font_size
+  margin: 0.5rem 0
+
+h5, .h5
+  font-size: $h5_font_size
+
+h6, .h6
+  font-size: $h6_font_size
+  margin: 0.3rem 0
+
+// Headers without margins
+.h1-m0, .h2-m0, .h3-m0, .h4-m0, .h5-m0, .h6-m0
+  margin: 0 !important
+  display: table !important
+
+.h1-m0
+  @extend .h1
+
+.h2-m0
+  @extend .h2
+
+.h3-m0
+  @extend .h3
+
+.h4-m0
+  @extend .h4
+
+.h5-m0
+  @extend .h5
+
+.h6-m0
+  @extend .h6
+
+.subheader
+  text-transform: uppercase
+  font-family: font(black)
+  font-size: $medium_font_size
+  @extend %removeUserSelect
+  display: block
+  margin: 0.3rem 0
+
+/* Configuration classes for text wrap */
+.text_wrap
+  word-break: break-word
+
+/* BEM class names for different font styles */
+@each $font-name, $font in $fonts
+  $color: "#{$font-name}"
+  .text_#{$color}
+    font-family: $font
+
+/* font size and transformations */
+.text
+  &_uppercase
+    text-transform: uppercase
+
+  &_bold
+    font-family: font(bold)
+
+  &_black
+    font-family: font(black)
+
+  &_italic
+    font-style: italic
+
+  &_underline
+    text-decoration: underline
+
+  &_marked
+    background-color: color(alternative)
+    color: color(default)
+
+  &_small-sz
+    font-size: $small_font_size
+
+  &_default-sz
+    font-size: $default_font_size
+
+  &_medium-sz
+    font-size: $medium_font_size
+
+  &_big-sz
+    font-size: $big_font_size
+
+  &_super-big-sz
+    font-size: $super_big_font_size
+
+/* Specific class names for formatting plain text */
+.attention
+  font-size: $medium_font_size
+  font-family: font(bold)
+
+@import default-responsivity

@@ -1,0 +1,12 @@
+@media screen and (max-width: breakpoint(sm))
+  .payments-container
+    @include flex(center, false)
+
+@media screen and (max-width: breakpoint(xs))
+  .payment-gradient
+    width: 110px
+    height: 50px
+
+  .payments-container
+    &__item
+      padding: 0 0.25rem 0.5rem 0.25rem

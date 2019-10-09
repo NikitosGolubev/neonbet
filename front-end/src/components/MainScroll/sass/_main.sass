@@ -1,0 +1,55 @@
+@import "settings"
+
+.custom-scroll
+  position: relative
+  overflow-x: hidden
+
+.simplebar-track .simplebar-scrollbar.simplebar-visible::before
+  opacity: 0 !important
+
+.custom-scroll .simplebar-scroll-content
+  overflow-y: auto
+  overflow-x: hidden
+  position: absolute
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100% !important
+  height: 100%
+
+.custom-scroll .simplebar-scroll-content
+  overflow-x: hidden
+  overflow-y: auto
+
+.simplebar-track
+  z-index: 1
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  width: $scroll_width !important
+  background-color: $scroll_track_color
+
+.simplebar-scrollbar
+  @extend %scrollBg
+  cursor: pointer
+  position: absolute
+  left: 0
+  top: 0
+  width: 100% !important
+
+
+[data-simplebar-direction="horizontal"] .simplebar-track, .simplebar.horizontal .simplebar-track
+  top: auto
+  left: 0
+  width: auto
+  height: 11px
+
+[data-simplebar-direction="horizontal"] .simplebar-track .simplebar-scrollbar, .simplebar.horizontal .simplebar-track .simplebar-scrollbar
+  right: auto
+  top: 2px
+  height: 7px
+  min-height: 0
+  min-width: 10px
+  width: auto

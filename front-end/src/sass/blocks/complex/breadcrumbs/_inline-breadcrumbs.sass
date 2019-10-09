@@ -1,0 +1,30 @@
+.breadcrumbs
+  @include flex(false, center)
+  flex-wrap: wrap
+
+  &__item
+    margin:
+      right: 1rem
+      top: 0.1rem
+      bottom: 0.1rem
+
+    &:last-child
+      margin-right: 0
+
+  &__link
+    color: color(secondary)
+
+    &:hover
+      text-decoration: underline
+
+  &__separator
+    font-size: $medium_font_size
+    font-weight: bold
+    line-height: 0.5
+
+  &_root
+    color: color(primary-light)
+
+  &_current
+    color: color(secondary)
+    text-decoration: underline

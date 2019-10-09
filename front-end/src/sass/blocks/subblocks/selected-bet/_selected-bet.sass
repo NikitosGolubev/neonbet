@@ -1,0 +1,26 @@
+.selected-bet
+  border-bottom: 1px solid color(secondary)
+  padding-top: 1rem
+
+  &:first-child
+    padding-top: 0
+
+  &__controls
+    margin-bottom: 0.6rem
+    @include flex(flex-end, center)
+
+  &__match-data
+    align-items: center
+
+  &__game-details
+    @include flex(center, center, column)
+
+  &__choice
+    color: color(alternative)
+    text-decoration: underline
+    font-family: font(black)
+    margin-left: 20px
+    white-space: nowrap
+    font-size: $medium_font_size
+
+@import selected-bet-responsivity

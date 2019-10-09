@@ -1,0 +1,52 @@
+.inline-event-presentation
+  @include flex(center, center, column)
+
+  &__item
+    margin: 0 0.3rem
+
+  &__body
+    @include flex(center, center)
+
+  &__team-name
+    color: color(alternative)
+    word-break: break-all
+    max-width: 60px
+
+    &_loss
+      color: color(secondary)
+
+  &__team-logo
+    min-height: 3rem
+    min-width: 3.5rem
+    border-radius: 3px
+    background-color: color(secondary-dark)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: 70%
+
+    &_win
+      box-shadow: $weak-primary-shadow
+
+    &_loss
+      opacity: 0.5
+
+  &__separator
+    color: color(alternative)
+    @extend %removeUserSelect
+    font-family: font(bold)
+
+    &_secondary
+      color: color(secondary)
+
+  &__coef
+    background-color: color(secondary-dark)
+    padding: 0.5rem 0.75rem
+    border-radius: 3px
+    color: color(alternative)
+
+    &_win
+      box-shadow: $weak-primary-shadow
+
+    &_loss
+      background-color: color(muted)
+      color: color(secondary)

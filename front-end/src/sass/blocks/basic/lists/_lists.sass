@@ -1,0 +1,21 @@
+// Numbered list
+.num-list
+  list-style: none
+  counter-reset: muted-counter
+
+  li
+    counter-increment: muted-counter
+    @include flex(false, center)
+
+  li::before
+    content: counter(muted-counter)
+    font-family: font(black)
+    font-size: $small_font_size
+    background: color(muted)
+    width: 1.7rem
+    height: 1.5rem
+    border-radius: 50%
+    @include flex(center, center)
+    color: color(alternative)
+    text-align: center
+    margin-right: 0.8rem

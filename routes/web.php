@@ -1,5 +1,7 @@
 <?php
 
+Route::get('/{any}', 'SpaBootController')->where('any', '.*');
+
 Route::get('/', function () {
     return view('welcome');
 });

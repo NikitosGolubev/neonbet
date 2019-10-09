@@ -1,0 +1,57 @@
+@import "settings"
+
+// Copied and slightly edited from https://codepen.io/rosalieelphick/pen/xJyRoK
+
+.burger
+  &__checkbox
+    &_hidden
+      position: absolute
+      overflow: hidden
+      clip: rect(0 0 0 0)
+      height: 1px
+      width: 1px
+      margin: -1px
+      padding: 0
+      border: 0
+
+    &_active + label > .burger__content > .burger__bar_1
+      transform: translateX(40px)
+      background-color: transparent
+
+    &_active + label > .burger__content > .burger__bar_2
+      transform: rotate(45deg)
+
+    &_active + label > .burger__content > .burger__bar_3
+      transform: rotate(-45deg)
+
+    &_active + label > .burger__content > .burger__bar_4
+      transform: translateX(-40px)
+      background-color: transparent
+
+  &__content
+    width: 30px
+    height: 30px
+    position: relative
+    cursor: pointer
+
+  &__bar
+    padding: 0
+    width: 30px
+    height: 4px
+    background-color: color(primary-dark)
+    display: block
+    border-radius: 4px
+    transition: all 0.4s ease-in-out
+    position: absolute
+
+    &_1
+      top: 0
+
+    &_2, &_3
+      top: 13.5px
+
+    &_3
+      right: 0
+
+    &_4
+      bottom: 0

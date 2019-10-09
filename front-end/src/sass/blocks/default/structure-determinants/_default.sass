@@ -1,0 +1,18 @@
+.base-container
+  max-width: breakpoint(lg)
+
+  @media screen and (max-width: breakpoint(lg))
+    max-width: breakpoint(md)
+
+  @media screen and (max-width: breakpoint(md))
+    max-width: breakpoint(sm)
+
+  @media screen and (max-width: breakpoint(sm))
+    max-width: breakpoint(xs)
+
+  @media screen and (max-width: breakpoint(xs))
+    max-width: breakpoint(xxs)
+
+.centered
+  text-align: center
+  @include flex(center, center)

@@ -1,0 +1,19 @@
+// Classes for attaching color to background or text
+@each $color_name, $color in $colors
+  #{'.'+$color_name}
+    color: $color
+
+    &_bg
+      background-color: $color !important
+
+// Gradient bg classes
+.primary-gradient
+  &_bg
+    background: $primary-gradient
+
+.bg-center
+  width: 100%
+  height: 100%
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: center center

@@ -1,0 +1,13 @@
+/**
+ * Makes block "flexible"
+ */
+@mixin flex($justify_content: false, $align_items: false, $flex_direction: false)
+  display: flex
+  @if $justify_content
+    justify-content: $justify_content
+
+  @if $align_items
+    align-items: $align_items
+
+  @if $flex_direction
+    flex-direction: $flex_direction

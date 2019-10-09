@@ -1,0 +1,61 @@
+.live-sensor
+  width: 100%
+  box-sizing: border-box
+  max-width: 5rem
+  @include flex(space-around, center)
+  border: 2px solid color(secondary)
+  padding: 0.4rem 0.6rem
+  border-radius: 1rem
+  cursor: pointer
+  @extend %removeUserSelect
+  @extend %mediumTransition
+
+  &__status
+    width: 11px
+    height: 11px
+    border-radius: 50%
+
+  &__text
+    text-transform: uppercase
+    white-space: nowrap
+    line-height: 0.8
+    margin-left: 0.6rem
+
+  &_disabled
+    cursor: initial
+
+  &_enabled &__status
+    background-image: linear-gradient(90deg, rgb(33,90,13) 0%, rgb(32,182,50) 100%)
+    box-shadow: 0 0 13px 0 rgba(0, 255, 24, 0.49)
+
+  &_enabled &__text
+    color: color(alternative)
+
+  &_disabled &__status
+    background: color(secondary-dark)
+
+  &_disabled &__text
+    color: color(secondary)
+
+  &_enabled:hover
+    background: color(secondary)
+
+  &_enabled:active
+    opacity: 0.7
+
+.simple-live-sensor
+  @include flex(center, center)
+
+  &__status
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    background-image: linear-gradient(90deg, rgb(33,90,13) 0%, rgb(32,182,50) 100%)
+    box-shadow: 0 0 13px 0 rgba(0, 255, 24, 0.49)
+
+  &__text
+    text-transform: uppercase
+    white-space: nowrap
+    margin-left: 0.4rem
+    margin-top: 1px
+    @extend %removeUserSelect

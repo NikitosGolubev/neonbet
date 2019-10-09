@@ -1,0 +1,31 @@
+@import settings
+
+.logo
+  width: 150px
+  height: 22px
+  @extend %mediumTransition
+  @include setBgImg('img/logo.png', 'center center no-repeat')
+
+  &_animated:hover
+    animation: rotateLogo 1.5s linear infinite
+
+.logo-shadow
+  width: 164px
+  height: 45px
+  @extend %mediumTransition
+  @include setBgImg('img/logo-shadow.png', 'center center no-repeat')
+
+@keyframes rotateLogo
+  0%
+    transform: rotate(0deg)
+
+  30%
+    transform: rotate(-20deg)
+
+  70%
+    transform: rotate(20deg)
+
+  100%
+    transform: rotate(0deg)
+
+@import responsivity

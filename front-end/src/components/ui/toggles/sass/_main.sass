@@ -1,0 +1,60 @@
+@import "settings"
+
+.toggle
+  &__label
+    position: relative
+    display: block
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent
+    transform: translate3d(0, 0, 0)
+
+    &:before
+      content: ""
+      position: relative
+      top: 0
+      left: 0
+      width: 36px
+      height: 8px
+      border-radius: 4px
+      background-color: color(muted)
+      display: block
+      transition: background .2s ease
+
+  &__switcher
+    position: absolute
+    top: -5px
+    left: -1px
+    display: block
+    background-image: linear-gradient(51deg,  rgba(color(secondary), 0.7) 20%, color(secondary) 100%)
+    border-radius: 10px
+    width: 18px
+    height: 18px
+    transition: all .2s ease
+
+    &:before
+      content: ""
+      position: absolute
+      display: block
+      margin: -18px
+      width: 56px
+      height: 56px
+      background: rgba(210, 250, 125, .5)
+      border-radius: 50%
+      transform: scale(0)
+      opacity: 1
+      pointer-events: none
+
+  &__checkbox
+    display: none
+
+    &:checked+.toggle__label
+      .toggle__switcher
+        transform: translateX(20px)
+        transition: all .2s cubic-bezier(.8, .4, .3, 1.25), background .15s ease
+        box-shadow: 0 5px 18px rgba(color(primary-dark), 0.57)
+        background-image: $primary-gradient
+
+        &:before
+          transform: scale(1)
+          opacity: 0
+          transition: all .4s ease

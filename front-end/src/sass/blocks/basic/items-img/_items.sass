@@ -1,0 +1,76 @@
+// Clock image
+.clock
+  width: 16px
+  height: 16px
+  @include setBgImg('img/clock.png', 'center center no-repeat')
+  background-size: contain
+
+.trophy
+  width: 18px
+  height: 16px
+  @include setBgImg('img/trophy.png', 'center center no-repeat')
+  background-size: contain
+
+.money
+  width: 18px
+  height: 18px
+  @include setBgImg('img/money.png', 'center center no-repeat')
+  background-size: contain
+
+.banknote
+  width: 28px
+  height: 26px
+  @include setBgImg('img/banknote.png', 'center center no-repeat')
+  background-size: contain
+
+.white-cross
+  width: 14px
+  height: 12px
+  @include setBgImg('img/white-cross.png', 'center center no-repeat')
+  background-size: contain
+
+.red-cross
+  width: 20px
+  height: 20px
+  @include setBgImg('img/red-cross.svg', 'center center no-repeat')
+  background-size: contain
+
+.info-pick
+  width: 20px
+  height: 20px
+  @include setBgImg('img/info.png', 'center center no-repeat')
+  background-size: contain
+
+.letter
+  width: 16px
+  height: 12px
+  @include setBgImg('img/letter.png', 'center center no-repeat')
+  background-size: contain
+
+.phone
+  width: 10px
+  height: 14px
+  @include setBgImg('img/phone.png', 'center center no-repeat')
+  background-size: contain
+
+.edit
+  width: 28px
+  height: 28px
+  @include setBgImg('img/edit.png', 'center center no-repeat')
+  background-size: contain
+
+.dropdown-arrow
+  @extend %mediumTransition
+  cursor: pointer
+  width: 15px
+  height: 12px
+  background-size: contain
+
+  &:hover
+    opacity: 0.7
+
+  &_open
+    @include setBgImg('img/dropdown-open.png', 'center center no-repeat')
+
+  &_close
+    @include setBgImg('img/dropdown-close.png', 'center center no-repeat')

@@ -1,0 +1,11 @@
+@import ../variables/responsivity
+
+/**
+ * Retrieves breakpoint from breakpoints map
+ */
+@function breakpoint($key)
+  @if (map-has-key($template_breakpoints, $key))
+  @return map-get($template_breakpoints, $key)
+
+  @warn "Unknown `#{$key}` in $breakpoints"
+  @return null

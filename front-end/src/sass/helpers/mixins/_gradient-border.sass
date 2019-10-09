@@ -1,0 +1,63 @@
+@import ../functions/colors
+
+// *
+// Attaches gradient border on some element
+// $elem - Selector of element, which should have gradient border
+// $grad - Gradient pattern which should be applied
+// $border_sz - Desired size of border
+// $radius - Value for border-radius property
+// $bg - Background color which should be set to element (without it, nothing won't work)
+// $border_el - Element which would represent border
+// $wrap - Element which contain $elem and $border_el
+//
+// Values
+// $elem (REQUIRED) selector
+// $grad (REQUIRED) gradient for background, not image
+// $border_sz (DEFAULT: 1px)
+// $radius (DEFAULT: 0px)
+// $bg (DEFAULT: false === color(default))
+// $border_el (DEFAULT: false === $elem+'_border')
+// $wrap (DEFAULT: false === $elem+'_wrap')
+//
+// Example HTML structure:
+// <div class='elem_wrap'>
+//   <div class='elem'>Some text here</div>
+//   <div class='elem_border'></div>
+// </div>
+// *
+@mixin gradientBorder($elem, $grad, $border_sz: 1px, $radius: 0px, $bg: false, $border_el: false, $wrap: false)
+  // By default background-color: color(default)
+  @if (not $bg)
+    $bg: color(default)
+
+  // By default ELEM-SELECTOR_border
+  @if (not $border_el)
+    $border_el: $elem+'_border'
+
+  // By default ELEM-SELECTOR_wrap
+  @if (not $wrap)
+    $wrap: $elem+'_wrap'
+
+  // Styling
+  #{$wrap}
+    position: relative
+    margin: $border_sz
+    display: table
+
+  #{$elem}
+    background-color: $bg !important
+    position: relative
+    z-index: 10
+    border-radius: $radius
+
+  #{$border_el}
+    position: absolute
+    background: $grad
+    z-index: 5
+    width: calc(100% + #{$border_sz * 2})
+    height: calc(100% + #{$border_sz * 2})
+    top: -$border_sz
+    left: -$border_sz
+    right: -$border_sz
+    bottom: -$border_sz
+    border-radius: $radius

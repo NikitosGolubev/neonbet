@@ -1,0 +1,9 @@
+// Some bug with flexboxgrid occurs particularly at 1200px, 992px, 768px, that's why values
+// there are whether increased or decreased by 1px (sm - 769px, md - 993px, lg - 1199px)
+
+$template_breakpoints: ()
+$template_breakpoints: map_merge($template_breakpoints, (xxs: 320px))
+$template_breakpoints: map_merge($template_breakpoints, (xs: 515px))
+$template_breakpoints: map_merge($template_breakpoints, (sm: 769px))
+$template_breakpoints: map_merge($template_breakpoints, (md: 993px))
+$template_breakpoints: map_merge($template_breakpoints, (lg: 1199px))

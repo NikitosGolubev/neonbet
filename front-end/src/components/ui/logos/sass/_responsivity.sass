@@ -1,0 +1,12 @@
+@media screen and (max-width: breakpoint(sm))
+  $decreasing_coef: 1.2
+
+  .logo
+    width: $logo_width / $decreasing_coef
+    height: $logo_height / $decreasing_coef
+    background-size: cover
+
+  .logo-shadow
+    width: $logo_shadow_width / $decreasing_coef
+    height: $logo_shadow_height / $decreasing_coef
+    background-size: cover

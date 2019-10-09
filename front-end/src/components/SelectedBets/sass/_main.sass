@@ -1,0 +1,64 @@
+@import "settings"
+
+.my-bets
+  z-index: 15
+  position: absolute
+  top: 0
+  left: 0
+
+  &__header
+    @include flex(space-between, center)
+
+  &__content
+    background: color(default)
+    width: 400px
+    z-index: 20
+
+    &_bg, &_wrap
+      height: 100%
+      position: fixed
+      top: 0
+      right: 0
+
+    &_bg
+      background: rgba(#000, 0.65)
+      width: 100%
+      cursor: pointer
+
+    &_wrap
+      @include flex(flex-end)
+
+  // All the particular content stored there
+  &__data
+    max-height: calc(100vh - 7rem) // 100% of screen height - APPROXIMATE SIZE OF .my-bets__header
+    padding-right: calc(#{$scroll_width} + 10px) // To eliminate visual issues with scrollbar
+
+  &__detail
+    @include flex(space-between, center)
+    margin: 0.7rem 0
+
+  &__type
+    font-family: font(black)
+    font-size: $super_big_font_size
+    color: color(alternative)
+
+  &__overall
+    padding: 0.5rem 0
+
+  // My bets button. For opening/closing.
+  $btn_height: 15rem
+  $btn_width: 4rem
+
+  &__btn
+    height: $btn_height
+    width: $btn_width
+    border-top-left-radius: 10px
+    border-bottom-left-radius: 10px
+
+    &_open
+      position: fixed
+      top: calc(50% - #{$btn_height}/2)
+      right: 0
+
+
+@import "responsivity"
