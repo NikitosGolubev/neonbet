@@ -9,14 +9,12 @@
 
         <!-- Action call buttons -->
         <li class="header__actions-list_item">
-            <a class="btn btn_outline-simple btn_lg" href="#">
-                Вход
+            <a href="#">
+                <v-button-outline-simple size="lg">Вход</v-button-outline-simple>
             </a>
         </li>
         <li class="header__actions-list_item">
-            <a class="btn btn_outline-simple btn_lg" href="#">
-                Регистрация
-            </a>
+            <v-button-outline-simple size="lg">Регистрация</v-button-outline-simple>
         </li>
 
         <li class="header__sidebar-burger">
@@ -34,10 +32,11 @@
 <script>
     import UserSidebarBurger from "../UserSidebar/UserSidebarBurger";
     import LanguagePicker from "../LanguagePicker/LanguagePicker";
+    import VButtonOutlineSimple from "../ui/buttons/VButtonOutlineSimple";
 
     export default {
         name: "MainHeaderActionCall",
-        components: {LanguagePicker, UserSidebarBurger}
+        components: {VButtonOutlineSimple, LanguagePicker, UserSidebarBurger}
     }
 </script>
 

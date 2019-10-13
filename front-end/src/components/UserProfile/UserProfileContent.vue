@@ -4,7 +4,8 @@
         <a href="#" class="link_default">
             <div class="user-avatar_wrap">
                 <div class="user-avatar main-user-profile__avatar"
-                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
+                     :style="`background: url(${require('@/assets/common/img/avatar.png')}) center center no-repeat;`">
+                </div>
                 <div class="user-avatar_border"></div>
             </div>
         </a>

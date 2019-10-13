@@ -1,0 +1,31 @@
+@import "settings"
+
+.team-logo-bubble
+  width: 100%
+  height: 5.5rem
+  max-width: 8rem
+  border-radius: 3px
+  background-size: auto 80% !important
+  background-color: color(secondary-dark) !important
+  @include flex(center, center)
+  margin-bottom: 7px // Triangle compensation
+  position: relative
+
+  // Triangle
+  &:after
+    content: ''
+    position: absolute
+    border: 7px solid transparent
+    border-top: 7px solid color(secondary-dark)
+    bottom: -13px
+    left: 50%
+    transform: translateX(-50%)
+
+  // Color variations
+  &_muted-light
+    background-color: color(muted-light) !important
+
+    &:after
+      border-top: 7px solid color(muted-light)
+
+@import responsivity

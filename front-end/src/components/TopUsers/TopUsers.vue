@@ -11,254 +11,57 @@
         <div>
             <ol class="num-list">
                 <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="primary-gradient_bg alternative top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Мой аккаунт</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Top user record -->
-                <li class="top-users__record_wrap card__content">
-                    <div class="top-users__record">
-                        <div class="top-users__record_left">
-                            <!-- Avatar -->
-                            <div class="user-avatar_wrap">
-                                <div class="user-avatar top-users__avatar"
-                                     style="background: url('assets/img/avatar.png') center center no-repeat; background-size: cover;"></div>
-                                <div class="user-avatar_border"></div>
-                            </div>
-
-                            <!-- Nickname -->
-                            <div class="top-users__nickname">Никнейм</div>
-                        </div>
-
-                        <div class="top-users__record_right">
-                            <!-- Balance -->
-                            <div class="balance">
-                                <div class="money balance__money-pick"></div>
-                                <div class="balance__content">12500</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="AnotherUser134"
+                        :balance="12004"
+                        :is-current-user="true"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
+                <top-users-record
+                        :userpick="require('@/assets/common/img/avatar.png')"
+                        nickname="SomeUser123"
+                        :balance="12500"
+                />
             </ol>
         </div>
     </div>
@@ -266,8 +69,10 @@
 </template>
 
 <script>
+    import TopUsersRecord from "./TopUsersRecord";
     export default {
-        name: "TopUsers"
+        name: "TopUsers",
+        components: {TopUsersRecord}
     }
 </script>
 

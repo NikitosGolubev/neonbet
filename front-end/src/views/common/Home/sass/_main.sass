@@ -1,13 +1,7 @@
 @import settings
 
 // "BASIC COMPONENTS"
-@import ../../../../sass/blocks/basic/matches/betting-event
-@import ../../../../sass/blocks/basic/matches/game-logo
-@import ../../../../sass/blocks/basic/matches/team-logo-bubble
-@import ../../../../sass/blocks/basic/matches/event-time-data
-@import ../../../../sass/blocks/basic/matches/live-sensor
-@import ../../../../sass/blocks/basic/matches/coefficient
-@import ../../../../sass/blocks/basic/matches/score
+
 @import ../../../../sass/blocks/basic/matches/additional-event
 
 // SUBBLOCKS
@@ -36,4 +30,8 @@ $content-gap: 2.2rem
   &__aside &__section:last-child, &__main &__section:last-child
     margin-bottom: 0
 
-@import responsivity/main
+.index-user-profile
+  &__header
+    @extend %removeUserSelect
+
+@import responsivity

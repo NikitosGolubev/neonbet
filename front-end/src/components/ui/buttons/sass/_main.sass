@@ -1,0 +1,199 @@
+@import "settings"
+
+// Default behaviour for items (pictures) to make them alive while interaction.
+.item-btn
+  display: block
+  @extend %mediumTransition
+  cursor: pointer
+
+  &:hover
+    opacity: 0.7
+
+  &:active
+    opacity: 0.5
+
+// Fileupload buttons
+.upload-gradient-btn
+  &__label
+    cursor: pointer
+    @include gradientText($text-gradient-default, color(primary-light))
+    @extend %fastTransition
+    @extend %removeUserSelect
+
+    &:hover
+      opacity: 0.7
+
+    &:active
+      text-decoration: underline
+
+  &__input
+    display: none
+
+// Default "nake" button
+.btn
+  white-space: nowrap
+  border-radius: $border_radius
+  box-sizing: border-box
+  height: calc(#{$default_font_size} + 27px)
+  padding: 0 1.2rem
+  max-width: 100%
+  @extend %mediumTransition
+  display: inline-flex
+  justify-content: center
+  align-items: center
+  cursor: pointer
+  @extend %removeUserSelect
+
+  &:active
+    opacity: 0.7
+
+  & *
+    user-select: none
+
+  // Simple quick-use buttons variations: .btn_#{$color_name}
+  @each $color_name, $color in $colors
+    &\_#{$color_name}
+      color: color(alternative)
+      background-color: $color
+
+      &:hover
+        opacity: 0.7
+
+      &:active
+        opacity: 0.5
+
+  &_alternative
+    color: color(default)
+
+  // Buttons sizes
+  &_lg
+    height: calc(#{$default_font_size} + 32px)
+    padding: 0 1.5rem
+
+  &_sm
+    padding: 0 0.8rem
+    height: calc(#{$default_font_size} + 20px)
+
+  // Specific button styles
+  // Button #1
+  &_outline-simple
+    color: color(alternative)
+    border: $outline_border solid transparent
+
+    &:hover
+      box-shadow: $weak-primary-shadow
+      border: $outline_border solid color(primary-light)
+
+  // Button #2
+  &_outline-simple-fillable
+    border: $outline_border solid color(primary-light)
+    box-shadow: $weak-primary-shadow
+    color: color(primary-light)
+
+    &:hover
+      @include smoothGradientAnimation(0.4s)
+      color: color(alternative)
+      background: $primary-gradient
+
+  // Button #3
+  &_fillable-gradient
+    color: color(primary-light)
+    // removing shadow from transition
+    transition-property: opacity, color
+
+    &:hover
+      @include smoothGradientAnimation(0.4s)
+
+    &-active, &:hover
+      box-shadow: $strong-primary-shadow
+      color: color(alternative)
+      background: $primary-gradient
+
+  // Button #4
+  &_fillable-simple
+    color: rgba(color(alternative), 0.5)
+
+    &-active, &:hover
+      color: color(alternative)
+      background: rgba(color(alternative), 0.07)
+
+  // Button #5
+  &__outline-gradient-fillable
+    box-shadow: $medium-primary-shadow
+    width: 100%
+
+    &_wrap
+      display: inline-flex
+      text-decoration: none
+
+    &_text
+      @include gradientText($text-gradient-default, color(primary-light))
+
+    &:hover
+      background: transparent !important
+
+    &:hover &_text
+      @include gradientTextReset(color(alternative))
+
+    &:active
+      opacity: 0.5
+
+// Gradient border of button #5
+@include gradientBorder('.btn__outline-gradient-fillable', $primary-gradient, $outline_border, $border_radius)
+@include gradientBorder('.btn__outline-gradient-fillable_muted', $primary-gradient, $outline_border, $border_radius, color(muted))
+
+.btn
+  // Button #6
+  &_result-disabled
+    cursor: initial
+    background: color(muted)
+    text-transform: uppercase
+    font-family: font(black)
+    font-size: $medium_font_size
+    color: color(alternative)
+    text-shadow: $weak-primary-shadow
+    box-shadow: $weak-primary-shadow
+
+    &:active, &:hover
+      opacity: 1
+
+  // Button #7
+  &_muted-text-change
+    color: color(secondary)
+    background-color: color(muted)
+
+    &:hover
+      color: color(alternative)
+
+// Side btns - separate type of buttons
+.side-btn
+  cursor: pointer
+  box-sizing: border-box
+  color: color(alternative)
+  font-size: $medium_font_size
+  font-family: font(bold)
+  @include flex(center, center, column)
+  @extend %removeUserSelect
+  @extend %mediumTransition
+
+  &:hover
+    opacity: 0.9
+
+  &:active
+    opacity: 0.7
+
+  &_gradient
+    box-shadow: $strong-primary-shadow
+    background: $primary-gradient
+
+  &_secondary
+    background: color(secondary)
+
+  &__text
+    writing-mode: vertical-lr
+    text-transform: uppercase
+    margin: 0.7rem 0
+    transform: rotate(-180deg)
+    -webkit-writing-mode: vertical-lr
+
+@import "responsivity"

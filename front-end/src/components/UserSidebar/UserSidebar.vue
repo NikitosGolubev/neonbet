@@ -7,19 +7,11 @@
                 <main-scroll>
                     <div class="responsive-sidebar__content">
                         <div>
-                            <!-- Burger close -->
                             <div class="responsive-sidebar__close">
                                 <user-sidebar-burger />
                             </div>
 
-                            <!-- User profile section -->
-                            <section class="responsive-sidebar__user-profile">
-                                <user-profile>
-                                    <user-profile-content />
-
-                                    <user-profile-nav />
-                                </user-profile>
-                            </section>
+                            <user-sidebar-profile />
 
                             <user-sidebar-nav />
                         </div>
@@ -45,12 +37,14 @@
     import UserProfileContent from "../UserProfile/UserProfileContent";
     import UserProfileNav from "../UserProfile/UserProfileNav";
     import UserSidebarNav from "./UserSidebarNav";
+    import UserSidebarProfile from "./UserSidebarProfile";
 
 
     export default {
         name: "UserSidebar",
         mixins: [adjustSidebar],
         components: {
+            UserSidebarProfile,
             UserSidebarNav,
             UserSidebarBurger,
             SocialMedia,

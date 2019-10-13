@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "UserProfileCard"
+        name: "UserProfile"
     }
 </script>
 

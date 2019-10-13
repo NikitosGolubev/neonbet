@@ -1,45 +1,28 @@
 <template>
-    <!-- Social media block -->
     <div class="socials">
-        <a href="#">
-            <div class="social-gradient-circle_wrap">
-                <div class="social-gradient-circle">
-                    <span class="vk"></span>
-                </div>
-                <div class="social-gradient-circle_border"></div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="social-gradient-circle_wrap">
-                <div class="social-gradient-circle">
-                    <span class="fb"></span>
-                </div>
-                <div class="social-gradient-circle_border"></div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="social-gradient-circle_wrap">
-                <div class="social-gradient-circle">
-                    <span class="inst"></span>
-                </div>
-                <div class="social-gradient-circle_border"></div>
-            </div>
-        </a>
-        <a href="#">
-            <div class="social-gradient-circle_wrap">
-                <div class="social-gradient-circle">
-                    <span class="twitter"></span>
-                </div>
-                <div class="social-gradient-circle_border"></div>
-            </div>
-        </a>
+        <social-media-item url="https://vk.com">
+            <span class="vk"></span>
+        </social-media-item>
+
+        <social-media-item url="https://facebook.com">
+            <span class="fb"></span>
+        </social-media-item>
+
+        <social-media-item url="https://instagram.com">
+            <span class="inst"></span>
+        </social-media-item>
+
+        <social-media-item url="https://twitter.com">
+            <span class="twitter"></span>
+        </social-media-item>
     </div>
-    <!-- END social media block -->
 </template>
 
 <script>
+    import SocialMediaItem from "./SocialMediaItem";
     export default {
-        name: "SocialMedia"
+        name: "SocialMedia",
+        components: {SocialMediaItem}
     }
 </script>
 

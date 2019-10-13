@@ -1,7 +1,9 @@
 <template>
     <user-profile>
         <div class="card__header">
-            <user-profile-header />
+            <header class="index-user-profile__header">
+                <span class="h3-m0">Профиль</span>
+            </header>
         </div>
 
         <div class="card__content">
@@ -14,7 +16,6 @@
 
 <script>
     import UserProfile from "../../../../components/UserProfile/UserProfile";
-    import UserProfileHeader from "../../../../components/UserProfile/UserProfileHeader";
     import UserProfileContent from "../../../../components/UserProfile/UserProfileContent";
     import UserProfileNav from "../../../../components/UserProfile/UserProfileNav";
 
@@ -23,8 +24,7 @@
         components: {
             UserProfileNav,
             UserProfileContent,
-            UserProfile,
-            UserProfileHeader
+            UserProfile
         }
     }
 </script>

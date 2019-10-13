@@ -1,20 +1,17 @@
 <template>
     <div class="circular-language-picker">
         <ul class="circular-language-picker__list">
-            <li class="circular-language-picker__list-item">
-                <a href="#" class="link_alternative-active">Ru</a>
-            </li>
-
-            <li class="circular-language-picker__list-item">
-                <a href="#" class="link_alternative">En</a>
-            </li>
+            <language-picker-item :is-active="true">Ru</language-picker-item>
+            <language-picker-item>En</language-picker-item>
         </ul>
     </div>
 </template>
 
 <script>
+    import LanguagePickerItem from "./LanguagePickerItem";
     export default {
-        name: "LanguagePicker"
+        name: "LanguagePicker",
+        components: {LanguagePickerItem}
     }
 </script>
 

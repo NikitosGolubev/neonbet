@@ -1,0 +1,21 @@
+@import "settings"
+
+.coefficient
+  @include gradientText($primary-gradient, color(primary-light))
+  font-size: 1.15rem // fixed value
+  cursor: pointer
+  @extend %mediumTransition
+
+  &:hover
+    opacity: 0.7
+
+  &_plain
+    cursor: default
+    &:hover
+      opacity: 1
+
+  &_big
+    font-family: font(black)
+    font-size: $super_big_font_size
+
+@import responsivity

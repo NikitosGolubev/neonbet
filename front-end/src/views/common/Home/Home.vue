@@ -37,7 +37,7 @@
     import GamesFilter from "../../../components/GamesFilter/GamesFilter";
     import SocialMedia from "../../../components/SocialMedia/SocialMedia";
     import AdditionalBettingLine from "../../../components/AdditionalBettingLine/AdditionalBettingLine";
-    import MainBettingLine from "../../../components/BettingLine/MainBettingLine";
+    import MainBettingLine from "../../../components/MainBettingLine/MainBettingLine";
     import TopUsers from "../../../components/TopUsers/TopUsers";
     import HomeUserProfile from "./components/HomeUserProfile";
 

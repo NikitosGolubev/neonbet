@@ -12,21 +12,11 @@
             </li>
             <li class="responsive-sidebar__nav-item">
                 <a class="responsive-sidebar__auth-btn" href="#">
-                    <div class="btn__outline-gradient-fillable_wrap">
-                        <div class="btn btn__outline-gradient-fillable">
-                            <span class="btn__outline-gradient-fillable_text">Вход</span>
-                        </div>
-                        <div class="btn__outline-gradient-fillable_border"></div>
-                    </div>
+                    <v-button-outline-gradient-fillable>Вход</v-button-outline-gradient-fillable>
                 </a>
 
                 <a class="responsive-sidebar__auth-btn" href="#">
-                    <div class="btn__outline-gradient-fillable_wrap">
-                        <div class="btn btn__outline-gradient-fillable">
-                            <span class="btn__outline-gradient-fillable_text">Регистрация</span>
-                        </div>
-                        <div class="btn__outline-gradient-fillable_border"></div>
-                    </div>
+                    <v-button-outline-gradient-fillable>Регистрация</v-button-outline-gradient-fillable>
                 </a>
             </li>
         </ul>
@@ -34,8 +24,10 @@
 </template>
 
 <script>
+    import VButtonOutlineGradientFillable from "../ui/buttons/VButtonOutlineGradientFillable";
     export default {
-        name: "UserSidebarNav"
+        name: "UserSidebarNav",
+        components: {VButtonOutlineGradientFillable}
     }
 </script>
 
