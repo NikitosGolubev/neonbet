@@ -1,5 +1,5 @@
 <template>
-    <div class="img-bubble"
+    <div class="simple-img-bubble"
          :style="`background: url(${imgPath}) center center no-repeat;`">
     </div>
 </template>
@@ -8,7 +8,7 @@
     import BubbleMixin from './mixins/img-bubble';
 
     export default {
-        name: "VImgBubble",
+        name: "VImgBubbleSimple",
         mixins: [BubbleMixin]
     }
 </script>

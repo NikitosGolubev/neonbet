@@ -5,11 +5,11 @@
 </template>
 
 <script>
-    import ButtonMixin from './mixins/button';
+    import ButtonSizeMixin from './mixins/button-size';
 
     export default {
         name: "VButtonResultDisabled",
-        mixins: [ButtonMixin]
+        mixins: [ButtonSizeMixin]
     }
 </script>
 

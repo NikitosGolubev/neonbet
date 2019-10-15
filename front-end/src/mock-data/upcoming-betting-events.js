@@ -7,6 +7,7 @@ export default [
         finalScore: null,
         winnerId: null,
         completed_at: null,
+        type: "Best of 3",
         betting: {
             coef1: 21,
             coef2: 79,
@@ -16,7 +17,7 @@ export default [
         game: {
             id: 23,
             name: 'CS:GO',
-            logo: require('@/assets/common/img/callofduty.png')
+            logo: require('@/assets/common/img/csgo.png')
         },
         team1: {
             id: 1,
@@ -27,7 +28,17 @@ export default [
             id: 2,
             logo: require('@/assets/common/img/team4.png'),
             name: 'Astralis'
-        }
+        },
+        additionalOptions: [
+            {
+                id: 345,
+                type: "Pistol round winner",
+                betting: {
+                    coef1: 36,
+                    coef2: 64
+                }
+            }
+        ]
     },
     {
         id: 2,
@@ -37,9 +48,10 @@ export default [
         finalScore: null,
         winnerId: null,
         completed_at: null,
+        type: "Best of 1",
         betting: {
-            coef1: 54,
-            coef2: 46,
+            coef1: 79,
+            coef2: 21,
             money1: 2042,
             money2: 7958
         },
@@ -57,88 +69,36 @@ export default [
             id: 2,
             logo: require('@/assets/common/img/team4.png'),
             name: 'Astralis'
-        }
+        },
+        additionalOptions: [
+            {
+                id: 234,
+                type: "Who will throw more smokes",
+                betting: {
+                    coef1: 50,
+                    coef2: 50
+                }
+            }
+        ]
     },
     {
         id: 3,
-        status: "live",
+        status: "upcoming",
         twitchLink: 'https://player.twitch.tv/?channel=esl_csgo&muted=false&autoplay=false',
-        startDate: '2019-10-13 13:00:00',
+        startDate: '2019-10-13 23:00:00',
         finalScore: null,
         winnerId: null,
         completed_at: null,
+        type: "Best of 1",
         betting: {
-            coef1: 20,
-            coef2: 80,
+            coef1: 21,
+            coef2: 79,
             money1: 2042,
             money2: 7958
         },
         game: {
             id: 23,
-            name: 'CS:GO',
-            logo: require('@/assets/common/img/nba.png')
-        },
-        team1: {
-            id: 1,
-            logo: require('@/assets/common/img/team3.png'),
-            name: 'NaVi'
-        },
-        team2: {
-            id: 2,
-            logo: require('@/assets/common/img/team4.png'),
-            name: 'Astralis'
-        }
-    },
-    {
-        id: 4,
-        status: "live",
-        twitchLink: 'https://player.twitch.tv/?channel=esl_csgo&muted=false&autoplay=false',
-        startDate: '2019-10-13 13:00:00',
-        finalScore: null,
-        winnerId: null,
-        completed_at: null,
-        betting: {
-            coef1: 55,
-            coef2: 45,
-            money1: 2042,
-            money2: 7958
-        },
-        game: {
-            id: 23,
-            name: 'CS:GO',
-            logo: require('@/assets/common/img/csgo.png')
-        },
-        team1: {
-            id: 1,
-            logo: require('@/assets/common/img/team3.png'),
-            name: 'NaVi'
-        },
-        team2: {
-            id: 2,
-            logo: require('@/assets/common/img/team4.png'),
-            name: 'Astralis'
-        }
-    },
-    {
-        id: 5,
-        status: "completed",
-        twitchLink: 'https://player.twitch.tv/?channel=esl_csgo&muted=false&autoplay=false',
-        startDate: '2019-10-12 17:00:00',
-        finalScore: {
-            team1: 21,
-            team2: 18
-        },
-        winnerId: 1,
-        completed_at: '2019-10-12 19:00:00',
-        betting: {
-            coef1: 82,
-            coef2: 18,
-            money1: 2042,
-            money2: 7958
-        },
-        game: {
-            id: 23,
-            name: 'CS:GO',
+            name: 'Dota 2',
             logo: require('@/assets/common/img/dota2.png')
         },
         team1: {
@@ -150,29 +110,37 @@ export default [
             id: 2,
             logo: require('@/assets/common/img/team4.png'),
             name: 'Astralis'
-        }
+        },
+        additionalOptions: [
+            {
+                id: 345,
+                type: "Hwo will capture roshan first",
+                betting: {
+                    coef1: 99,
+                    coef2: 1
+                }
+            }
+        ]
     },
     {
-        id: 6,
-        status: "completed",
+        id: 4,
+        status: "upcoming",
         twitchLink: 'https://player.twitch.tv/?channel=esl_csgo&muted=false&autoplay=false',
-        startDate: '2019-10-12 17:00:00',
-        finalScore: {
-            team1: 1,
-            team2: 2
-        },
-        winnerId: 2,
-        completed_at: '2019-10-12 21:00:00',
+        startDate: '2019-10-13 23:00:00',
+        finalScore: null,
+        winnerId: null,
+        completed_at: null,
+        type: "Best of 3",
         betting: {
-            coef1: 34,
-            coef2: 66,
+            coef1: 0,
+            coef2: 100,
             money1: 2042,
             money2: 7958
         },
         game: {
             id: 23,
-            name: 'CS:GO',
-            logo: require('@/assets/common/img/csgo.png')
+            name: 'Call of Duty',
+            logo: require('@/assets/common/img/callofduty.png')
         },
         team1: {
             id: 1,
@@ -183,6 +151,57 @@ export default [
             id: 2,
             logo: require('@/assets/common/img/team4.png'),
             name: 'Astralis'
-        }
+        },
+        additionalOptions: [
+            {
+                id: 567,
+                type: "Is Knox will have best K/D at the end",
+                betting: {
+                    coef1: 36,
+                    coef2: 64
+                }
+            }
+        ]
+    },
+    {
+        id: 5,
+        status: "upcoming",
+        twitchLink: 'https://player.twitch.tv/?channel=esl_csgo&muted=false&autoplay=false',
+        startDate: '2019-10-13 23:00:00',
+        finalScore: null,
+        winnerId: null,
+        completed_at: null,
+        type: "Best of 3",
+        betting: {
+            coef1: 25,
+            coef2: 75,
+            money1: 2042,
+            money2: 7958
+        },
+        game: {
+            id: 23,
+            name: 'NBA2K19',
+            logo: require('@/assets/common/img/nba.png')
+        },
+        team1: {
+            id: 1,
+            logo: require('@/assets/common/img/team3.png'),
+            name: 'NaVi'
+        },
+        team2: {
+            id: 2,
+            logo: require('@/assets/common/img/team4.png'),
+            name: 'Astralis'
+        },
+        additionalOptions: [
+            {
+                id: 978,
+                type: "Who will score more 3 points shots",
+                betting: {
+                    coef1: 36,
+                    coef2: 64
+                }
+            }
+        ]
     }
 ];

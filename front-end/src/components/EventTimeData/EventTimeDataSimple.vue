@@ -1,7 +1,6 @@
 <template>
     <div class="event-time-data">
-        <div class="event-time-data__item">{{ time }}</div>
-        <div class="event-time-data__item">{{ date }}</div>
+        <div>{{ date }} - {{ time }}</div>
     </div>
 </template>
 
@@ -9,7 +8,7 @@
     import EventTimeMixin from './mixins/event-time';
 
     export default {
-        name: "EventTimeData",
+        name: "EventTimeDataSimple",
         mixins: [EventTimeMixin]
     }
 </script>

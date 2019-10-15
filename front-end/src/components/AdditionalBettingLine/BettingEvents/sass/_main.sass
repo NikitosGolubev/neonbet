@@ -1,0 +1,45 @@
+@import "settings"
+
+.additional-event
+  border-bottom: $default_restrict_border
+
+  &:last-child
+    border-bottom: none
+
+  &__option-name
+    text-transform: uppercase
+    text-align: center
+
+  &__game-logo
+    background-size: 80% !important
+
+  &__data
+    @include flex(center, center)
+    width: 100%
+
+  &__data-item
+    margin: 0 0.35rem
+
+  &__team-name
+    color: color(alternative)
+    word-wrap: break-word
+    cursor: pointer
+    @extend %mediumTransition
+
+    &:hover
+      opacity: 0.6
+
+  &__addition
+    padding: 0.8rem 0
+
+    &_wrap
+      background: color(muted-light)
+
+  &__body
+    padding: 0.6rem 0
+
+  &__match-option
+    &_responsive
+      display: none !important
+
+@import "responsivity"

@@ -5,11 +5,11 @@
 </template>
 
 <script>
-    import ButtonMixin from './mixins/button';
+    import ButtonSizeMixin from './mixins/button-size';
 
     export default {
         name: "VButtonFillableSimple",
-        mixins: [ButtonMixin],
+        mixins: [ButtonSizeMixin],
         props: {
             isActive: {
                 default: false,

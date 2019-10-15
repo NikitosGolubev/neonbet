@@ -1,15 +1,15 @@
-<template>
+ButtonSizeMixin<template>
     <div class="btn btn_outline-simple-fillable" :class="sizeClass">
         <slot></slot>
     </div>
 </template>
 
 <script>
-    import ButtonMixin from './mixins/button';
+    import ButtonSizeMixin from './mixins/button-size';
 
     export default {
         name: "VButtonOutlineSimpleFillable",
-        mixins: [ButtonMixin]
+        mixins: [ButtonSizeMixin]
     }
 </script>
 

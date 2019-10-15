@@ -1,5 +1,5 @@
 <template>
-
+    <div class="logo"></div>
 </template>
 
 <script>
@@ -8,6 +8,6 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="sass">
+    @import "sass/main"
 </style>
