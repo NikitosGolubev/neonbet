@@ -1,0 +1,24 @@
+@import "settings"
+
+.content-container
+  margin-top: 2rem
+
+  &__header
+    padding:
+      top: 0.8rem
+      bottom: 0.8rem
+    @extend %removeUserSelect
+
+  &__section
+    padding: 0.5rem 0
+
+  &__text-header, &__text-subheader
+    @extend %removeUserSelect
+
+  &__text-header
+    color: color(alternative)
+
+  &__text-subheader
+    margin-bottom: 2rem
+
+@import "responsivity"

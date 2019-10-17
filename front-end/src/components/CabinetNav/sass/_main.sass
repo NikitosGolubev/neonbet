@@ -1,0 +1,20 @@
+@import "settings"
+
+.dashboard-navigation
+  margin: 1.5rem 0
+  background-color: color(muted)
+  padding: 1.5rem 0
+  border-radius: 10px
+
+  &__item
+    @include flex(center, center)
+
+  &__link-btn
+    width: 80%
+
+  &__dropdown-presentation
+    @include flex(space-between, center)
+    padding: 0 1rem
+    display: none
+
+@import "responsivity"

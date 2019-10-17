@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import MainLayout from '../layouts/MainLayout/MainLayout';
-
 Vue.use(Router);
 
 export default new Router({
@@ -11,18 +9,14 @@ export default new Router({
 
   routes: [
     {
+      name: 'home',
       path: '/',
-      component: MainLayout,
-      children: [
-        {
-          name: 'home',
-          path: '',
-          components: {
-            default: () => import('../views/common/Home/Home.vue'),
-            pageAfter: () => import('../components/SelectedBets/SelectedBets')
-          }
-        }
-      ]
+      component: () => import('../views/common/Home/Home.vue')
+    },
+    {
+      name: 'cabinet',
+      path: '/cabinet',
+      component: () => import('../views/common/Cabinet/Profile/Profile.vue')
     }
   ]
 });

@@ -6,21 +6,21 @@
             <upper-carousel v-if="includeUpperCarousel"></upper-carousel>
 
             <main>
-                <router-view />
+                <slot></slot>
             </main>
 
             <main-footer></main-footer>
         </div>
 
-        <router-view name="pageAfter"/>
+        <slot name="pageAfter"></slot>
     </div>
 </template>
 
 <script>
-    // Styles
+    import MainLayoutMixin from './mixins/main-layout';
+
     import '../vue-default.css';
 
-    // Components
     import MainHeader from '../../components/MainHeader/MainHeader';
     import UpperCarousel from '../../components/UpperCarousel/UpperCarousel';
     import MainFooter from '../../components/MainFooter/MainFooter';
@@ -32,12 +32,7 @@
             UpperCarousel,
             MainFooter
         },
-        props: {
-            includeUpperCarousel: {
-                type: Boolean,
-                default: true
-            }
-        }
+        mixins: [MainLayoutMixin]
     }
 </script>
 

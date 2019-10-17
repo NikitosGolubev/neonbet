@@ -1,0 +1,19 @@
+@import "settings"
+
+.user-profile
+  &__field-data
+    padding: $field_gap
+
+  &__personal-data
+    &_left .user-profile__field-data
+      padding-left: 0
+
+  &__personal-data
+    &_right .user-profile__field-data
+      padding-right: 0
+
+.user-profile-avatar
+  width: 8rem
+  height: 8rem
+
+@import "responsivity"

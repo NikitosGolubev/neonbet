@@ -1,0 +1,29 @@
+.user-profile
+  @media screen and (max-width: breakpoint(md))
+    &__field-data
+      padding: $field_gap_md 0
+
+    &__double-field
+      padding:
+        left: $field_gap_md
+        right: $field_gap_md
+
+      &:first-child
+        padding-left: 0
+
+      &:last-child
+        padding-right: 0
+
+  @media screen and (max-width: breakpoint(sm))
+    &__save-personal-data
+      margin-top: 1rem
+
+    &__double-field
+      padding:
+        left: 0
+        right: 0
+
+.user-profile-avatar
+  @media screen and (max-width: breakpoint(xs))
+    width: 5rem
+    height: 5rem
