@@ -8,7 +8,7 @@
 
 <script>
     export default {
-        name: "GradientPayment",
+        name: "VGradientPayment",
         computed: {
             cssPaymentLogo() {
                 return `url(${this.paymentLogo})`;
@@ -27,6 +27,6 @@
     }
 </script>
 
-<style scoped>
-
+<style lang="sass">
+    @import "sass/main"
 </style>

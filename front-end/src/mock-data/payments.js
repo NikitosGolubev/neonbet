@@ -1,18 +1,18 @@
 export default [
     {
         name: 'qiwi',
-        logo: 'assets/img/qiwi.png'
+        logo: require('@/assets/common/img/qiwi.png')
     },
     {
         name: 'skinpay',
-        logo: 'assets/img/skinpay.png'
+        logo: require('@/assets/common/img/skinpay.png')
     },
     {
         name: 'visa',
-        logo: 'assets/img/visa.png'
+        logo: require('@/assets/common/img/visa.png')
     },
     {
         name: 'yandex',
-        logo: 'assets/img/yandex.png'
+        logo: require('@/assets/common/img/yandex.png')
     }
 ];

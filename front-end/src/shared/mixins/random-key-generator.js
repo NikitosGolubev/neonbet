@@ -31,8 +31,16 @@ export default {
          * Gets the random key of specific data group.
          */
         _getSubjectData(subject, index = null) {
-            if (index === null) return this.keysStorage[subject];
-            return this.keysStorage[subject][index];
+            let result = null;
+
+            try {
+                if (index === null) result = this.keysStorage[subject];
+                else result = this.keysStorage[subject][index];
+            } catch (e) {
+                return null;
+            }
+
+            return result;
         },
 
         /**
@@ -44,7 +52,10 @@ export default {
             if (index === null) {
                 this.$set(this.keysStorage, subject, randomKey);
             } else {
-                this.$set(this.keysStorage, subject, []);
+                if (!this.keysStorage[subject]) {
+                    this.$set(this.keysStorage, subject, []);
+                }
+
                 this.keysStorage[subject].push(randomKey);
             }
 

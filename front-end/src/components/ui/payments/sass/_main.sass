@@ -1,8 +1,6 @@
-@include gradientBorder('.payment-gradient', $dark-gradient, 2.5px, 10px, color(default))
+@import settings
 
-.payments-container
-  &__item
-    padding: 0 0.5rem 1rem 0.5rem
+@include gradientBorder('.payment-gradient', $dark-gradient, 2.5px, 10px, color(default))
 
 .payment-gradient
   display: block
@@ -22,4 +20,4 @@
   &_active &, &_wrap:hover &
     background-size: 80%
 
-@import payment-gradient-responsivity
+@import responsivity

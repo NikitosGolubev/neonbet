@@ -1,33 +1,31 @@
 <template>
     <div class="payments-container row">
-        <div
-             v-for="(payment, index) in payments"
-             :key="getRandomId()"
-             class="payments-container__item">
-
+        <div v-for="(payment, index) in payments" :key="uniqueKey()" class="payments-container__item">
             <input class="radio-input"
                    v-model="radioValue"
                    type="radio"
                    :value="payment.name"
-                   :name="fieldName"
-                   :id="getFieldId(index)"
+                   :name="name"
+                   :id="uniqueKey('payments', index)"
             />
-            <label :for="getFieldId(index)">
-                <gradient-payment :is-active="isChecked(payment.name)" :payment-logo="payment.logo" />
+
+            <label :for="uniqueKey('payments', index)">
+                <v-gradient-payment :is-active="isChecked(payment.name)" :payment-logo="payment.logo" />
             </label>
         </div>
     </div>
 </template>
 
 <script>
-    import uuid from 'uuid/v4';
-    import GradientPayment from "./GradientPayment";
+    import RandomKeyMixin from "../../shared/mixins/random-key-generator";
+    import VGradientPayment from "../ui/payments/VGradinetPayment";
 
     export default {
         name: "RadioGradientPayment",
-        components: {GradientPayment},
+        components: {VGradientPayment},
+        mixins: [RandomKeyMixin],
         props: {
-            fieldName: {
+            name: {
                 type: String,
                 required: true
             },
@@ -38,28 +36,22 @@
         },
         data() {
             return {
-                fieldsId: uuid(),
                 radioValue: null
             }
         },
         methods: {
-            getRandomId() {
-                return uuid();
-            },
-
-            getFieldId(index) {
-                return this.fieldsId + index;
-            },
-
             isChecked(paymentName) {
                 return this.radioValue === paymentName;
+            }
+        },
+        watch: {
+            radioValue(newVal) {
+                this.$emit('input', newVal); // for v-model
             }
         }
     }
 </script>
 
-<style scoped>
-    .radio-input {
-        display: none;
-    }
+<style lang="sass">
+    @import "sass/main"
 </style>

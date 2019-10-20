@@ -1,8 +1,10 @@
 <template>
     <div class="dashboard-navigation__item col-xs-12 col-sm-6 col-md-3">
-        <v-button-default class="dashboard-navigation__link-btn">
-            {{ item.name }}
-        </v-button-default>
+        <router-link :to="item.url" class="dashboard-navigation__link">
+            <v-button-default class="dashboard-navigation__link_btn">
+                {{ item.name }}
+            </v-button-default>
+        </router-link>
     </div>
 </template>
 

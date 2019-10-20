@@ -17,6 +17,11 @@ export default new Router({
       name: 'cabinet',
       path: '/cabinet',
       component: () => import('../views/common/Cabinet/Profile/Profile.vue')
+    },
+    {
+      name: 'deposit',
+      path: '/cabinet/deposit',
+      component: () => import('../views/common/Cabinet/MoneyTransactions/Deposit/Deposit.vue')
     }
   ]
 });
