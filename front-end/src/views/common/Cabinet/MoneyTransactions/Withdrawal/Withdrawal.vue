@@ -4,7 +4,7 @@
             <panel-section>
                 <header>
                     <panel-text-subheader>
-                        <h4>Сделать депозит</h4>
+                        <h4>Вывести средства</h4>
                     </panel-text-subheader>
                 </header>
                 <div class="money-transactions__amount-input">
@@ -14,18 +14,22 @@
 
             <panel-section>
                 <panel-text-subheader>
-                    <h4>Выберите способ оплаты</h4>
+                    <h4>Платёжная система для вывода</h4>
                 </panel-text-subheader>
 
                 <radio-gradient-payment name="payment" :payments="payments" />
 
                 <div class="money-transactions__action-btn">
                     <v-button-outline-gradient-fillable size="lg">
-                        Оплатить
+                        Вывести
                     </v-button-outline-gradient-fillable>
                 </div>
             </panel-section>
         </section>
+
+        <template #afterMain>
+            <withdrawal-last-operations-table :last-withdrawals="withdrawalsHistory" />
+        </template>
     </cabinet-layout>
 </template>
 
@@ -37,20 +41,24 @@
     import RadioGradientPayment from "../../../../../components/RadioGradientPayment/RadioGradientPayment";
     import VButtonOutlineGradientFillable from "../../../../../components/ui/buttons/VButtonOutlineGradientFillable";
     import MockPayments from '../../../../../mock-data/payments';
+    import MockWithdrawals from '../../../../../mock-data/withdrawals-history';
+    import WithdrawalLastOperationsTable from "./components/WithdrawalLastOperationsTable";
 
     export default {
-        name: "Deposit",
+        name: "Withdrawal",
         components: {
+            WithdrawalLastOperationsTable,
             VButtonOutlineGradientFillable,
             RadioGradientPayment, VFieldSecondary, PanelTextSubheader, PanelSection, CabinetLayout},
         data() {
             return {
                 breadcrumbs: [
                     {name: "Главная"},
-                    {name: "Сделать депозит"}
+                    {name: "Вывод средств"}
                 ],
 
-                payments: MockPayments
+                payments: MockPayments,
+                withdrawalsHistory: MockWithdrawals
             }
         }
     }

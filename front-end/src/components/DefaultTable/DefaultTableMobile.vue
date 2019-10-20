@@ -77,7 +77,7 @@
 
     // Mixins
     import mobileMixin from './mixins/mobile';
-    import randomKeyGenerator from '../../mixins/random-key-generator';
+    import randomKeyGenerator from '../../shared/mixins/random-key-generator';
 
 
     export default {

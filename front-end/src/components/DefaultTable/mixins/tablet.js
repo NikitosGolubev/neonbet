@@ -6,7 +6,7 @@ import isElement from 'lodash/isElement';
 
 // Mixins
 import tableInit from './table-init';
-import windowSizeTracker from '../../../mixins/window-size-tracker';
+import windowSizeTracker from '../../../shared/mixins/window-size-tracker';
 
 export default {
     mixins: [windowSizeTracker, tableInit],

@@ -48,11 +48,11 @@ export default class Table {
      */
     getAdditionalContentFromRow(row) {
         const rowKey = row.getAttribute(this.rowKeyAttr);
-        if (!rowKey) return null;
+        if (!rowKey) return [];
 
         const additionalContent = this.element.querySelectorAll(`[${this.rowKeyAttr}='${rowKey}']:not(.${this.rowClassName})`);
 
-        return additionalContent ? additionalContent : null;
+        return additionalContent ? additionalContent : [];
     }
 };
 

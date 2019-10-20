@@ -1,4 +1,4 @@
-$default_table_gap: 0.75rem
+@import "settings"
 
 .default-table
   background: color(default)
@@ -33,7 +33,7 @@ $default_table_gap: 0.75rem
 
   &_little-content-gap
     .default-table__content
-     padding: $default_table_gap / 2
+    padding: $default_table_gap / 2
 
   &__cell
     padding: $default_table_gap
@@ -59,4 +59,4 @@ $default_table_gap: 0.75rem
     right: 10px
     top: calc(50% - 5px)
 
-@import default-table-responsivity
+@import responsivity
