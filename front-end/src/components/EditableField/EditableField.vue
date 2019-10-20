@@ -1,31 +1,20 @@
 <template>
     <div class="editable-field_wrap">
-        <field-secondary
-                ref="field"
-                :is-disabled="isFieldDisabled"
-                :class="'editable-field'"
-                :value="fieldVal"
-                :name="fieldName"
-        />
-        <div @click="adjustFieldState" class="editable-field__icon edit item-btn"></div>
+        <span ref="field" class="js-editable_field__input-scope">
+            <slot></slot>
+        </span>
+
+        <v-button-item @click.native="adjustFieldState">
+            <div class="editable-field__icon edit"></div>
+        </v-button-item>
     </div>
 </template>
 
 <script>
-    import FieldSecondary from "./FieldSecondary";
+    import VButtonItem from "../ui/buttons/VButtonItem";
     export default {
         name: "EditableField",
-        props: {
-            fieldVal: {
-                type: String,
-                default: ''
-            },
-
-            fieldName: {
-                type: String,
-                required: true
-            }
-        },
+        components: {VButtonItem},
         data() {
             return {
                 isFieldDisabled: true
@@ -33,7 +22,11 @@
         },
         computed: {
             field() {
-                return this.$refs.field.$el;
+                let field = this.$refs.field.querySelector('input');
+
+                if (!field) field = this.$refs.field.querySelector('textarea');
+
+                return field;
             }
         },
         methods: {
@@ -55,11 +48,10 @@
         },
         mounted() {
             this.adjustFieldActivity();
-        },
-        components: {FieldSecondary}
+        }
     }
 </script>
 
-<style scoped>
-
+<style lang="sass">
+    @import "sass/main"
 </style>

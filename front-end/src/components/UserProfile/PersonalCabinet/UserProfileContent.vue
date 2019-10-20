@@ -1,33 +1,39 @@
 <template>
     <div class="main-user-profile__data">
-        <!-- Avatar -->
         <div class="user-avatar_wrap">
             <div class="user-avatar main-user-profile__avatar user-profile-avatar"
-                 :style="`background: url(${require('@/assets/common/img/avatar.png')}) center center no-repeat;`">
+                 :style="`background: url(${user.avatar}) center center no-repeat;`">
             </div>
             <div class="user-avatar_border"></div>
         </div>
 
         <div class="main-user-profile__details">
             <div class="main-user-profile__details-item">
-                <span class="main-user-profile__nickname">Никнейм</span>
+                <span class="main-user-profile__nickname">{{user.nickname}}</span>
             </div>
             <div class="balance main-user-profile__details-item">
                 <div class="money balance__money-pick"></div>
-                <div class="balance__content">12500</div>
+                <div class="balance__content">{{ user.balance }}</div>
             </div>
             <div class="main-user-profile__details-item text_medium-sz">
-                <gradient-file-upload button-value="Изменить аватар" />
+                <v-button-upload-gradient v-model="user.avatar" button-init-val="Изменить аватар" />
             </div>
         </div>
     </div>
 </template>
 
 <script>
-    import GradientFileUpload from "../../UploadFileBtn/GradientFileUpload";
+    import VButtonUploadGradient from "../../ui/buttons/VButtonUploadGradient";
+
     export default {
         name: "UserProfileContent",
-        components: {GradientFileUpload}
+        components: {VButtonUploadGradient},
+        props: {
+            user: {
+                type: Object,
+                required: true
+            }
+        }
     }
 </script>
 
