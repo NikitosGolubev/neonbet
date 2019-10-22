@@ -1,0 +1,29 @@
+.betting-history
+  @media screen and (max-width: breakpoint(lg))
+    &__team-name
+      display: none
+
+  @media screen and (max-width: breakpoint(md))
+    &__team-name
+      display: block
+
+    &__bet-detail
+      @include flex(center, flex-start, column)
+
+      &_item
+        margin-top: 0.75rem
+
+        &:first-child
+          margin-top: 0
+
+    &__detail-info
+      display: none
+
+  @media screen and (max-width: breakpoint(sm))
+    &__bet-type
+      font-size: $big_font_size_sm
+      color: color(secondary)
+
+  @media screen and (max-width: breakpoint(xs))
+    &__team-name
+      display: none

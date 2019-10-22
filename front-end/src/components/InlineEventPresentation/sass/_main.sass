@@ -1,3 +1,5 @@
+@import "settings"
+
 .inline-event-presentation
   @include flex(center, center, column)
 
@@ -12,7 +14,7 @@
     word-break: break-all
     max-width: 60px
 
-    &_loss
+    &_select-dull
       color: color(secondary)
 
   &__team-logo
@@ -24,19 +26,15 @@
     background-repeat: no-repeat
     background-size: 70%
 
-    &_win
+    &_select-bright
       box-shadow: $weak-primary-shadow
 
-    &_loss
+    &_select-dull
       opacity: 0.5
 
   &__separator
-    color: color(alternative)
     @extend %removeUserSelect
     font-family: font(bold)
-
-    &_secondary
-      color: color(secondary)
 
   &__coef
     background-color: color(secondary-dark)
@@ -44,9 +42,9 @@
     border-radius: 3px
     color: color(alternative)
 
-    &_win
+    &_select-bright
       box-shadow: $weak-primary-shadow
 
-    &_loss
+    &_select-dull
       background-color: color(muted)
       color: color(secondary)

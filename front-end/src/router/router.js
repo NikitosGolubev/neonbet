@@ -27,6 +27,11 @@ export default new Router({
       name: 'withdrawal',
       path: '/cabinet/withdrawal',
       component: () => import('../views/common/Cabinet/MoneyTransactions/Withdrawal/Withdrawal.vue')
+    },
+    {
+      name: 'betting-history',
+      path: '/cabinet/betting-history',
+      component: () => import('../views/common/Cabinet/BettingHistory/BettingHistory.vue')
     }
   ]
 });

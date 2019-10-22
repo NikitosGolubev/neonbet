@@ -1,0 +1,32 @@
+@import "settings"
+
+.betting-history
+  &__status
+    color: color(alternative)
+    text-transform: uppercase
+
+  &__game-logo
+    width: 3rem
+    height: 3rem
+    background-position: center
+    background-repeat: no-repeat
+    background-size: 90% !important
+
+  &__balance-lost
+    opacity: 0.25
+
+  &__bet-detail
+    border-bottom: $default_restrict_border
+    @include flex(space-between, center)
+    padding: 0.75rem
+
+  &__bet-type
+    font-family: font(black)
+    font-size: $big_font_size
+    text-transform: uppercase
+    color: color(muted)
+
+  &__details-dropdown
+    @include flex(center, center)
+
+@import "responsivity"
