@@ -32,6 +32,26 @@ export default new Router({
       name: 'betting-history',
       path: '/cabinet/betting-history',
       component: () => import('../views/common/Cabinet/BettingHistory/BettingHistory.vue')
+    },
+    {
+      name: 'register',
+      path: '/register',
+      component: () => import('../views/common/Auth/Register/Register.vue')
+    },
+    {
+      name: 'login',
+      path: '/login',
+      component: () => import('../views/common/Auth/Login/Login.vue')
+    },
+    {
+      name: 'forgetPassword',
+      path: '/forget-password',
+      component: () => import('../views/common/Auth/ForgetPassword/ForgetPassword.vue')
+    },
+    {
+      name: 'passwordRecovery',
+      path: '/password-recovery',
+      component: () => import('../views/common/Auth/PasswordRecovery/PasswordRecovery.vue')
     }
   ]
 });
