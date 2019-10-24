@@ -52,6 +52,21 @@ export default new Router({
       name: 'passwordRecovery',
       path: '/password-recovery',
       component: () => import('../views/common/Auth/PasswordRecovery/PasswordRecovery.vue')
+    },
+    {
+      name: 'notFound',
+      path: '/404',
+      component: () => import('../views/common/Service/HttpResponse/HttpResponse.vue')
+    },
+    {
+      name: 'success',
+      path: '/success',
+      component: () => import('../views/common/Service/OperationStatuses/Success.vue')
+    },
+    {
+      name: 'failure',
+      path: '/failure',
+      component: () => import('../views/common/Service/OperationStatuses/Failure.vue')
     }
   ]
 });

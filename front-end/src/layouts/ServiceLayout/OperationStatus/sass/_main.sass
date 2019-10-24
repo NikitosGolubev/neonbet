@@ -1,0 +1,28 @@
+@import "settings"
+
+.operation-status
+  @include flex(center, center, column)
+
+  &__type
+    font-size: 20vmin
+    color: color(alternative)
+    font-family: font(black)
+    @extend %removeUserSelect
+    text-transform: uppercase
+
+    &_wrap
+      width: 80%
+      padding: 1vmin 0
+      @include flex(center, center)
+
+  &__desk
+    color: color(alternative)
+    font-family: font(light)
+    font-size: 3vmin
+    @extend %removeUserSelect
+
+    &_wrap
+      max-width: 80vmin
+      text-align: center
+      line-height: 1.3
+      margin: 2.5vmin

@@ -1,0 +1,23 @@
+@import settings
+
+@import ../../../sass/blocks/default/fonts/default
+@import ../../../sass/blocks/default/structure-determinants/default
+@import ../../../sass/blocks/default/typography/default
+@import ../../../sass/blocks/default/colors/default
+
+::selection
+  background: rgba(color(primary-dark), 0.4)
+
+.page
+  background: color(default)
+  padding: 4vmin 6vmin
+
+.service-page
+  &__logo
+    position: absolute
+    left: 6vmin
+    top: 4vmin
+
+  &__content
+    min-height: calc(100vh - 8vmin)
+    @include flex(center, center)
