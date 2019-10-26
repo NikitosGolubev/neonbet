@@ -19,8 +19,6 @@
 <script>
     import MainLayoutMixin from './mixins/main-layout';
 
-    import '../vue-default.css';
-
     import MainHeader from '../../components/MainHeader/MainHeader';
     import UpperCarousel from '../../components/UpperCarousel/UpperCarousel';
     import MainFooter from '../../components/MainFooter/MainFooter';

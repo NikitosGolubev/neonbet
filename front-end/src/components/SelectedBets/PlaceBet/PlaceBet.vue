@@ -2,7 +2,7 @@
     <div class="place-bet">
         <div class="place-bet__item">
             <div>
-                <input class="field field_dark-rounded" type="text" placeholder="Введите сумму:" />
+                <v-field-muted placeholder="Введите сумму:" class="round" />
             </div>
             <div class="place-bet__btn">
                 <v-button-outline-gradient-fillable size="sm">
@@ -20,9 +20,10 @@
 
 <script>
     import VButtonOutlineGradientFillable from "../../ui/buttons/VButtonOutlineGradientFillable";
+    import VFieldMuted from "../../ui/fields/VFieldMuted";
     export default {
         name: "PlaceBet",
-        components: {VButtonOutlineGradientFillable}
+        components: {VFieldMuted, VButtonOutlineGradientFillable}
     }
 </script>
 

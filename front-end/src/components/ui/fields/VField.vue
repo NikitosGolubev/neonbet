@@ -9,21 +9,14 @@
 </template>
 
 <script>
-    import FieldMixin from './mixins/field';
-    import ErrorPrintingMixin from './mixins/error-printer';
+    import AbstractFieldMixin from './mixins/abstract-field';
 
     export default {
         name: "VField",
-        mixins: [ErrorPrintingMixin, FieldMixin],
-        props: {
-            disabledClasses: {
-                type: Array,
-                default: []
-            }
-        }
+        mixins: [AbstractFieldMixin]
     }
 </script>
 
-<style scoped>
-
+<style lang="sass">
+    @import "sass/main"
 </style>

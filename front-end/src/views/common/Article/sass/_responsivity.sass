@@ -1,0 +1,26 @@
+.youtube-video
+  @media screen and (max-width: breakpoint(md))
+    &__content
+      &_fullwidth
+        height: 350px
+
+  @media screen and (max-width: breakpoint(sm))
+    &__content
+      &_fullwidth
+        height: 250px
+
+    @media screen and (max-width: breakpoint(xs))
+      &__content
+        &_fullwidth
+          height: 175px
+
+.article-paragraph
+  @media screen and (max-width: breakpoint(md))
+    max-width: 85%
+
+  @media screen and (max-width: breakpoint(sm))
+    font-size: $medium_font_size_sm
+
+  @media screen and (max-width: breakpoint(sm))
+    font-size: $medium_font_size_xs
+    max-width: 100%

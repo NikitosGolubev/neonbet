@@ -1,0 +1,67 @@
+@import "settings"
+
+.create-ticket-form
+  background-color: color(muted)
+  padding: 1.5rem 3rem
+  margin: 2rem 0
+  border-radius: 10px
+
+  &__recaptcha
+    transform: scale(0.84)
+
+  &__sign
+    @extend %removeUserSelect
+    margin-right: 0.5rem
+
+  &__submit-container
+    @include flex(space-between, center)
+
+.tickets-history
+  &__header
+    background-color: color(secondary-dark)
+    border-radius: 10px
+
+    &_responsive
+      display: none
+
+    &-item
+      border-right: $default_restrict_border
+      @extend %removeUserSelect
+
+      &:last-child
+        border-right: none
+
+  &__item
+    padding: 1rem
+    @include flex(false, center)
+
+  &__ticket-status
+    &_responsive
+      display: none
+
+  &__data-row
+    border-bottom: $default_restrict_border
+    padding: 0.5rem 0
+
+  &__content
+    width: 100%
+
+  &__content-block
+    width: 80%
+    margin:
+      top: 0.5rem
+      bottom: 2rem
+      left: auto
+      right: auto
+    background-color: color(muted-light)
+    padding: 1rem 2rem
+    border-radius: 20px
+
+  &__preview
+    width: 100%
+    @include flex(space-between, center)
+
+    &-dropdown
+      padding-left: 10px
+
+@import "responsivity"

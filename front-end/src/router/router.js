@@ -67,6 +67,16 @@ export default new Router({
       name: 'failure',
       path: '/failure',
       component: () => import('../views/common/Service/OperationStatuses/Failure.vue')
+    },
+    {
+      name: 'article',
+      path: '/article',
+      component: () => import('../views/common/Article/Article.vue')
+    },
+    {
+      name: 'support',
+      path: '/support',
+      component: () => import('../views/common/Support/Support.vue')
     }
   ]
 });

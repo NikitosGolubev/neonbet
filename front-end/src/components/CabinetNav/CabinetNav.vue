@@ -8,8 +8,8 @@
         <dropdown-element :key-id="dropdownKey" :apply-dropdown-at="993" >
             <div class="row dashboard-navigation__dropdown">
                 <template v-for="item in menu">
-                    <cabinet-nav-item v-if="isRouteActive(item.url)"  :item="item" />
-                    <cabinet-nav-item-active v-else :item="item" />
+                    <cabinet-nav-item-active v-if="isRouteActive(item.url)"  :item="item" />
+                    <cabinet-nav-item v-else :item="item" />
                 </template>
             </div>
         </dropdown-element>

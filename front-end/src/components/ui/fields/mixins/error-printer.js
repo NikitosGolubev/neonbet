@@ -45,7 +45,7 @@ export default {
     watch: {
         isError(newVal) {
             if (newVal) {
-                this.displayErrorMessage();
+                this.displayErrorBlock();
             } else {
                 this.removeErrorBlock();
             }

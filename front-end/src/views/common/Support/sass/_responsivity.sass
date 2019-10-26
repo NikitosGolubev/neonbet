@@ -1,0 +1,39 @@
+@media screen and (max-width: breakpoint(md))
+  .tickets-history
+    &__header
+      display: none
+
+      &_responsive
+        display: block
+
+    &__ticket-header
+      justify-content: space-between
+
+    &__item
+      padding: 0.5rem 0
+
+    &__ticket-status
+      display: none
+
+      &_responsive
+        display: block
+
+    &__content-block
+      width: auto
+      margin-bottom: 1.5rem
+      padding: 0.7rem 1rem
+
+@media screen and (max-width: breakpoint(sm))
+  .create-ticket-form
+    padding: 0.5rem 0.75rem
+    margin: 1rem 0
+
+@media screen and (max-width: breakpoint(xs))
+  .create-ticket-form
+    &__sign
+      text-align: center
+      margin-right: 0
+      margin-bottom: 0.5rem
+
+    &__submit-container
+      @include flex(center, center, column)

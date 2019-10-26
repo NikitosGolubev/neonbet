@@ -4,23 +4,18 @@
             :disabled-classes="disabledClasses"
             :is-disabled="isDisabled"
             class="field_secondary"
+            :class="stableStylingClasses"
     />
 </template>
 
 <script>
-    import FieldMixin from './mixins/field';
+    import SecondaryFieldMixin from './mixins/secondary-field';
     import VField from "./VField";
 
     export default {
         name: "VFieldSecondary",
         components: {VField},
-        mixins: [FieldMixin],
-        props: {
-            disabledClasses: {
-                type: Array,
-                default: () => ['field_secondary-disabled']
-            }
-        }
+        mixins: [SecondaryFieldMixin]
     }
 </script>
 
