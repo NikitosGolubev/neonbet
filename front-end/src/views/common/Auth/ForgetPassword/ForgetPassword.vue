@@ -17,6 +17,7 @@
     import PanelTextHeader from "../../../../layouts/MainLayout/PanelLayout/components/PanelTextHeader";
     import ForgetPasswordForm from "./components/ForgetPasswordForm";
     import PanelSection from "../../../../layouts/MainLayout/PanelLayout/components/PanelSection";
+
     export default {
         name: "ForgetPassword",
         components: {PanelSection, ForgetPasswordForm, PanelTextHeader, PanelLayout},

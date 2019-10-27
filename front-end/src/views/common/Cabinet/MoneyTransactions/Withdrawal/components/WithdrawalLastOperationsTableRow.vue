@@ -26,8 +26,6 @@
 </template>
 
 <script>
-    import moment from 'moment'
-
     export default {
         name: "WithdrawalLastOperationsTableRow",
         props: {
@@ -38,11 +36,11 @@
         },
         computed: {
             commitDate() {
-                return moment(this.withdrawal.commitDate).format('D MMMM YYYY');
+                return this.$moment(this.withdrawal.commitDate).format('D MMMM YYYY');
             },
 
             commitTime() {
-                return moment(this.withdrawal.commitDate).format('HH:mm');
+                return this.$moment(this.withdrawal.commitDate).format('HH:mm');
             }
         }
     }

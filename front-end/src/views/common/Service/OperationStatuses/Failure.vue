@@ -1,16 +1,16 @@
 <template>
-    <operation-status theme="danger">
+    <operation-status-layout theme="danger">
         failure
         <template #message>
             Извините, но кажется что-то пошло не так :(
         </template>
-    </operation-status>
+    </operation-status-layout>
 </template>
 
 <script>
-    import OperationStatus from "../../../../layouts/ServiceLayout/OperationStatus/OperationStatus";
+    import OperationStatusLayout from "../../../../layouts/ServiceLayout/OperationStatusLayout/OperationStatusLayout";
     export default {
         name: "Failure",
-        components: {OperationStatus}
+        components: {OperationStatusLayout}
     }
 </script>

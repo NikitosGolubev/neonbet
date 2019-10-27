@@ -1,3 +1,6 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
+
 module.exports = {
     // proxy API requests to Valet during development
 
@@ -16,5 +19,14 @@ module.exports = {
             entry: 'src/app/main.js',
             template: 'public/index.html'
         }
+    },
+
+    configureWebpack: {
+        plugins: [
+            new BundleAnalyzerPlugin(),
+            new MomentLocalesPlugin({
+                localesToKeep: ['en', 'ru'],
+            })
+        ]
     }
 };

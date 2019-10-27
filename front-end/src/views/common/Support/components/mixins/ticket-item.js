@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 const MAX_PREVIEW_LENGTH = 150;
 const PREVIEW_SHORTING_PERCENT = 0.75;
 
@@ -12,7 +10,7 @@ export default {
     },
     computed: {
         ticketAppliedAt() {
-            return moment(this.ticket.applyDate).format("DD.MM.YYYY | HH:mm");
+            return this.$moment(this.ticket.applyDate).format("DD.MM.YYYY | HH:mm");
         },
 
         ticketContent() {

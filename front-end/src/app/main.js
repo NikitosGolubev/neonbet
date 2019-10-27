@@ -3,8 +3,10 @@ import App from './App.vue'
 import router from '../router/router'
 import store from '../store/store'
 import VueObserveVisibility from 'vue-observe-visibility'
+import VueMomentPlugin from './plugins/moment';
 
 Vue.use(VueObserveVisibility);
+Vue.use(VueMomentPlugin);
 
 // Components
 Vue.component('main-scroll', require('../components/MainScroll/MainScroll').default);
@@ -23,6 +25,11 @@ new Vue({
       md: 993,
       lg: 1199,
       xl: Infinity
+    }
+  },
+  methods: {
+    moment(...args) {
+      return moment(args);
     }
   }
 }).$mount('#app');

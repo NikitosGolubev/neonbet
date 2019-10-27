@@ -5,8 +5,6 @@
 </template>
 
 <script>
-    import moment from 'moment';
-
     export default {
         name: "UserBetLayoutPlaceTime",
         props: {
@@ -17,7 +15,7 @@
         },
         computed: {
             placedAt() {
-                return moment(this.dateTime).format('HH:mm');
+                return this.$moment(this.dateTime).format('HH:mm');
             }
         }
     }
