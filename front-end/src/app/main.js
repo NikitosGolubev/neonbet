@@ -4,6 +4,10 @@ import router from '../router/router'
 import store from '../store/store'
 import VueObserveVisibility from 'vue-observe-visibility'
 import VueMomentPlugin from './plugins/moment';
+import ElementUi from 'element-ui';
+import locale from 'element-ui/lib/locale/lang/ru-RU'
+
+Vue.use(ElementUi, {locale});
 
 Vue.use(VueObserveVisibility);
 Vue.use(VueMomentPlugin);
@@ -25,11 +29,6 @@ new Vue({
       md: 993,
       lg: 1199,
       xl: Infinity
-    }
-  },
-  methods: {
-    moment(...args) {
-      return moment(args);
     }
   }
 }).$mount('#app');

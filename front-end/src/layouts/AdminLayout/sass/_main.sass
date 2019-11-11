@@ -1,0 +1,45 @@
+@import "settings"
+
+@import "../../../sass/blocks/default/fonts/default"
+@import "../../../sass/blocks/default/colors/default"
+@import "../../../sass/blocks/default/typography/default"
+@import "../../../sass/blocks/default/structure-determinants/default"
+
+@import ../../../sass/blocks/basic/links/links
+
+@import "../../../sass/admin/blocks/default/structure-determinants/default"
+@import "../../../sass/admin/blocks/default/typography/default"
+
+body
+  background-color: color(muted)
+  color: color(secondary)
+
+.admin-panel
+  &__nav
+    padding-right: 15px
+    z-index: 100
+    position: fixed
+    height: 100vh
+    overflow-x: hidden
+    overflow-y: auto
+
+  &__main
+    padding-top: 20px
+    transition: 0.3s padding
+
+    &_collapsed
+      padding-left: 250px
+
+    &_uncollapsed
+      padding-left: 65px
+
+  &__content
+    padding: 20px 50px
+
+  &__header
+    border-bottom: 1px solid color(muted-dark)
+
+/** Adjusting styles of core Element UI elements **/
+
+.el-range-input
+  background: color(default)

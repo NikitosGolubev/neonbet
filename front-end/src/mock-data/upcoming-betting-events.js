@@ -17,16 +17,16 @@ export default [
         game: {
             id: 23,
             name: 'CS:GO',
-            logo: require('@/assets/common/img/csgo.png')
+            logo: require('@/assets/img/csgo.png')
         },
         team1: {
             id: 1,
-            logo: require('@/assets/common/img/team3.png'),
+            logo: require('@/assets/img/team3.png'),
             name: 'NaVi'
         },
         team2: {
             id: 2,
-            logo: require('@/assets/common/img/team4.png'),
+            logo: require('@/assets/img/team4.png'),
             name: 'Astralis'
         },
         additionalOptions: [
@@ -58,16 +58,16 @@ export default [
         game: {
             id: 23,
             name: 'CS:GO',
-            logo: require('@/assets/common/img/csgo.png')
+            logo: require('@/assets/img/csgo.png')
         },
         team1: {
             id: 1,
-            logo: require('@/assets/common/img/team3.png'),
+            logo: require('@/assets/img/team3.png'),
             name: 'NaVi'
         },
         team2: {
             id: 2,
-            logo: require('@/assets/common/img/team4.png'),
+            logo: require('@/assets/img/team4.png'),
             name: 'Astralis'
         },
         additionalOptions: [
@@ -99,16 +99,16 @@ export default [
         game: {
             id: 23,
             name: 'Dota 2',
-            logo: require('@/assets/common/img/dota2.png')
+            logo: require('@/assets/img/dota2.png')
         },
         team1: {
             id: 1,
-            logo: require('@/assets/common/img/team3.png'),
+            logo: require('@/assets/img/team3.png'),
             name: 'NaVi'
         },
         team2: {
             id: 2,
-            logo: require('@/assets/common/img/team4.png'),
+            logo: require('@/assets/img/team4.png'),
             name: 'Astralis'
         },
         additionalOptions: [
@@ -140,16 +140,16 @@ export default [
         game: {
             id: 23,
             name: 'Call of Duty',
-            logo: require('@/assets/common/img/callofduty.png')
+            logo: require('@/assets/img/callofduty.png')
         },
         team1: {
             id: 1,
-            logo: require('@/assets/common/img/team3.png'),
+            logo: require('@/assets/img/team3.png'),
             name: 'NaVi'
         },
         team2: {
             id: 2,
-            logo: require('@/assets/common/img/team4.png'),
+            logo: require('@/assets/img/team4.png'),
             name: 'Astralis'
         },
         additionalOptions: [
@@ -181,16 +181,16 @@ export default [
         game: {
             id: 23,
             name: 'NBA2K19',
-            logo: require('@/assets/common/img/nba.png')
+            logo: require('@/assets/img/nba.png')
         },
         team1: {
             id: 1,
-            logo: require('@/assets/common/img/team3.png'),
+            logo: require('@/assets/img/team3.png'),
             name: 'NaVi'
         },
         team2: {
             id: 2,
-            logo: require('@/assets/common/img/team4.png'),
+            logo: require('@/assets/img/team4.png'),
             name: 'Astralis'
         },
         additionalOptions: [

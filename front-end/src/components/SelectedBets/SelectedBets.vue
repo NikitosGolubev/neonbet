@@ -17,7 +17,7 @@
 <script>
     import SelectedBetsOpenBtn from "./SelectedBetsOpenBtn";
     import SelectedBetsCloseBtn from "./SelectedBetsCloseBtn";
-    import SelectedBetsContent from "./SelectedBetsContent";
+    const SelectedBetsContent = () =>  import("./SelectedBetsContent");
 
     export default {
         name: "SelectedBets",

@@ -12,53 +12,53 @@
             <ol class="num-list">
                 <!-- Top user record -->
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="AnotherUser134"
                         :balance="12004"
                         :is-current-user="true"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />
                 <top-users-record
-                        :userpick="require('@/assets/common/img/avatar.png')"
+                        :userpick="require('@/assets/img/avatar.png')"
                         nickname="SomeUser123"
                         :balance="12500"
                 />

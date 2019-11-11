@@ -5,7 +5,7 @@ export default [
         sum: 12345,
         payment: {
             name: 'qiwi',
-            logo: require('@/assets/common/img/qiwi.png')
+            logo: require('@/assets/img/qiwi.png')
         }
     },
     {
@@ -14,7 +14,7 @@ export default [
         sum: 3234,
         payment: {
             name: 'skinpay',
-            logo: require('@/assets/common/img/skinpay.png')
+            logo: require('@/assets/img/skinpay.png')
         }
     },
     {
@@ -23,7 +23,7 @@ export default [
         sum: 34234,
         payment: {
             name: 'visa',
-            logo: require('@/assets/common/img/visa.png')
+            logo: require('@/assets/img/visa.png')
         }
     },
     {
@@ -32,7 +32,7 @@ export default [
         sum: 234,
         payment: {
             name: 'yandex',
-            logo: require('@/assets/common/img/yandex.png')
+            logo: require('@/assets/img/yandex.png')
         }
     }
 ];

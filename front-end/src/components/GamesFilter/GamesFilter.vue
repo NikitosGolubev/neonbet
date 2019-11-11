@@ -16,10 +16,10 @@
 
         <dropdown-element :apply-dropdown-at="1198" :key-id="dropdownKey">
             <main-scroll classes="games-filter__content">
-                <games-filter-record name="Counter-Strike" :logo-path="require(`@/assets/common/img/csgo.png`)" />
-                <games-filter-record name="Dota 2" :logo-path="require(`@/assets/common/img/dota2.png`)" />
-                <games-filter-record name="NBA 2k19" :logo-path="require(`@/assets/common/img/nba.png`)" />
-                <games-filter-record name="Call of Duty" :logo-path="require(`@/assets/common/img/callofduty.png`)" />
+                <games-filter-record name="Counter-Strike" :logo-path="require(`@/assets/img/csgo.png`)" />
+                <games-filter-record name="Dota 2" :logo-path="require(`@/assets/img/dota2.png`)" />
+                <games-filter-record name="NBA 2k19" :logo-path="require(`@/assets/img/nba.png`)" />
+                <games-filter-record name="Call of Duty" :logo-path="require(`@/assets/img/callofduty.png`)" />
             </main-scroll>
         </dropdown-element>
     </div>

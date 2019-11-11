@@ -1,0 +1,48 @@
+$gaps: 3rem, 2rem, 1.5rem, 1rem, 10px, 5px
+
+@each $gap in $gaps
+  .m-#{index($gaps, $gap)}
+    margin: $gap
+
+  .mh-#{index($gaps, $gap)}
+    margin-left: $gap
+    margin-right: $gap
+
+  .mv-#{index($gaps, $gap)}
+    margin-top: $gap
+    margin-bottom: $gap
+
+  .ml-#{index($gaps, $gap)}
+    margin-left: $gap
+
+  .mr-#{index($gaps, $gap)}
+    margin-right: $gap
+
+  .mt-#{index($gaps, $gap)}
+    margin-top: $gap
+
+  .mb-#{index($gaps, $gap)}
+    margin-bottom: $gap
+
+  .p-#{index($gaps, $gap)}
+    padding: $gap
+
+  .ph-#{index($gaps, $gap)}
+    padding-left: $gap
+    padding-right: $gap
+
+  .pv-#{index($gaps, $gap)}
+    padding-top: $gap
+    padding-bottom: $gap
+
+  .pl-#{index($gaps, $gap)}
+    padding-left: $gap
+
+  .pr-#{index($gaps, $gap)}
+    padding-right: $gap
+
+  .pt-#{index($gaps, $gap)}
+    padding-top: $gap
+
+  .pb-#{index($gaps, $gap)}
+    padding-bottom: $gap

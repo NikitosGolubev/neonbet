@@ -77,6 +77,11 @@ export default new Router({
       name: 'support',
       path: '/support',
       component: () => import('../views/common/Support/Support.vue')
+    },
+    {
+      name: 'admin',
+      path: '/admin',
+      component: () => import('../views/admin/Home/Home.vue')
     }
   ]
 });
