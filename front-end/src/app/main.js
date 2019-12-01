@@ -6,11 +6,13 @@ import VueObserveVisibility from 'vue-observe-visibility'
 import VueMomentPlugin from './plugins/moment';
 import ElementUi from 'element-ui';
 import locale from 'element-ui/lib/locale/lang/ru-RU'
+import Vuelidate from 'vuelidate'
 
 Vue.use(ElementUi, {locale});
 
 Vue.use(VueObserveVisibility);
 Vue.use(VueMomentPlugin);
+Vue.use(Vuelidate);
 
 // Components
 Vue.component('main-scroll', require('../components/MainScroll/MainScroll').default);

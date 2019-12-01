@@ -22,13 +22,7 @@
     export default {
         name: "AdminLayout",
         components: {MainHeader, MainNav},
-        mixins: [MenuManagerMixin],
-        data() {
-            return {
-                value: 'RU',
-                timezone: 'UTC'
-            };
-        }
+        mixins: [MenuManagerMixin]
     }
 </script>
 

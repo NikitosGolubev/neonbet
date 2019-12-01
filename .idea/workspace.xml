@@ -3,171 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aa2250d-00b7-438b-ba3b-85a74f24dc7e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/app/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/app/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Semibold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/fonts/ProximaNova-Semibold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/article-img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/banknote.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/callofduty.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/clock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/csgo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/dota2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/dropdown-close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/dropdown-open.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/edit.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/fb.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/header-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/info.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/inst.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/left.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/letter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/logo-shadow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/nba.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/qiwi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/red-cross.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/right.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/scroll.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/skinpay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/team1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/team2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/team3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/team4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/tick.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/trophy.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/twitter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/up.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/visa.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/vk-grad.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/vk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/vk.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/white-cross.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/assets/common/img/yandex.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/AdditionalBettingLine/BettingEvents/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/AdditionalBettingLine/BettingEvents/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/AdditionalBettingLine/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/AdditionalBettingLine/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/CabinetNav/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/CabinetNav/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/DefaultTable/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/DefaultTable/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/EditableField/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/EditableField/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/EventTimeData/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/EventTimeData/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/GamePlayer/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/GamePlayer/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/GamesFilter/GamesFilter.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/GamesFilter/GamesFilter.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/GamesFilter/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/GamesFilter/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/InlineEventPresentation/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/InlineEventPresentation/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/LanguagePicker/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/LanguagePicker/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/LiveSensor/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/LiveSensor/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/MainBettingLine/BettingEvents/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/MainBettingLine/BettingEvents/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/MainBettingLine/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/MainBettingLine/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/MainFooter/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/MainFooter/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/MainHeader/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/MainHeader/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/MainScroll/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/MainScroll/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/RadioGradientPayment/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/RadioGradientPayment/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/SelectedBets/PlaceBet/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/SelectedBets/PlaceBet/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/SelectedBets/SelectedBet/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/SelectedBets/SelectedBet/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/SelectedBets/SelectedBets.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/SelectedBets/SelectedBets.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/SelectedBets/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/SelectedBets/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/SocialMedia/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/SocialMedia/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/TopUsers/TopUsers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/TopUsers/TopUsers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/TopUsers/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/TopUsers/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/UpperCarousel/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/UpperCarousel/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/UserProfile/UserProfileContent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/UserProfile/UserProfileContent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/UserProfile/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/UserProfile/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/UserSidebar/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/UserSidebar/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/breadcrumbs/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/breadcrumbs/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/burgers/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/burgers/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/buttons/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/buttons/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/checkboxes/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/checkboxes/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/coefficients/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/coefficients/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/fields/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/fields/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/game-logos/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/game-logos/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/img-bubbles/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/img-bubbles/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/logos/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/logos/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/operation-statuses/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/operation-statuses/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/payments/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/payments/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/scores/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/scores/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/components/ui/toggles/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/components/ui/toggles/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/MainLayout/PanelLayout/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/MainLayout/PanelLayout/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/MainLayout/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/MainLayout/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/ServiceLayout/OperationStatusLayout/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/ServiceLayout/OperationStatusLayout/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/layouts/ServiceLayout/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/layouts/ServiceLayout/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/betting-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/betting-events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/betting-history.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/betting-history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/payments.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/payments.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/selected-bets.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/selected-bets.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/upcoming-betting-events.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/upcoming-betting-events.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/mock-data/withdrawals-history.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/mock-data/withdrawals-history.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/router/router.js" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/router/router.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/sass/blocks/default/typography/_default.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/sass/blocks/default/typography/_default.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/sass/helpers/variables/_basic.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/sass/helpers/variables/_basic.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/sass/helpers/variables/_colors.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/sass/helpers/variables/_colors.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Article/Article.vue" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Article/Article.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Article/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Article/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Auth/Register/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Auth/Register/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Cabinet/BettingHistory/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Cabinet/BettingHistory/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Cabinet/MoneyTransactions/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Cabinet/MoneyTransactions/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Cabinet/Profile/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Cabinet/Profile/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Home/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Home/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Service/HttpResponse/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Service/HttpResponse/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front-end/src/views/common/Support/sass/_settings.sass" beforeDir="false" afterPath="$PROJECT_DIR$/front-end/src/views/common/Support/sass/_settings.sass" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/chunk-0e1fc213.13ae4eaa.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/chunk-26ac2055.3aa6d39f.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/chunk-41b902a6.f2db87a0.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/chunk-4e653f08.da7f4394.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-02aa9322.d4d9026d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-02aa9322.d4d9026d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-0e1fc213.c840214b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-0e1fc213.c840214b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-1c568c72.bb07796c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-1c568c72.bb07796c.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-266697ff.4a595b76.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-266697ff.4a595b76.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-26ac2055.330b09c0.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-26ac2055.330b09c0.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-2d20f6fb.94b95bc5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-2d20f6fb.94b95bc5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-41b902a6.37192355.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-41b902a6.37192355.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-4e653f08.86bb67e5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-4e653f08.86bb67e5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-4f0d0d84.0639bc4a.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-4f0d0d84.0639bc4a.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-54494026.72d820f9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-54494026.72d820f9.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-62417416.48ec8b6f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-62417416.48ec8b6f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-680fd9c3.3750306b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-680fd9c3.3750306b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-6e986898.3f9c6b4b.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-6e986898.3f9c6b4b.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-74664ebe.c4f8e81d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-74664ebe.c4f8e81d.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-7fb7a272.ec0dc482.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-7fb7a272.ec0dc482.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-8cae2806.f02f2751.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-8cae2806.f02f2751.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-a2a1b3a0.f90ee0bb.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-a2a1b3a0.f90ee0bb.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-c1e02ab0.f8de02b8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-c1e02ab0.f8de02b8.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.0e5e473f.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/chunk-vendors.0e5e473f.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.7dae64c2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/index.7dae64c2.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +14,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -400,7 +235,7 @@
       <path value="$PROJECT_DIR$/vendor/cakephp/chronos" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="925" />
     <option name="width" value="1000" />
     <option name="height" value="1040" />
@@ -574,12 +409,15 @@
       <workItem from="1572260024308" duration="3500000" />
       <workItem from="1572286028855" duration="7000" />
       <workItem from="1572366910795" duration="5000" />
-      <workItem from="1572983296114" duration="69017000" />
+      <workItem from="1572983296114" duration="69540000" />
+      <workItem from="1573670463283" duration="688000" />
+      <workItem from="1573679910515" duration="241000" />
+      <workItem from="1573982356422" duration="53000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="429293000" />
+    <option name="totallyTimeSpent" value="430798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,12 +429,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info id="Structure" order="0" sideWeight="0.5007153" side_tool="true" weight="0.37297297" />
       <window_info id="npm" order="1" sideWeight="0.5007153" side_tool="true" weight="0.37297297" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49928468" visible="true" weight="0.20643431" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.49928468" visible="true" weight="0.21447721" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -608,7 +446,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32956153" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50067025" side_tool="true" weight="0.32956153" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932975" weight="0.26449788" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49932975" visible="true" weight="0.26449788" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -700,9 +538,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/src/sass/admin/blocks/default/_structure-determinants.sass">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/src/sass/admin/blocks/default/_structure-determinants.sass" />
     <entry file="file://$PROJECT_DIR$/front-end/src/sass/blocks/default/colors/_default.sass">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -727,9 +563,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/src/components-admin/MainNav/sass/_settings.sass">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/src/components-admin/MainNav/sass/_settings.sass" />
     <entry file="file://$PROJECT_DIR$/front-end/src/sass/admin/blocks/default/structure-determinants/_default.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -827,9 +661,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front-end/src/sass/admin/blocks/default/typography/_default-responsivity.sass">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/front-end/src/sass/admin/blocks/default/typography/_default-responsivity.sass" />
     <entry file="file://$PROJECT_DIR$/front-end/src/sass/admin/blocks/default/typography/_default.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">

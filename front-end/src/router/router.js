@@ -19,17 +19,17 @@ export default new Router({
       component: () => import('../views/common/Cabinet/Profile/Profile.vue')
     },
     {
-      name: 'deposit',
+      name: 'cabinet.deposit',
       path: '/cabinet/deposit',
       component: () => import('../views/common/Cabinet/MoneyTransactions/Deposit/Deposit.vue')
     },
     {
-      name: 'withdrawal',
+      name: 'cabinet.withdrawal',
       path: '/cabinet/withdrawal',
       component: () => import('../views/common/Cabinet/MoneyTransactions/Withdrawal/Withdrawal.vue')
     },
     {
-      name: 'betting-history',
+      name: 'cabinet.betting-history',
       path: '/cabinet/betting-history',
       component: () => import('../views/common/Cabinet/BettingHistory/BettingHistory.vue')
     },
@@ -82,6 +82,11 @@ export default new Router({
       name: 'admin',
       path: '/admin',
       component: () => import('../views/admin/Home/Home.vue')
-    }
+    },
+    {
+      name: 'admin.users',
+      path: '/admin/users',
+      component: () => import('../views/admin/Users/UsersList/UsersList.vue')
+    },
   ]
 });

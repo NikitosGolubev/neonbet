@@ -5,5 +5,6 @@ export default {
     birthdate: '12.02.1988',
     regdate: '12.01.2018',
     avatar: require('@/assets/img/avatar.png'),
-    balance: 12500
+    balance: 12500,
+    role: 'admin'
 };

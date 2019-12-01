@@ -1,0 +1,19 @@
+@import "settings"
+
+.search-response
+    @include flex(center, center, column)
+
+    &__picture
+        width: 50%
+        min-width: 300px
+        @extend %removeUserSelect
+
+        &_img
+            width: 100%
+
+    &__sign
+        text-transform: uppercase
+        text-align: center
+        word-wrap: normal
+        word-break: normal
+        @extend %removeUserSelect
