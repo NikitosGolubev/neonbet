@@ -2,7 +2,9 @@ const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPl
 const MomentLocalesPlugin = require('moment-locales-webpack-plugin');
 
 const config = {
-    publicPath: "./",
+    publicPath: process.env.NODE_ENV === 'production'
+        ? '/neonbet/'
+        : './',
 
     pages: {
         index: {
