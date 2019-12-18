@@ -8,9 +8,11 @@
                 <span class="http-response__desk">То что вы ищите, не найдено :(</span>
             </div>
             <div class="http-response__return-btn">
-                <v-button-outline-gradient-fillable>
-                    На главную
-                </v-button-outline-gradient-fillable>
+                <router-link :to="{name: 'home'}">
+                    <v-button-outline-gradient-fillable>
+                        На главную
+                    </v-button-outline-gradient-fillable>
+                </router-link>
             </div>
         </div>
     </service-layout>

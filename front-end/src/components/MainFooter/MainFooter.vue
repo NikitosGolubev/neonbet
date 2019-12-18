@@ -5,9 +5,9 @@
             <div class="footer__item_wrap">
                 <div class="footer__item">
                     <!-- Logo -->
-                    <a href="#">
+                    <router-link :to="{name: 'home'}">
                         <v-animated-logo />
-                    </a>
+                    </router-link>
 
                     <div>
                         <span class="text_small-sz">© Copyright 2016-2018 Livestream Gaming Ltd. Все права защищены.
@@ -21,9 +21,21 @@
                 <div class="footer__item">
                     <ul class="footer__nav">
                         <li class="footer__nav-item"><span class="h6">NeonOne</span></li>
-                        <li class="footer__nav-item"><a href="#" class="link_alternative">Правила сервиса</a></li>
-                        <li class="footer__nav-item"><a href="#" class="link_alternative">Конфиденциальность</a></li>
-                        <li class="footer__nav-item"><a href="#" class="link_alternative">Ответственная игра</a></li>
+                        <li class="footer__nav-item">
+                            <router-link to="#">
+                                <span class="link_alternative">Правила сервиса</span>
+                            </router-link>
+                        </li>
+                        <li class="footer__nav-item">
+                            <router-link to="#">
+                                <span class="link_alternative">Конфиденциальность</span>
+                            </router-link>
+                        </li>
+                        <li class="footer__nav-item">
+                            <router-link to="#">
+                                <span class="link_alternative">Ответственная игра</span>
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -31,9 +43,21 @@
                 <div class="footer__item">
                     <ul class="footer__nav">
                         <li class="footer__nav-item"><span class="h6">Информация</span></li>
-                        <li class="footer__nav-item"><a href="#" class="link_alternative">FAQ</a></li>
-                        <li class="footer__nav-item"><a href="#" class="link_alternative">Бонусы и акции</a></li>
-                        <li class="footer__nav-item"><a href="#" class="link_alternative">Биткоин FAQ</a></li>
+                        <li class="footer__nav-item">
+                            <router-link to="#">
+                                <span class="link_alternative">FAQ</span>
+                            </router-link>
+                        </li>
+                        <li class="footer__nav-item">
+                            <router-link to="#">
+                                <span class="link_alternative">Бонусы и акции</span>
+                            </router-link>
+                        </li>
+                        <li class="footer__nav-item">
+                            <router-link to="#">
+                                <span class="link_alternative">Биткоин FAQ</span>
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
             </div>

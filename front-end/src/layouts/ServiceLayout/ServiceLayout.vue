@@ -1,9 +1,9 @@
 <template>
     <div class="service-page">
         <div class="service-page__logo">
-            <a href="#">
+            <router-link :to="{name: 'home'}">
                 <v-animated-logo />
-            </a>
+            </router-link>>
         </div>
 
         <main class="service-page__content">

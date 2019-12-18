@@ -12,9 +12,11 @@
                 </span>
             </div>
             <div class="operation-status__return-btn">
-                <v-button-outline-gradient-fillable>
-                    На главную
-                </v-button-outline-gradient-fillable>
+                <router-link :to="{name: 'home'}">
+                    <v-button-outline-gradient-fillable>
+                        На главную
+                    </v-button-outline-gradient-fillable>
+                </router-link>
             </div>
         </div>
     </service-layout>

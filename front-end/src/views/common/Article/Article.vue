@@ -54,7 +54,7 @@
         computed: {
             breadcrumbs() {
                 return [
-                    {name: "Главная"},
+                    {name: "Главная", routeName: 'home'},
                     {name: "Новости"},
                     {name: this.title}
                 ];

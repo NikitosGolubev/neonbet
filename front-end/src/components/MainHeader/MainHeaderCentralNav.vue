@@ -2,13 +2,19 @@
     <nav>
         <ul class="header__list">
             <li class="header__list-item">
-                <a href="#" class="link_alternative">Тех. поддержка</a>
+                <router-link :to="{name: 'support'}">
+                    <span  class="link_alternative">Тех. поддержка</span>
+                </router-link>
             </li>
             <li class="header__list-item">
-                <a href="#" class="link_alternative">Общие вопросы</a>
+                <router-link to="#">
+                    <span  class="link_alternative">Общие вопросы</span>
+                </router-link>
             </li>
             <li class="header__list-item">
-                <a href="#" class="link_alternative">Новости</a>
+                <router-link :to="{name: 'article'}">
+                    <span  class="link_alternative">Новости</span>
+                </router-link>
             </li>
         </ul>
     </nav>

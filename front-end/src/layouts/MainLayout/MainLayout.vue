@@ -34,6 +34,6 @@
     }
 </script>
 
-<style lang="sass">
+<style lang="sass" >
     @import "sass/main"
 </style>

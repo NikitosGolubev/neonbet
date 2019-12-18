@@ -56,7 +56,9 @@
                 </v-button-outline-gradient-fillable>
             </div>
             <div class="user-registration__util">
-                <a class="link link_primary-gradient" href="#">Забыли пароль?</a>
+                <router-link :to="{name: 'forgetPassword'}">
+                    <span class="link link_primary-gradient">Забыли пароль?</span>
+                </router-link>
             </div>
         </div>
     </form>

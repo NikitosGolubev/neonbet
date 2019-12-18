@@ -2,19 +2,21 @@
     <ul class="header__list header__actions-list">
         <!-- Important social links -->
         <li class="header__actions-list_item">
-            <a href="#">
+            <a href="https://vk.com/nikitos_angry_jew" target="_blank">
                 <div class="vk-grad item-btn"></div>
             </a>
         </li>
 
         <!-- Action call buttons -->
         <li class="header__actions-list_item">
-            <a href="#">
+            <router-link :to="{name: 'login'}">
                 <v-button-outline-simple size="lg">Вход</v-button-outline-simple>
-            </a>
+            </router-link>
         </li>
         <li class="header__actions-list_item">
-            <v-button-outline-simple size="lg">Регистрация</v-button-outline-simple>
+            <router-link :to="{name: 'register'}">
+                <v-button-outline-simple size="lg">Регистрация</v-button-outline-simple>
+            </router-link>
         </li>
 
         <li class="header__sidebar-burger">

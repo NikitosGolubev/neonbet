@@ -15,7 +15,9 @@
                         <span class="primary-light">Запомнить меня?</span>
                     </v-checkbox-primary>
                     <div>
-                        <a href="#" class="link_primary-light">Забыли пароль?</a>
+                        <router-link :to="{name: 'forgetPassword'}">
+                            <span class="link_primary-light">Забыли пароль?</span>
+                        </router-link>
                     </div>
                 </div>
                 <div class="row center-xs">

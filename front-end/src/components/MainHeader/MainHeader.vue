@@ -1,9 +1,9 @@
 <template>
     <div>
         <header class="header page__header">
-            <a href="#">
+            <router-link :to="{name: 'home'}">
                 <v-animated-logo />
-            </a>
+            </router-link>
 
             <div class="header__central-nav">
                 <header-central-navigation />

@@ -25,8 +25,8 @@
         data() {
             return {
                 breadcrumbs: [
-                    {name: "Главная"},
-                    {name: "История ставок"}
+                    {name: "Главная", routeName: 'home'},
+                    {name: "История ставок", routeName: 'cabinet.betting-history'}
                 ],
 
                 bettingHistory: MockBettingHistory

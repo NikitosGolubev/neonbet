@@ -1,9 +1,18 @@
 <template>
     <admin-layout>
-        <h2>Пользователи</h2>
+        <h2>
+            Пользователи
+            <span class="text_regular secondary">
+                (15/10237)
+            </span>
+        </h2>
 
         <div class="mt-2">
             <users-table :data="users" />
+
+            <div class="centered mt-3">
+                <el-button>Загрузить ещё</el-button>
+            </div>
         </div>
     </admin-layout>
 </template>

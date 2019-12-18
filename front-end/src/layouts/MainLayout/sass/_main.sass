@@ -22,8 +22,8 @@
 
 body
   min-height: 100vh
-  @include setBgImg('img/header-bg.jpg', "top center no-repeat", true, color(muted))
-  background-size: 100%
+  background: color(muted) url('#{$root_folder_depth}img/header-bg.jpg') top center no-repeat !important
+  background-size: 100% !important
   color: color(secondary)
 
 .page
