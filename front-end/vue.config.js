@@ -1,3 +1,3 @@
-const config = require('./config-types/plain.config');
+const config = require('./config-types/laravel.config');
 
 module.exports = config;
